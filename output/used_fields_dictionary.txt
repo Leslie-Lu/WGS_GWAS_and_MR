@@ -1,0 +1,28 @@
+eid
+31          Coding	Meaning: Categorical (single); 0, Female; 1, Male
+22001       Coding	Meaning: Categorical (single); 0, Female; 1, Male
+21022       Coding	Meaning: Integer, Units of measurement are years
+21001       Coding	Meaning: Continuous, units of measurement are Kg/m2
+21000       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1001
+22006       Coding	Meaning: Categorical (single), 1, Caucasian, https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1002
+22027       Coding	Meaning: Categorical (single), 1, Yes, https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=1
+20116       Coding	Meaning: Categorical (single), -3, Prefer not to answer; 0, Never; 1, Previous; 2, Current
+1558        Coding	Meaning: Categorical (single), 1, Daily or almost daily; 2, Three or four times a week; 3, Once or twice a week; 4, One to three times a month; 5, Special occasions only; 6, Never; -3, Prefer not to answer
+22189       Coding	Meaning: Continuous
+22000       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=22000
+22009       Coding	Meaning: Continuous, units of measurement are Units
+53          Coding	Meaning: Date
+40000       Coding	Meaning: Date
+40005       Coding	Meaning: Date
+40006       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+40013       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=87; docs\materials\ukb\ICD9_coding87.tsv
+20001       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=3; docs\materials\ukb\Cancer_code_self_reported_coding3.tsv
+40001       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+40002       Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+41202       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+41203       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=87; docs\materials\ukb\ICD9_coding87.tsv
+41204       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+41205       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=87; docs\materials\ukb\ICD9_coding87.tsv
+20002       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=6, docs\materials\ukb\Non_cancer_illness_code_self_reported_coding6.tsv
+41270       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
+41271       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=87; docs\materials\ukb\ICD9_coding87.tsv
