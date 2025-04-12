@@ -1,0 +1,331 @@
+name,title
+eid,Participant ID
+p31,Sex
+p22001,Genetic sex
+p21022,Age at recruitment
+p21001_i0,Body mass index (BMI) | Instance 0
+p21001_i1,Body mass index (BMI) | Instance 1
+p21001_i2,Body mass index (BMI) | Instance 2
+p21001_i3,Body mass index (BMI) | Instance 3
+p21000_i0,Ethnic background | Instance 0
+p21000_i1,Ethnic background | Instance 1
+p21000_i2,Ethnic background | Instance 2
+p21000_i3,Ethnic background | Instance 3
+p22006,Genetic ethnic grouping
+p22027,Outliers for heterozygosity or missing rate
+p20116_i0,Smoking status | Instance 0
+p20116_i1,Smoking status | Instance 1
+p20116_i2,Smoking status | Instance 2
+p20116_i3,Smoking status | Instance 3
+p1558_i0,Alcohol intake frequency. | Instance 0
+p1558_i1,Alcohol intake frequency. | Instance 1
+p1558_i2,Alcohol intake frequency. | Instance 2
+p1558_i3,Alcohol intake frequency. | Instance 3
+p22189,Townsend deprivation index at recruitment
+p22000,Genotype measurement batch
+p22009_a1,Genetic principal components | Array 1
+p22009_a2,Genetic principal components | Array 2
+p22009_a3,Genetic principal components | Array 3
+p22009_a4,Genetic principal components | Array 4
+p22009_a5,Genetic principal components | Array 5
+p22009_a6,Genetic principal components | Array 6
+p22009_a7,Genetic principal components | Array 7
+p22009_a8,Genetic principal components | Array 8
+p22009_a9,Genetic principal components | Array 9
+p22009_a10,Genetic principal components | Array 10
+p22009_a11,Genetic principal components | Array 11
+p22009_a12,Genetic principal components | Array 12
+p22009_a13,Genetic principal components | Array 13
+p22009_a14,Genetic principal components | Array 14
+p22009_a15,Genetic principal components | Array 15
+p22009_a16,Genetic principal components | Array 16
+p22009_a17,Genetic principal components | Array 17
+p22009_a18,Genetic principal components | Array 18
+p22009_a19,Genetic principal components | Array 19
+p22009_a20,Genetic principal components | Array 20
+p22009_a21,Genetic principal components | Array 21
+p22009_a22,Genetic principal components | Array 22
+p22009_a23,Genetic principal components | Array 23
+p22009_a24,Genetic principal components | Array 24
+p22009_a25,Genetic principal components | Array 25
+p22009_a26,Genetic principal components | Array 26
+p22009_a27,Genetic principal components | Array 27
+p22009_a28,Genetic principal components | Array 28
+p22009_a29,Genetic principal components | Array 29
+p22009_a30,Genetic principal components | Array 30
+p22009_a31,Genetic principal components | Array 31
+p22009_a32,Genetic principal components | Array 32
+p22009_a33,Genetic principal components | Array 33
+p22009_a34,Genetic principal components | Array 34
+p22009_a35,Genetic principal components | Array 35
+p22009_a36,Genetic principal components | Array 36
+p22009_a37,Genetic principal components | Array 37
+p22009_a38,Genetic principal components | Array 38
+p22009_a39,Genetic principal components | Array 39
+p22009_a40,Genetic principal components | Array 40
+p53_i0,Date of attending assessment centre | Instance 0
+p53_i1,Date of attending assessment centre | Instance 1
+p53_i2,Date of attending assessment centre | Instance 2
+p53_i3,Date of attending assessment centre | Instance 3
+p40000_i0,Date of death | Instance 0
+p40000_i1,Date of death | Instance 1
+p40005_i0,Date of cancer diagnosis | Instance 0
+p40005_i1,Date of cancer diagnosis | Instance 1
+p40005_i2,Date of cancer diagnosis | Instance 2
+p40005_i3,Date of cancer diagnosis | Instance 3
+p40005_i4,Date of cancer diagnosis | Instance 4
+p40005_i5,Date of cancer diagnosis | Instance 5
+p40005_i6,Date of cancer diagnosis | Instance 6
+p40005_i7,Date of cancer diagnosis | Instance 7
+p40005_i8,Date of cancer diagnosis | Instance 8
+p40005_i9,Date of cancer diagnosis | Instance 9
+p40005_i10,Date of cancer diagnosis | Instance 10
+p40005_i11,Date of cancer diagnosis | Instance 11
+p40005_i12,Date of cancer diagnosis | Instance 12
+p40005_i13,Date of cancer diagnosis | Instance 13
+p40005_i14,Date of cancer diagnosis | Instance 14
+p40005_i15,Date of cancer diagnosis | Instance 15
+p40005_i16,Date of cancer diagnosis | Instance 16
+p40005_i17,Date of cancer diagnosis | Instance 17
+p40005_i18,Date of cancer diagnosis | Instance 18
+p40005_i19,Date of cancer diagnosis | Instance 19
+p40005_i20,Date of cancer diagnosis | Instance 20
+p40005_i21,Date of cancer diagnosis | Instance 21
+p40006_i0,Type of cancer: ICD10 | Instance 0
+p40006_i1,Type of cancer: ICD10 | Instance 1
+p40006_i2,Type of cancer: ICD10 | Instance 2
+p40006_i3,Type of cancer: ICD10 | Instance 3
+p40006_i4,Type of cancer: ICD10 | Instance 4
+p40006_i5,Type of cancer: ICD10 | Instance 5
+p40006_i6,Type of cancer: ICD10 | Instance 6
+p40006_i7,Type of cancer: ICD10 | Instance 7
+p40006_i8,Type of cancer: ICD10 | Instance 8
+p40006_i9,Type of cancer: ICD10 | Instance 9
+p40006_i10,Type of cancer: ICD10 | Instance 10
+p40006_i11,Type of cancer: ICD10 | Instance 11
+p40006_i12,Type of cancer: ICD10 | Instance 12
+p40006_i13,Type of cancer: ICD10 | Instance 13
+p40006_i14,Type of cancer: ICD10 | Instance 14
+p40006_i15,Type of cancer: ICD10 | Instance 15
+p40006_i16,Type of cancer: ICD10 | Instance 16
+p40006_i17,Type of cancer: ICD10 | Instance 17
+p40006_i18,Type of cancer: ICD10 | Instance 18
+p40006_i19,Type of cancer: ICD10 | Instance 19
+p40006_i20,Type of cancer: ICD10 | Instance 20
+p40006_i21,Type of cancer: ICD10 | Instance 21
+p40013_i0,Type of cancer: ICD9 | Instance 0
+p40013_i1,Type of cancer: ICD9 | Instance 1
+p40013_i2,Type of cancer: ICD9 | Instance 2
+p40013_i3,Type of cancer: ICD9 | Instance 3
+p40013_i4,Type of cancer: ICD9 | Instance 4
+p40013_i5,Type of cancer: ICD9 | Instance 5
+p40013_i6,Type of cancer: ICD9 | Instance 6
+p40013_i7,Type of cancer: ICD9 | Instance 7
+p40013_i8,Type of cancer: ICD9 | Instance 8
+p40013_i9,Type of cancer: ICD9 | Instance 9
+p40013_i10,Type of cancer: ICD9 | Instance 10
+p40013_i11,Type of cancer: ICD9 | Instance 11
+p40013_i12,Type of cancer: ICD9 | Instance 12
+p40013_i13,Type of cancer: ICD9 | Instance 13
+p40013_i14,Type of cancer: ICD9 | Instance 14
+p20001_i0_a0,"Cancer code, self-reported | Instance 0 | Array 0"
+p20001_i0_a1,"Cancer code, self-reported | Instance 0 | Array 1"
+p20001_i0_a2,"Cancer code, self-reported | Instance 0 | Array 2"
+p20001_i0_a3,"Cancer code, self-reported | Instance 0 | Array 3"
+p20001_i0_a4,"Cancer code, self-reported | Instance 0 | Array 4"
+p20001_i0_a5,"Cancer code, self-reported | Instance 0 | Array 5"
+p20001_i1_a0,"Cancer code, self-reported | Instance 1 | Array 0"
+p20001_i1_a1,"Cancer code, self-reported | Instance 1 | Array 1"
+p20001_i1_a2,"Cancer code, self-reported | Instance 1 | Array 2"
+p20001_i1_a3,"Cancer code, self-reported | Instance 1 | Array 3"
+p20001_i1_a4,"Cancer code, self-reported | Instance 1 | Array 4"
+p20001_i1_a5,"Cancer code, self-reported | Instance 1 | Array 5"
+p20001_i2_a0,"Cancer code, self-reported | Instance 2 | Array 0"
+p20001_i2_a1,"Cancer code, self-reported | Instance 2 | Array 1"
+p20001_i2_a2,"Cancer code, self-reported | Instance 2 | Array 2"
+p20001_i2_a3,"Cancer code, self-reported | Instance 2 | Array 3"
+p20001_i2_a4,"Cancer code, self-reported | Instance 2 | Array 4"
+p20001_i2_a5,"Cancer code, self-reported | Instance 2 | Array 5"
+p20001_i3_a0,"Cancer code, self-reported | Instance 3 | Array 0"
+p20001_i3_a1,"Cancer code, self-reported | Instance 3 | Array 1"
+p20001_i3_a2,"Cancer code, self-reported | Instance 3 | Array 2"
+p20001_i3_a3,"Cancer code, self-reported | Instance 3 | Array 3"
+p20001_i3_a4,"Cancer code, self-reported | Instance 3 | Array 4"
+p20001_i3_a5,"Cancer code, self-reported | Instance 3 | Array 5"
+p40001_i0,Underlying (primary) cause of death: ICD10 | Instance 0
+p40001_i1,Underlying (primary) cause of death: ICD10 | Instance 1
+p40002_i0_a0,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 0
+p40002_i0_a1,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 1
+p40002_i0_a2,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 2
+p40002_i0_a3,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 3
+p40002_i0_a4,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 4
+p40002_i0_a5,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 5
+p40002_i0_a6,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 6
+p40002_i0_a7,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 7
+p40002_i0_a8,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 8
+p40002_i0_a9,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 9
+p40002_i0_a10,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 10
+p40002_i0_a11,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 11
+p40002_i0_a12,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 12
+p40002_i0_a13,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 13
+p40002_i0_a14,Contributory (secondary) causes of death: ICD10 | Instance 0 | Array 14
+p40002_i1_a0,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 0
+p40002_i1_a1,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 1
+p40002_i1_a2,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 2
+p40002_i1_a3,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 3
+p40002_i1_a4,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 4
+p40002_i1_a5,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 5
+p40002_i1_a6,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 6
+p40002_i1_a7,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 7
+p40002_i1_a8,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 8
+p40002_i1_a9,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 9
+p40002_i1_a10,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 10
+p40002_i1_a11,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 11
+p40002_i1_a12,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 12
+p40002_i1_a13,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 13
+p40002_i1_a14,Contributory (secondary) causes of death: ICD10 | Instance 1 | Array 14
+p41202,Diagnoses - main ICD10
+p41203,Diagnoses - main ICD9
+p41204,Diagnoses - secondary ICD10
+p41205,Diagnoses - secondary ICD9
+p20002_i0_a0,"Non-cancer illness code, self-reported | Instance 0 | Array 0"
+p20002_i0_a1,"Non-cancer illness code, self-reported | Instance 0 | Array 1"
+p20002_i0_a2,"Non-cancer illness code, self-reported | Instance 0 | Array 2"
+p20002_i0_a3,"Non-cancer illness code, self-reported | Instance 0 | Array 3"
+p20002_i0_a4,"Non-cancer illness code, self-reported | Instance 0 | Array 4"
+p20002_i0_a5,"Non-cancer illness code, self-reported | Instance 0 | Array 5"
+p20002_i0_a6,"Non-cancer illness code, self-reported | Instance 0 | Array 6"
+p20002_i0_a7,"Non-cancer illness code, self-reported | Instance 0 | Array 7"
+p20002_i0_a8,"Non-cancer illness code, self-reported | Instance 0 | Array 8"
+p20002_i0_a9,"Non-cancer illness code, self-reported | Instance 0 | Array 9"
+p20002_i0_a10,"Non-cancer illness code, self-reported | Instance 0 | Array 10"
+p20002_i0_a11,"Non-cancer illness code, self-reported | Instance 0 | Array 11"
+p20002_i0_a12,"Non-cancer illness code, self-reported | Instance 0 | Array 12"
+p20002_i0_a13,"Non-cancer illness code, self-reported | Instance 0 | Array 13"
+p20002_i0_a14,"Non-cancer illness code, self-reported | Instance 0 | Array 14"
+p20002_i0_a15,"Non-cancer illness code, self-reported | Instance 0 | Array 15"
+p20002_i0_a16,"Non-cancer illness code, self-reported | Instance 0 | Array 16"
+p20002_i0_a17,"Non-cancer illness code, self-reported | Instance 0 | Array 17"
+p20002_i0_a18,"Non-cancer illness code, self-reported | Instance 0 | Array 18"
+p20002_i0_a19,"Non-cancer illness code, self-reported | Instance 0 | Array 19"
+p20002_i0_a20,"Non-cancer illness code, self-reported | Instance 0 | Array 20"
+p20002_i0_a21,"Non-cancer illness code, self-reported | Instance 0 | Array 21"
+p20002_i0_a22,"Non-cancer illness code, self-reported | Instance 0 | Array 22"
+p20002_i0_a23,"Non-cancer illness code, self-reported | Instance 0 | Array 23"
+p20002_i0_a24,"Non-cancer illness code, self-reported | Instance 0 | Array 24"
+p20002_i0_a25,"Non-cancer illness code, self-reported | Instance 0 | Array 25"
+p20002_i0_a26,"Non-cancer illness code, self-reported | Instance 0 | Array 26"
+p20002_i0_a27,"Non-cancer illness code, self-reported | Instance 0 | Array 27"
+p20002_i0_a28,"Non-cancer illness code, self-reported | Instance 0 | Array 28"
+p20002_i0_a29,"Non-cancer illness code, self-reported | Instance 0 | Array 29"
+p20002_i0_a30,"Non-cancer illness code, self-reported | Instance 0 | Array 30"
+p20002_i0_a31,"Non-cancer illness code, self-reported | Instance 0 | Array 31"
+p20002_i0_a32,"Non-cancer illness code, self-reported | Instance 0 | Array 32"
+p20002_i0_a33,"Non-cancer illness code, self-reported | Instance 0 | Array 33"
+p20002_i1_a0,"Non-cancer illness code, self-reported | Instance 1 | Array 0"
+p20002_i1_a1,"Non-cancer illness code, self-reported | Instance 1 | Array 1"
+p20002_i1_a2,"Non-cancer illness code, self-reported | Instance 1 | Array 2"
+p20002_i1_a3,"Non-cancer illness code, self-reported | Instance 1 | Array 3"
+p20002_i1_a4,"Non-cancer illness code, self-reported | Instance 1 | Array 4"
+p20002_i1_a5,"Non-cancer illness code, self-reported | Instance 1 | Array 5"
+p20002_i1_a6,"Non-cancer illness code, self-reported | Instance 1 | Array 6"
+p20002_i1_a7,"Non-cancer illness code, self-reported | Instance 1 | Array 7"
+p20002_i1_a8,"Non-cancer illness code, self-reported | Instance 1 | Array 8"
+p20002_i1_a9,"Non-cancer illness code, self-reported | Instance 1 | Array 9"
+p20002_i1_a10,"Non-cancer illness code, self-reported | Instance 1 | Array 10"
+p20002_i1_a11,"Non-cancer illness code, self-reported | Instance 1 | Array 11"
+p20002_i1_a12,"Non-cancer illness code, self-reported | Instance 1 | Array 12"
+p20002_i1_a13,"Non-cancer illness code, self-reported | Instance 1 | Array 13"
+p20002_i1_a14,"Non-cancer illness code, self-reported | Instance 1 | Array 14"
+p20002_i1_a15,"Non-cancer illness code, self-reported | Instance 1 | Array 15"
+p20002_i1_a16,"Non-cancer illness code, self-reported | Instance 1 | Array 16"
+p20002_i1_a17,"Non-cancer illness code, self-reported | Instance 1 | Array 17"
+p20002_i1_a18,"Non-cancer illness code, self-reported | Instance 1 | Array 18"
+p20002_i1_a19,"Non-cancer illness code, self-reported | Instance 1 | Array 19"
+p20002_i1_a20,"Non-cancer illness code, self-reported | Instance 1 | Array 20"
+p20002_i1_a21,"Non-cancer illness code, self-reported | Instance 1 | Array 21"
+p20002_i1_a22,"Non-cancer illness code, self-reported | Instance 1 | Array 22"
+p20002_i1_a23,"Non-cancer illness code, self-reported | Instance 1 | Array 23"
+p20002_i1_a24,"Non-cancer illness code, self-reported | Instance 1 | Array 24"
+p20002_i1_a25,"Non-cancer illness code, self-reported | Instance 1 | Array 25"
+p20002_i1_a26,"Non-cancer illness code, self-reported | Instance 1 | Array 26"
+p20002_i1_a27,"Non-cancer illness code, self-reported | Instance 1 | Array 27"
+p20002_i1_a28,"Non-cancer illness code, self-reported | Instance 1 | Array 28"
+p20002_i1_a29,"Non-cancer illness code, self-reported | Instance 1 | Array 29"
+p20002_i1_a30,"Non-cancer illness code, self-reported | Instance 1 | Array 30"
+p20002_i1_a31,"Non-cancer illness code, self-reported | Instance 1 | Array 31"
+p20002_i1_a32,"Non-cancer illness code, self-reported | Instance 1 | Array 32"
+p20002_i1_a33,"Non-cancer illness code, self-reported | Instance 1 | Array 33"
+p20002_i2_a0,"Non-cancer illness code, self-reported | Instance 2 | Array 0"
+p20002_i2_a1,"Non-cancer illness code, self-reported | Instance 2 | Array 1"
+p20002_i2_a2,"Non-cancer illness code, self-reported | Instance 2 | Array 2"
+p20002_i2_a3,"Non-cancer illness code, self-reported | Instance 2 | Array 3"
+p20002_i2_a4,"Non-cancer illness code, self-reported | Instance 2 | Array 4"
+p20002_i2_a5,"Non-cancer illness code, self-reported | Instance 2 | Array 5"
+p20002_i2_a6,"Non-cancer illness code, self-reported | Instance 2 | Array 6"
+p20002_i2_a7,"Non-cancer illness code, self-reported | Instance 2 | Array 7"
+p20002_i2_a8,"Non-cancer illness code, self-reported | Instance 2 | Array 8"
+p20002_i2_a9,"Non-cancer illness code, self-reported | Instance 2 | Array 9"
+p20002_i2_a10,"Non-cancer illness code, self-reported | Instance 2 | Array 10"
+p20002_i2_a11,"Non-cancer illness code, self-reported | Instance 2 | Array 11"
+p20002_i2_a12,"Non-cancer illness code, self-reported | Instance 2 | Array 12"
+p20002_i2_a13,"Non-cancer illness code, self-reported | Instance 2 | Array 13"
+p20002_i2_a14,"Non-cancer illness code, self-reported | Instance 2 | Array 14"
+p20002_i2_a15,"Non-cancer illness code, self-reported | Instance 2 | Array 15"
+p20002_i2_a16,"Non-cancer illness code, self-reported | Instance 2 | Array 16"
+p20002_i2_a17,"Non-cancer illness code, self-reported | Instance 2 | Array 17"
+p20002_i2_a18,"Non-cancer illness code, self-reported | Instance 2 | Array 18"
+p20002_i2_a19,"Non-cancer illness code, self-reported | Instance 2 | Array 19"
+p20002_i2_a20,"Non-cancer illness code, self-reported | Instance 2 | Array 20"
+p20002_i2_a21,"Non-cancer illness code, self-reported | Instance 2 | Array 21"
+p20002_i2_a22,"Non-cancer illness code, self-reported | Instance 2 | Array 22"
+p20002_i2_a23,"Non-cancer illness code, self-reported | Instance 2 | Array 23"
+p20002_i2_a24,"Non-cancer illness code, self-reported | Instance 2 | Array 24"
+p20002_i2_a25,"Non-cancer illness code, self-reported | Instance 2 | Array 25"
+p20002_i2_a26,"Non-cancer illness code, self-reported | Instance 2 | Array 26"
+p20002_i2_a27,"Non-cancer illness code, self-reported | Instance 2 | Array 27"
+p20002_i2_a28,"Non-cancer illness code, self-reported | Instance 2 | Array 28"
+p20002_i2_a29,"Non-cancer illness code, self-reported | Instance 2 | Array 29"
+p20002_i2_a30,"Non-cancer illness code, self-reported | Instance 2 | Array 30"
+p20002_i2_a31,"Non-cancer illness code, self-reported | Instance 2 | Array 31"
+p20002_i2_a32,"Non-cancer illness code, self-reported | Instance 2 | Array 32"
+p20002_i2_a33,"Non-cancer illness code, self-reported | Instance 2 | Array 33"
+p20002_i3_a0,"Non-cancer illness code, self-reported | Instance 3 | Array 0"
+p20002_i3_a1,"Non-cancer illness code, self-reported | Instance 3 | Array 1"
+p20002_i3_a2,"Non-cancer illness code, self-reported | Instance 3 | Array 2"
+p20002_i3_a3,"Non-cancer illness code, self-reported | Instance 3 | Array 3"
+p20002_i3_a4,"Non-cancer illness code, self-reported | Instance 3 | Array 4"
+p20002_i3_a5,"Non-cancer illness code, self-reported | Instance 3 | Array 5"
+p20002_i3_a6,"Non-cancer illness code, self-reported | Instance 3 | Array 6"
+p20002_i3_a7,"Non-cancer illness code, self-reported | Instance 3 | Array 7"
+p20002_i3_a8,"Non-cancer illness code, self-reported | Instance 3 | Array 8"
+p20002_i3_a9,"Non-cancer illness code, self-reported | Instance 3 | Array 9"
+p20002_i3_a10,"Non-cancer illness code, self-reported | Instance 3 | Array 10"
+p20002_i3_a11,"Non-cancer illness code, self-reported | Instance 3 | Array 11"
+p20002_i3_a12,"Non-cancer illness code, self-reported | Instance 3 | Array 12"
+p20002_i3_a13,"Non-cancer illness code, self-reported | Instance 3 | Array 13"
+p20002_i3_a14,"Non-cancer illness code, self-reported | Instance 3 | Array 14"
+p20002_i3_a15,"Non-cancer illness code, self-reported | Instance 3 | Array 15"
+p20002_i3_a16,"Non-cancer illness code, self-reported | Instance 3 | Array 16"
+p20002_i3_a17,"Non-cancer illness code, self-reported | Instance 3 | Array 17"
+p20002_i3_a18,"Non-cancer illness code, self-reported | Instance 3 | Array 18"
+p20002_i3_a19,"Non-cancer illness code, self-reported | Instance 3 | Array 19"
+p20002_i3_a20,"Non-cancer illness code, self-reported | Instance 3 | Array 20"
+p20002_i3_a21,"Non-cancer illness code, self-reported | Instance 3 | Array 21"
+p20002_i3_a22,"Non-cancer illness code, self-reported | Instance 3 | Array 22"
+p20002_i3_a23,"Non-cancer illness code, self-reported | Instance 3 | Array 23"
+p20002_i3_a24,"Non-cancer illness code, self-reported | Instance 3 | Array 24"
+p20002_i3_a25,"Non-cancer illness code, self-reported | Instance 3 | Array 25"
+p20002_i3_a26,"Non-cancer illness code, self-reported | Instance 3 | Array 26"
+p20002_i3_a27,"Non-cancer illness code, self-reported | Instance 3 | Array 27"
+p20002_i3_a28,"Non-cancer illness code, self-reported | Instance 3 | Array 28"
+p20002_i3_a29,"Non-cancer illness code, self-reported | Instance 3 | Array 29"
+p20002_i3_a30,"Non-cancer illness code, self-reported | Instance 3 | Array 30"
+p20002_i3_a31,"Non-cancer illness code, self-reported | Instance 3 | Array 31"
+p20002_i3_a32,"Non-cancer illness code, self-reported | Instance 3 | Array 32"
+p20002_i3_a33,"Non-cancer illness code, self-reported | Instance 3 | Array 33"
+p41270,Diagnoses - ICD10
+p41271,Diagnoses - ICD9
+p1647_i0,Country of birth (UK/elsewhere) | Instance 0
+p1647_i1,Country of birth (UK/elsewhere) | Instance 1
+p1647_i2,Country of birth (UK/elsewhere) | Instance 2

@@ -26,3 +26,4 @@ eid
 20002       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=6, docs\materials\ukb\Non_cancer_illness_code_self_reported_coding6.tsv
 41270       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19; docs\materials\ukb\ICD10_coding19.tsv
 41271       Coding	Meaning: Categorical (multiple), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=87; docs\materials\ukb\ICD9_coding87.tsv
+1647        Coding	Meaning: Categorical (single), https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=100420; 1, England; 2, Wales; 3, Scotland; 4, Northern Ireland; 5, Republic of Ireland; 6, Elsewhere; -1, Do not know; -3, Prefer not to answer
