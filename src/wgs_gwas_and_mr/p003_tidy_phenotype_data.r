@@ -37,7 +37,7 @@ phenotype_data %>%
   )
 women_data= phenotype_data %>%
   filter(
-    (p22001==0) | (is.na(p22001) & (p31==0))
+    (p22001==0 & p31==0) | (is.na(p22001) & (p31==0))
   ) %>%
   select(-c(p31, p22001))
 women_data %>% dim()
@@ -99,8 +99,8 @@ tidy_women_data= women_data %>%
     # p40006_i, p40001_i, p40002_i, p41202, p41203, p41204, p41205, p41270, p41271 is character
     # p40013_i, p20001_i, p20002_i is integer
     across(
-      c(starts_with("p40006_i"), 
-        starts_with("p40013_i"), 
+      c(starts_with("p40006_i"),
+        starts_with("p40013_i"),
         starts_with("p20001_i"),
         starts_with("p40001_i"),
         starts_with("p40002_i"),
