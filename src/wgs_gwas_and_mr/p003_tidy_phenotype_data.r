@@ -3,8 +3,9 @@
 # DESCRIPTION       : Tidy phenotype data for WGS GWAS and MR
 # DATE CREATED      : 2025-04-11
 # INPUT             : data\input\PhenotypeData_20250331.csv
-# OUTPUT            : data\output\PhenotypeData_20250331_tidy.csv
-#                     data\output\PhenotypeData_20250331_tidy.rds
+# OUTPUT            : data/output/D001TidyWomen.csv
+#                     data/output/D002DiagnosisCodeandDate.csv
+#                     data/output/D003TotalEligibleWomenID.csv
 # R VERSION         : 4.3.1
 # AUTHOR            : Zhen Lu
 ################################################################################################
@@ -63,6 +64,11 @@ tidy_women_data= women_data %>%
       p21000_i0 %in% c(-1, -3, NA) ~ 7,                 # Do not know
       TRUE ~ 999                                        # error
     ),
+    # European ancestry
+    European_ancestry= case_when(
+      p22006 == 1 ~ 1,             # European ancestry
+      TRUE ~ 0                     # Non-European ancestry
+    ),
     # Smoking status
     p20116= dplyr::case_when(
       p20116_i0 == 1 ~ 1,             #	Previous
@@ -86,7 +92,7 @@ tidy_women_data= women_data %>%
     Genotype_measurement_batch= case_when(
       p22000 %in% c(-11:-1,1000) ~ 1, # 1000, BiLEVE
       p22000 %in% c(1:95, 2000) ~ 2,  # 2000, Axiom
-      is.na(p22000) ~ 3,              # 0, 	  Do not know
+      is.na(p22000) ~ 3,              # 3, 	  Do not know
       TRUE ~ 999                      # error
     ),
     # Date of death
