@@ -1,0 +1,34 @@
+start at:
+Mon Apr 21 22:14:46 CST 2025
+PLINK v1.9.0-b.7.7 64-bit (22 Oct 2024)            cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data.log.
+Options in effect:
+  --bfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/QC_european/european_data_pass_qc
+  --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_ld_pruning.prune.in
+  --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_king_cutoff.king.cutoff.in.id
+  --keep-allele-order
+  --make-bed
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data
+  --threads 16
+
+515603 MB RAM detected; reserving 257801 MB for main workspace.
+613402 variants loaded from .bim file.
+205102 people (0 males, 205102 females) loaded from .fam.
+--extract: 260007 variants remaining.
+--keep: 195468 people remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 195468 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate in remaining samples is 0.996354.
+260007 variants and 195468 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data.bed
++
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data.bim
++
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+end at:
+Mon Apr 21 22:30:24 CST 2025

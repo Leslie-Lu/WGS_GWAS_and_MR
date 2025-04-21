@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=QC_euro
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=64            
+#SBATCH --ntasks-per-node=16            
 #SBATCH --time=17-00:00:00
 #SBATCH --mem=400G
 #SBATCH --partition=inspur
