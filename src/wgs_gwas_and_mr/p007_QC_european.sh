@@ -135,3 +135,24 @@
 # # output eligible pre-pca european sample id
 # awk 'NR>1 {print $1, $2}' "$output_path/european_king_cutoff.king.cutoff.in.id" > \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T001_EuropeanPrePCAID.txt"
+
+# # run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p009_european_pre_pca.r
+# # recode phenotype values (eligible_cc_cin3) in .fam
+# awk '{print $1, $4+1}' \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt" > \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt"
+# awk '{count[$4]++} END {for (value in count) print value, count[value]}' \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt"
+# awk '{count[$2]++} END {for (value in count) print value, count[value]}' \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt"
+# # replace the 6th column of .fam with the recoded phenotype values
+# awk 'NR==FNR {a[$1]=$2; next} {print $1,$2,$3,$4,$5,a[$1]}' \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt" \
+#   "$output_path/european_pre_pca_data.fam" > \
+#   "$output_path/european_pre_pca_data_outcome_cc_cin3.fam"
+# awk '{count[$6]++} END {for (value in count) print value, count[value]}' \
+#   "$output_path/european_pre_pca_data_outcome_cc_cin3.fam"
+# cp "$output_path/european_pre_pca_data.bed" \
+#   "$output_path/european_pre_pca_data_outcome_cc_cin3.bed"
+# cp "$output_path/european_pre_pca_data.bim" \
+#   "$output_path/european_pre_pca_data_outcome_cc_cin3.bim"
