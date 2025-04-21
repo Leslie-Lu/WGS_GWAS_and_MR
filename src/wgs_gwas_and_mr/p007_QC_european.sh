@@ -131,3 +131,7 @@
 #   --out "$output_path/european_pre_pca_data" \
 #   --threads $threads
 # # 260007 variants and 195468 people pass filters and QC.
+
+# # output eligible pre-pca european sample id
+# awk 'NR>1 {print $1, $2}' "$output_path/european_king_cutoff.king.cutoff.in.id" > \
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T001_EuropeanPrePCAID.txt"
