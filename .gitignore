@@ -4,6 +4,6 @@ docs
 etc
 tmp_ssh_data
 backup
+.vscode
 
 .lintr
-
