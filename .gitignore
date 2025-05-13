@@ -3,6 +3,7 @@ data
 docs
 etc
 tmp_ssh_data
+backup
 
 .lintr
 

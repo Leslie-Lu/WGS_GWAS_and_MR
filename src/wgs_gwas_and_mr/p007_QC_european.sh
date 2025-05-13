@@ -9,8 +9,8 @@
 #                   : https://cloufield.github.io/GWASTutorial/04_Data_QC/#plink-syntax
 # AUTHOR            : Zhen Lu
 ################################################################################################
-# DATE MODIFIED     : 2025-04-18
-# REASON            : Initial version
+# DATE MODIFIED     : 2025-05-12
+# REASON            : Update the --mind from 0.05 to 0.2 for the sample missing rate
 ################################################################################################
 
 # # 1. keep only European ancestry individuals on local
@@ -55,26 +55,26 @@
 #   --threads $threads
 # # run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p008_genotype_data_qc.ipynb
 
-# LD pruning
+# # LD pruning
 # plink \
 #   --bfile ${genotypeFile} \
 #   --maf 0.001 \
 #   --geno 0.05 \
-#   --mind 0.05 \
+#   --mind 0.2 \
 #   --hwe 1e-6 \
 #   --indep-pairwise 50 5 0.2 \
 #   --out "$output_path/plink_result_ld_pruning" \
 #   --threads $threads
 
-# Inbreeding F coefficient
+# # Inbreeding F coefficient
 # plink \
 #   --bfile ${genotypeFile} \
 #   --extract "$output_path/plink_result_ld_pruning.prune.in" \
 #   --het \
 #   --out "$output_path/plink_result_inbreeding" \
 #   --threads $threads
-# run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p008_genotype_data_qc.ipynb
-# awk 'NR>1 && $6>0.0201 || $6<-0.0232 {print $1,$2}' \
+# # run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p008_genotype_data_qc.ipynb
+# awk 'NR>1 && $6>0.0201 || $6<-0.0231 {print $1,$2}' \
 #   "$output_path/plink_result_inbreeding.het" > "$output_path/high_het.sample"
 
 # # Apply all the filters to obtain a clean dataset
@@ -82,7 +82,7 @@
 #   --bfile ${genotypeFile} \
 #   --maf 0.001 \
 #   --geno 0.05 \
-#   --mind 0.05 \
+#   --mind 0.2 \
 #   --hwe 1e-6 \
 #   --indep-pairwise 50 5 0.2 \
 #   --remove "$output_path/high_het.sample" \
@@ -130,12 +130,15 @@
 #   --make-bed \
 #   --out "$output_path/european_pre_pca_data" \
 #   --threads $threads
-# # 260007 variants and 195468 people pass filters and QC.
+# # Apr 21:            260007 variants and 195468 people pass filters and QC.
+# # Updated on May 13: 259839 variants and 203972 people pass filters and QC.
 
 # # output eligible pre-pca european sample id
 # awk 'NR>1 {print $1, $2}' "$output_path/european_king_cutoff.king.cutoff.in.id" > \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T001_EuropeanPrePCAID.txt"
 
+
+# # 4. pre-PCA
 # # run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p009_european_pre_pca.r
 # # recode phenotype values (eligible_cc_cin3) in .fam
 # awk '{print $1, $4+1}' \

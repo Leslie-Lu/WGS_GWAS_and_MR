@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=16            
 #SBATCH --time=17-00:00:00
-#SBATCH --mem=400G
+#SBATCH --mem=160G
 #SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
