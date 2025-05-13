@@ -141,6 +141,8 @@
 # # 4. pre-PCA
 # # run WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p009_european_pre_pca.r
 # # recode phenotype values (eligible_cc_cin3) in .fam
+
+# output_path="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european"
 # awk '{print $1, $4+1}' \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt" > \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt"
