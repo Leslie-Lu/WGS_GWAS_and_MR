@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=smartpca_euro
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=64            
+#SBATCH --ntasks-per-node=16            
 #SBATCH --time=50-00:00:00
-#SBATCH --mem=450G
-#SBATCH --partition=inspur
+#SBATCH --mem=1100G
+#SBATCH --partition=bigmem
 #SBATCH --output=/dev/null
 
 EXEC=/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p010_smartpca_european_outcome_cc_cin3.sh
