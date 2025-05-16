@@ -2,6 +2,7 @@
 # PROJECT NAME      : src\wgs_gwas_and_mr\p011_GWAS_power.r
 # DESCRIPTION       : Power analysis for GWAS
 # DATE CREATED      : 2025-05-16
+# INSPIRED BY       : https://cran.r-project.org/web/packages/genpwr/vignettes/vignette.html
 # OUTPUT            : output/Figure/F_001_GWAS_power.png
 # R VERSION         : 4.5.0
 # AUTHOR            : Zhen Lu
