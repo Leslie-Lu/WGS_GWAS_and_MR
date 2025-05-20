@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=smartpca_euro
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=16            
+#SBATCH --ntasks-per-node=16          
 #SBATCH --time=50-00:00:00
-#SBATCH --mem=1100G
+#SBATCH --mem=1450G
 #SBATCH --partition=bigmem
 #SBATCH --output=/dev/null
 
