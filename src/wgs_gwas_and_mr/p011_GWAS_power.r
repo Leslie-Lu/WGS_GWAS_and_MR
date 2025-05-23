@@ -22,7 +22,7 @@ library(data.table)
 library(purrr)
 library(genpwr)
 library(ggplot2)
-
+library(ggtext)
 
 test <- genpwr.calc(calc = "power", model = "logistic", ge.interaction = NULL,
                     N=c(198394 + 5578), Case.Rate=c(5578/(198394 + 5578)), k=NULL,
@@ -39,7 +39,7 @@ test$MAF %<>% factor(
 
 # The minimum OR and MAF for power = 0.80
 test %>%
-  filter(`Power_at_Alpha_5e-08` >= 0.80) %>%
+  filter(`Power_at_Alpha_5e-08` >= 0.80 & MAF=="MAF = 0.05") %>%
   arrange(OR, MAF) %>%
   head(1) %>%
   with(sprintf("The minimum OR for %s is %s", MAF, OR))
@@ -54,11 +54,18 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
   geom_line(aes(color=MAF), linewidth= 1.28) +
   expand_limits(x=c(1.00, 2.00), y=c(0, 1)) +
   scale_x_continuous(
-    breaks = seq(1.00, 2.00, 0.20),
-    labels = scales::label_number(accuracy = 0.01)
+    breaks = c(seq(1.00, 2.00, 0.20), 1.30, 1.68),
+    labels = function(x) {
+      case_when(
+        x == 1.30 ~ paste0("<span style='color:", scales::hue_pal()(6)[3], "'>1.30</span>"),
+        x == 1.68 ~ paste0("<span style='color:", scales::hue_pal()(6)[1], "'>1.68</span>"),
+        TRUE ~ paste0("<span style='color:black'>", scales::label_number(accuracy = 0.01)(x), "</span>")
+      )
+    }
   ) +
   scale_y_continuous(
     breaks = seq(0, 1.00, 0.20),
+    expand = expansion(mult = c(0, 0.028), add = c(0, 0)),
     labels = function(x) if_else(x==0, "0", sprintf("%.2f", x))
   ) +
   labs(x="Odds Ratio (OR)", y="GWAS Statistical Power") +
@@ -68,13 +75,21 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
   ) +
   theme_classic() +
   geom_hline(yintercept = 0.80, linewidth=0.88, linetype = "dashed") +
+  geom_segment(
+    x = 1.30, xend = 1.30, y = 0, yend = 0.80,
+    linewidth = 0.88, linetype = "dashed", color= scales::hue_pal()(6)[3]
+  ) +
+  geom_segment(
+    x = 1.68, xend = 1.68, y = 0, yend = 0.80,
+    linewidth = 0.88, linetype = "dashed", color= scales::hue_pal()(6)[1]
+  ) +
   theme(
     text= element_text(size= 18),
     axis.title = element_text(face = "bold"),
-    axis.text.x = element_text(size= 15, colour = "black"),
     axis.text.y = element_text(size= 15, colour = "black"),
     legend.position = "inside",
-    legend.position.inside = c(0.88, 0.4)
+    legend.position.inside = c(0.88, 0.4),
+    axis.text.x = element_markdown(size= 15)
   )
 p %>%
   ggsave(
