@@ -65,10 +65,13 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
   ) +
   scale_y_continuous(
     breaks = seq(0, 1.00, 0.20),
-    expand = expansion(mult = c(0, 0.028), add = c(0, 0)),
+    expand = expansion(mult = c(0, 0.08), add = c(0, 0)),
     labels = function(x) if_else(x==0, "0", sprintf("%.2f", x))
   ) +
-  labs(x="Odds Ratio (OR)", y="GWAS Statistical Power") +
+  labs(
+    x="Odds Ratio (OR)", y="GWAS Statistical Power",
+    title = "CIN3+ (CC and CIN3): Case/Control = 5,578/198,394; GWAS Significance Level = 5e-8",
+  ) +
   scale_color_discrete(
     name = "Minor Allele Frequency (MAF)", 
     guide = guide_legend(override.aes = list(linewidth = 2.8))
@@ -84,15 +87,16 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
     linewidth = 0.88, linetype = "dashed", color= scales::hue_pal()(6)[1]
   ) +
   theme(
-    text= element_text(size= 18),
+    text= element_text(size= 21),
     axis.title = element_text(face = "bold"),
-    axis.text.y = element_text(size= 15, colour = "black"),
+    axis.text.y = element_text(size= 18, colour = "black"),
     legend.position = "inside",
     legend.position.inside = c(0.88, 0.4),
-    axis.text.x = element_markdown(size= 15)
+    axis.text.x = element_markdown(size= 18),
+    plot.title = element_text(hjust = 0.5, vjust = 0.2, face = "bold", size = 24),
   )
 p %>%
   ggsave(
     filename = "output/Figure/F_001_GWAS_power.png",
-    width = 15, height = 9, dpi = 600
+    width = 17, height = 9, dpi = 600
   )
