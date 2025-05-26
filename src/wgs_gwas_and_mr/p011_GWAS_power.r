@@ -23,6 +23,13 @@ library(purrr)
 library(genpwr)
 library(ggplot2)
 library(ggtext)
+library(ggsci)
+library(showtext)
+
+col = pal_npg("nrc")(6)
+font_add("MetroSans", "data/input/MetroSans-Regular.ttf")
+showtext_auto()
+showtext_opts(dpi = 600)
 
 test <- genpwr.calc(calc = "power", model = "logistic", ge.interaction = NULL,
                     N=c(198394 + 5578), Case.Rate=c(5578/(198394 + 5578)), k=NULL,
@@ -52,14 +59,21 @@ test %>%
 # gwas power plot
 p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
   geom_line(aes(color=MAF), linewidth= 1.28) +
+  scale_color_manual(
+    values = setNames(col, levels(test$MAF)),
+    name = "Minor Allele Frequency (MAF)",
+    guide = guide_legend(override.aes = list(linewidth = 2.8))
+  ) +
   expand_limits(x=c(1.00, 2.00), y=c(0, 1)) +
   scale_x_continuous(
     breaks = c(seq(1.00, 2.00, 0.20), 1.30, 1.68),
     labels = function(x) {
       case_when(
-        x == 1.30 ~ paste0("<span style='color:", scales::hue_pal()(6)[3], "'>1.30</span>"),
-        x == 1.68 ~ paste0("<span style='color:", scales::hue_pal()(6)[1], "'>1.68</span>"),
-        TRUE ~ paste0("<span style='color:black'>", scales::label_number(accuracy = 0.01)(x), "</span>")
+        x == 1.30 ~ paste0("<span style='color:", col[3], "'>1.30</span>"),
+        x == 1.68 ~ paste0("<span style='color:", col[1], "'>1.68</span>"),
+        TRUE ~ paste0(
+          "<span style='color:black'>", scales::label_number(accuracy = 0.01)(x), "</span>"
+        )
       )
     }
   ) +
@@ -72,29 +86,28 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
     x="Odds Ratio (OR)", y="GWAS Statistical Power",
     title = "CIN3+ (CC and CIN3): Case/Control = 5,578/198,394; GWAS Significance Level = 5e-8",
   ) +
-  scale_color_discrete(
-    name = "Minor Allele Frequency (MAF)", 
-    guide = guide_legend(override.aes = list(linewidth = 2.8))
-  ) +
   theme_classic() +
   geom_hline(yintercept = 0.80, linewidth=0.88, linetype = "dashed") +
   geom_segment(
     x = 1.30, xend = 1.30, y = 0, yend = 0.80,
-    linewidth = 0.88, linetype = "dashed", color= scales::hue_pal()(6)[3]
+    linewidth = 0.88, linetype = "dashed", color= col[3]
   ) +
   geom_segment(
     x = 1.68, xend = 1.68, y = 0, yend = 0.80,
-    linewidth = 0.88, linetype = "dashed", color= scales::hue_pal()(6)[1]
+    linewidth = 0.88, linetype = "dashed", color= col[1]
   ) +
   theme(
-    text= element_text(size= 21),
+    text = element_text(family = "MetroSans", size= 21),
     axis.title = element_text(face = "bold"),
     axis.text.y = element_text(size= 18, colour = "black"),
     legend.position = "inside",
     legend.position.inside = c(0.88, 0.4),
     axis.text.x = element_markdown(size= 18),
-    plot.title = element_text(hjust = 0.5, vjust = 0.2, face = "bold", size = 24),
+    plot.title = element_text(hjust = 0.5, vjust = -0.8, face = "bold", size = 24),
+    plot.title.position = "plot",
+    plot.margin = margin(t = 15, r = 10, b = 10, l = 10, unit = "pt")
   )
+
 p %>%
   ggsave(
     filename = "output/Figure/F_001_GWAS_power.png",
