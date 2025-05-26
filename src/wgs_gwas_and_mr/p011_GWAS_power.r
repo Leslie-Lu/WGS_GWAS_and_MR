@@ -27,7 +27,11 @@ library(ggsci)
 library(showtext)
 
 col = pal_npg("nrc")(6)
-font_add("MetroSans", "data/input/MetroSans-Regular.ttf")
+font_add(
+  "MetroSans",
+  regular = "data/input/MetroSans-Regular.ttf",
+  bold = "data/input/MetroSans-Bold.ttf",
+)
 showtext_auto()
 showtext_opts(dpi = 600)
 
