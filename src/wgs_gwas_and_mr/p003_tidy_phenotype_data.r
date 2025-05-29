@@ -9,8 +9,9 @@
 # R VERSION         : 4.3.1
 # AUTHOR            : Zhen Lu
 ################################################################################################
-# DATE MODIFIED     : 2025-04-13
-# REASON            : Initial version
+# DATE MODIFIED     : 2025-05-27
+# REASON            : Double check for the figure of flowchart
+# OUTPUT            : data/output/D002_DiagnosisCodeandDate_ExcludedWomen_20250527.csv
 ################################################################################################
 rm(list = ls())
 gc()
@@ -19,9 +20,10 @@ library(magrittr)
 library(dplyr)
 library(data.table)
 library(purrr)
+library(lubridate)
 
 # load data
-phenotype_data= data.table::fread("./data/input/PhenotypeData_20250331.csv")
+phenotype_data= data.table::fread("./data/input/PhenotypeData_20250527.csv")
 phenotype_data %>% dim()
 phenotype_data %>% colnames() %>% head()
 phenotype_data$V1 %>% head()
@@ -42,6 +44,58 @@ women_data= phenotype_data %>%
   ) %>%
   select(-c(p31, p22001))
 women_data %>% dim()
+
+# Note: Update on 2025-05-27
+# Double check the number of excluded women
+women_data %>%
+  select(p21022) %>%
+  purrr::map(
+    ~ table(.x, useNA = "always")
+  )
+women_data %>%
+  select(p21022, p21001_i0, p22027, p22189) %>%
+  purrr::map(
+    ~ is.na(.x) %>% table(useNA = "always")
+  )
+women_data %>%
+  filter(
+    is.na(p21022) |            # Age at recruitment
+    is.na(p21001_i0) |         # Body mass index (BMI)
+    !is.na(p22027) |           # Outliers for heterozygosity or missing rate
+    is.na(p22189)              # Townsend deprivation index at recruitment
+    # p53_i0, Date_of_death, p40005_i is IDate
+  ) %>%
+  mutate(
+    Date_of_death= case_when(
+      !is.na(p40000_i0) ~ p40000_i0,
+      is.na(p40000_i0) & !is.na(p40000_i1) ~ p40000_i1,
+      is.na(p40000_i0) & is.na(p40000_i1) ~ p40000_i0,
+      TRUE ~ p40000_i0
+    ),
+  ) %>%
+  select(c(
+    eid,
+    starts_with("p53_i0"),
+    starts_with("p40005_i"),
+    starts_with("p40006_i"),
+    starts_with("p40013_i"),
+    starts_with("p20001_i"),
+    starts_with("p40001_i"),
+    starts_with("p40002_i"),
+    starts_with("p41202"),
+    starts_with("p41203"),
+    starts_with("p41204"),
+    starts_with("p41205"),
+    starts_with("p20002_i"),
+    starts_with("p41270"),
+    starts_with("p41271"),
+    starts_with("Date_of_death")
+  )) %>%
+  fwrite(
+    "./data/output/D002_DiagnosisCodeandDate_ExcludedWomen_20250527.csv",
+    row.names = FALSE
+  )
+
 
 # tidy the features
 tidy_women_data= women_data %>%
@@ -120,6 +174,17 @@ tidy_women_data= women_data %>%
       ),
       ~ as.character(.x)
     ),
+
+    # Note: Update on 2025-05-27
+    # check several fields including dates and age at key timepoints
+    across(
+      c(
+        starts_with("p20007_i"),
+        starts_with("p20009_i")
+      ),
+      ~ ifelse(is.na(.x) | .x %in% c(-1, 3), NA, .x)
+    ),
+    
     # Country of birth (UK/elsewhere)
     Country_of_birth= case_when(
       !is.na(p1647_i0) ~ p1647_i0,
@@ -153,9 +218,17 @@ tidy_women_data= women_data %>%
       p22009_a36, p22009_a37, p22009_a38, p22009_a39, p22009_a40,
       p53_i1, p53_i2, p53_i3,
       p40000_i0, p40000_i1,
-      p1647_i0, p1647_i1, p1647_i2
+      p1647_i0, p1647_i1, p1647_i2,
+
+      # Note: Update on 2025-05-27
+      # check several fields including dates and age at key timepoints
+      starts_with("p20006_i"), starts_with("p20008_i"),
+      starts_with("p20012_i"), starts_with("p20013_i"),
+      starts_with("p40007_i"), starts_with("p84_i"),
+      starts_with("p87_i"), starts_with("p2453_i"),
     )
   )
+tidy_women_data %>% dim()
 tidy_women_data %>% glimpse()
 
 # used for next step
@@ -175,7 +248,11 @@ D001TidyWomen= tidy_women_data %>%
     starts_with("p20002_i"),
     starts_with("p41270"),
     starts_with("p41271"),
-    starts_with("Date_of_death")
+    starts_with("Date_of_death"),
+    # Note: Update on 2025-05-27
+    starts_with("p20007_i"),
+    starts_with("p20009_i"),
+    starts_with("p40008_i"),
   ))
 D001TidyWomen %>% glimpse()
 D001TidyWomen %>%
@@ -200,7 +277,11 @@ D002DiagnosisCodeandDate= tidy_women_data %>%
     starts_with("p20002_i"),
     starts_with("p41270"),
     starts_with("p41271"),
-    starts_with("Date_of_death")
+    starts_with("Date_of_death"),
+    # Note: Update on 2025-05-27
+    starts_with("p20007_i"),
+    starts_with("p20009_i"),
+    starts_with("p40008_i"),
   ))
 D002DiagnosisCodeandDate %>% glimpse()
 D002DiagnosisCodeandDate %>%

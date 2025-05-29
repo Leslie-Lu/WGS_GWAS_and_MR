@@ -88,7 +88,7 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
   ) +
   labs(
     x="Odds Ratio (OR)", y="GWAS Statistical Power",
-    title = "CIN3+ (CC and CIN3): Case/Control = 5,578/198,394; GWAS Significance Level = 5e-8",
+    title = "CIN3+ (CC and CIN3) / Control = 5,578/198,394\nGWAS Significance Level = 5e-8",
   ) +
   theme_classic() +
   geom_hline(yintercept = 0.80, linewidth=0.88, linetype = "dashed") +
@@ -114,6 +114,6 @@ p= ggplot(test, aes(x=OR, y=`Power_at_Alpha_5e-08`)) +
 
 p %>%
   ggsave(
-    filename = "output/Figure/F_001_GWAS_power.png",
+    filename = "output/Figure/SF_005_GWAS_power.png",
     width = 17, height = 9, dpi = 600
   )

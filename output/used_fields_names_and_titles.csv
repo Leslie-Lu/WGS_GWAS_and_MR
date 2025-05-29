@@ -329,3 +329,671 @@ p41271,Diagnoses - ICD9
 p1647_i0,Country of birth (UK/elsewhere) | Instance 0
 p1647_i1,Country of birth (UK/elsewhere) | Instance 1
 p1647_i2,Country of birth (UK/elsewhere) | Instance 2
+p20006_i0_a0,Interpolated Year when cancer first diagnosed | Instance 0 | Array 0
+p20006_i0_a1,Interpolated Year when cancer first diagnosed | Instance 0 | Array 1
+p20006_i0_a2,Interpolated Year when cancer first diagnosed | Instance 0 | Array 2
+p20006_i0_a3,Interpolated Year when cancer first diagnosed | Instance 0 | Array 3
+p20006_i0_a4,Interpolated Year when cancer first diagnosed | Instance 0 | Array 4
+p20006_i0_a5,Interpolated Year when cancer first diagnosed | Instance 0 | Array 5
+p20006_i1_a0,Interpolated Year when cancer first diagnosed | Instance 1 | Array 0
+p20006_i1_a1,Interpolated Year when cancer first diagnosed | Instance 1 | Array 1
+p20006_i1_a2,Interpolated Year when cancer first diagnosed | Instance 1 | Array 2
+p20006_i1_a3,Interpolated Year when cancer first diagnosed | Instance 1 | Array 3
+p20006_i1_a4,Interpolated Year when cancer first diagnosed | Instance 1 | Array 4
+p20006_i1_a5,Interpolated Year when cancer first diagnosed | Instance 1 | Array 5
+p20006_i2_a0,Interpolated Year when cancer first diagnosed | Instance 2 | Array 0
+p20006_i2_a1,Interpolated Year when cancer first diagnosed | Instance 2 | Array 1
+p20006_i2_a2,Interpolated Year when cancer first diagnosed | Instance 2 | Array 2
+p20006_i2_a3,Interpolated Year when cancer first diagnosed | Instance 2 | Array 3
+p20006_i2_a4,Interpolated Year when cancer first diagnosed | Instance 2 | Array 4
+p20006_i2_a5,Interpolated Year when cancer first diagnosed | Instance 2 | Array 5
+p20006_i3_a0,Interpolated Year when cancer first diagnosed | Instance 3 | Array 0
+p20006_i3_a1,Interpolated Year when cancer first diagnosed | Instance 3 | Array 1
+p20006_i3_a2,Interpolated Year when cancer first diagnosed | Instance 3 | Array 2
+p20006_i3_a3,Interpolated Year when cancer first diagnosed | Instance 3 | Array 3
+p20006_i3_a4,Interpolated Year when cancer first diagnosed | Instance 3 | Array 4
+p20006_i3_a5,Interpolated Year when cancer first diagnosed | Instance 3 | Array 5
+p20007_i0_a0,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 0
+p20007_i0_a1,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 1
+p20007_i0_a2,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 2
+p20007_i0_a3,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 3
+p20007_i0_a4,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 4
+p20007_i0_a5,Interpolated Age of participant when cancer first diagnosed | Instance 0 | Array 5
+p20007_i1_a0,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 0
+p20007_i1_a1,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 1
+p20007_i1_a2,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 2
+p20007_i1_a3,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 3
+p20007_i1_a4,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 4
+p20007_i1_a5,Interpolated Age of participant when cancer first diagnosed | Instance 1 | Array 5
+p20007_i2_a0,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 0
+p20007_i2_a1,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 1
+p20007_i2_a2,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 2
+p20007_i2_a3,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 3
+p20007_i2_a4,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 4
+p20007_i2_a5,Interpolated Age of participant when cancer first diagnosed | Instance 2 | Array 5
+p20007_i3_a0,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 0
+p20007_i3_a1,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 1
+p20007_i3_a2,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 2
+p20007_i3_a3,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 3
+p20007_i3_a4,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 4
+p20007_i3_a5,Interpolated Age of participant when cancer first diagnosed | Instance 3 | Array 5
+p20008_i0_a0,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 0
+p20008_i0_a1,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 1
+p20008_i0_a2,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 2
+p20008_i0_a3,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 3
+p20008_i0_a4,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 4
+p20008_i0_a5,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 5
+p20008_i0_a6,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 6
+p20008_i0_a7,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 7
+p20008_i0_a8,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 8
+p20008_i0_a9,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 9
+p20008_i0_a10,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 10
+p20008_i0_a11,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 11
+p20008_i0_a12,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 12
+p20008_i0_a13,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 13
+p20008_i0_a14,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 14
+p20008_i0_a15,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 15
+p20008_i0_a16,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 16
+p20008_i0_a17,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 17
+p20008_i0_a18,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 18
+p20008_i0_a19,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 19
+p20008_i0_a20,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 20
+p20008_i0_a21,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 21
+p20008_i0_a22,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 22
+p20008_i0_a23,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 23
+p20008_i0_a24,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 24
+p20008_i0_a25,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 25
+p20008_i0_a26,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 26
+p20008_i0_a27,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 27
+p20008_i0_a28,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 28
+p20008_i0_a29,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 29
+p20008_i0_a30,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 30
+p20008_i0_a31,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 31
+p20008_i0_a32,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 32
+p20008_i0_a33,Interpolated Year when non-cancer illness first diagnosed | Instance 0 | Array 33
+p20008_i1_a0,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 0
+p20008_i1_a1,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 1
+p20008_i1_a2,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 2
+p20008_i1_a3,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 3
+p20008_i1_a4,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 4
+p20008_i1_a5,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 5
+p20008_i1_a6,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 6
+p20008_i1_a7,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 7
+p20008_i1_a8,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 8
+p20008_i1_a9,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 9
+p20008_i1_a10,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 10
+p20008_i1_a11,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 11
+p20008_i1_a12,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 12
+p20008_i1_a13,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 13
+p20008_i1_a14,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 14
+p20008_i1_a15,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 15
+p20008_i1_a16,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 16
+p20008_i1_a17,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 17
+p20008_i1_a18,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 18
+p20008_i1_a19,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 19
+p20008_i1_a20,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 20
+p20008_i1_a21,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 21
+p20008_i1_a22,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 22
+p20008_i1_a23,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 23
+p20008_i1_a24,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 24
+p20008_i1_a25,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 25
+p20008_i1_a26,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 26
+p20008_i1_a27,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 27
+p20008_i1_a28,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 28
+p20008_i1_a29,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 29
+p20008_i1_a30,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 30
+p20008_i1_a31,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 31
+p20008_i1_a32,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 32
+p20008_i1_a33,Interpolated Year when non-cancer illness first diagnosed | Instance 1 | Array 33
+p20008_i2_a0,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 0
+p20008_i2_a1,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 1
+p20008_i2_a2,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 2
+p20008_i2_a3,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 3
+p20008_i2_a4,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 4
+p20008_i2_a5,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 5
+p20008_i2_a6,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 6
+p20008_i2_a7,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 7
+p20008_i2_a8,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 8
+p20008_i2_a9,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 9
+p20008_i2_a10,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 10
+p20008_i2_a11,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 11
+p20008_i2_a12,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 12
+p20008_i2_a13,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 13
+p20008_i2_a14,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 14
+p20008_i2_a15,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 15
+p20008_i2_a16,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 16
+p20008_i2_a17,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 17
+p20008_i2_a18,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 18
+p20008_i2_a19,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 19
+p20008_i2_a20,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 20
+p20008_i2_a21,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 21
+p20008_i2_a22,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 22
+p20008_i2_a23,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 23
+p20008_i2_a24,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 24
+p20008_i2_a25,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 25
+p20008_i2_a26,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 26
+p20008_i2_a27,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 27
+p20008_i2_a28,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 28
+p20008_i2_a29,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 29
+p20008_i2_a30,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 30
+p20008_i2_a31,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 31
+p20008_i2_a32,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 32
+p20008_i2_a33,Interpolated Year when non-cancer illness first diagnosed | Instance 2 | Array 33
+p20008_i3_a0,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 0
+p20008_i3_a1,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 1
+p20008_i3_a2,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 2
+p20008_i3_a3,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 3
+p20008_i3_a4,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 4
+p20008_i3_a5,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 5
+p20008_i3_a6,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 6
+p20008_i3_a7,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 7
+p20008_i3_a8,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 8
+p20008_i3_a9,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 9
+p20008_i3_a10,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 10
+p20008_i3_a11,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 11
+p20008_i3_a12,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 12
+p20008_i3_a13,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 13
+p20008_i3_a14,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 14
+p20008_i3_a15,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 15
+p20008_i3_a16,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 16
+p20008_i3_a17,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 17
+p20008_i3_a18,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 18
+p20008_i3_a19,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 19
+p20008_i3_a20,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 20
+p20008_i3_a21,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 21
+p20008_i3_a22,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 22
+p20008_i3_a23,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 23
+p20008_i3_a24,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 24
+p20008_i3_a25,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 25
+p20008_i3_a26,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 26
+p20008_i3_a27,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 27
+p20008_i3_a28,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 28
+p20008_i3_a29,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 29
+p20008_i3_a30,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 30
+p20008_i3_a31,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 31
+p20008_i3_a32,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 32
+p20008_i3_a33,Interpolated Year when non-cancer illness first diagnosed | Instance 3 | Array 33
+p20009_i0_a0,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 0
+p20009_i0_a1,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 1
+p20009_i0_a2,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 2
+p20009_i0_a3,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 3
+p20009_i0_a4,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 4
+p20009_i0_a5,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 5
+p20009_i0_a6,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 6
+p20009_i0_a7,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 7
+p20009_i0_a8,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 8
+p20009_i0_a9,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 9
+p20009_i0_a10,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 10
+p20009_i0_a11,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 11
+p20009_i0_a12,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 12
+p20009_i0_a13,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 13
+p20009_i0_a14,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 14
+p20009_i0_a15,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 15
+p20009_i0_a16,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 16
+p20009_i0_a17,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 17
+p20009_i0_a18,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 18
+p20009_i0_a19,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 19
+p20009_i0_a20,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 20
+p20009_i0_a21,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 21
+p20009_i0_a22,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 22
+p20009_i0_a23,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 23
+p20009_i0_a24,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 24
+p20009_i0_a25,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 25
+p20009_i0_a26,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 26
+p20009_i0_a27,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 27
+p20009_i0_a28,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 28
+p20009_i0_a29,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 29
+p20009_i0_a30,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 30
+p20009_i0_a31,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 31
+p20009_i0_a32,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 32
+p20009_i0_a33,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 0 | Array 33
+p20009_i1_a0,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 0
+p20009_i1_a1,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 1
+p20009_i1_a2,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 2
+p20009_i1_a3,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 3
+p20009_i1_a4,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 4
+p20009_i1_a5,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 5
+p20009_i1_a6,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 6
+p20009_i1_a7,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 7
+p20009_i1_a8,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 8
+p20009_i1_a9,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 9
+p20009_i1_a10,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 10
+p20009_i1_a11,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 11
+p20009_i1_a12,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 12
+p20009_i1_a13,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 13
+p20009_i1_a14,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 14
+p20009_i1_a15,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 15
+p20009_i1_a16,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 16
+p20009_i1_a17,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 17
+p20009_i1_a18,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 18
+p20009_i1_a19,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 19
+p20009_i1_a20,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 20
+p20009_i1_a21,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 21
+p20009_i1_a22,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 22
+p20009_i1_a23,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 23
+p20009_i1_a24,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 24
+p20009_i1_a25,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 25
+p20009_i1_a26,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 26
+p20009_i1_a27,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 27
+p20009_i1_a28,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 28
+p20009_i1_a29,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 29
+p20009_i1_a30,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 30
+p20009_i1_a31,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 31
+p20009_i1_a32,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 32
+p20009_i1_a33,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 1 | Array 33
+p20009_i2_a0,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 0
+p20009_i2_a1,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 1
+p20009_i2_a2,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 2
+p20009_i2_a3,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 3
+p20009_i2_a4,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 4
+p20009_i2_a5,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 5
+p20009_i2_a6,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 6
+p20009_i2_a7,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 7
+p20009_i2_a8,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 8
+p20009_i2_a9,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 9
+p20009_i2_a10,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 10
+p20009_i2_a11,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 11
+p20009_i2_a12,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 12
+p20009_i2_a13,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 13
+p20009_i2_a14,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 14
+p20009_i2_a15,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 15
+p20009_i2_a16,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 16
+p20009_i2_a17,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 17
+p20009_i2_a18,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 18
+p20009_i2_a19,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 19
+p20009_i2_a20,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 20
+p20009_i2_a21,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 21
+p20009_i2_a22,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 22
+p20009_i2_a23,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 23
+p20009_i2_a24,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 24
+p20009_i2_a25,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 25
+p20009_i2_a26,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 26
+p20009_i2_a27,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 27
+p20009_i2_a28,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 28
+p20009_i2_a29,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 29
+p20009_i2_a30,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 30
+p20009_i2_a31,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 31
+p20009_i2_a32,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 32
+p20009_i2_a33,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 2 | Array 33
+p20009_i3_a0,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 0
+p20009_i3_a1,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 1
+p20009_i3_a2,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 2
+p20009_i3_a3,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 3
+p20009_i3_a4,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 4
+p20009_i3_a5,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 5
+p20009_i3_a6,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 6
+p20009_i3_a7,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 7
+p20009_i3_a8,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 8
+p20009_i3_a9,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 9
+p20009_i3_a10,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 10
+p20009_i3_a11,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 11
+p20009_i3_a12,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 12
+p20009_i3_a13,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 13
+p20009_i3_a14,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 14
+p20009_i3_a15,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 15
+p20009_i3_a16,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 16
+p20009_i3_a17,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 17
+p20009_i3_a18,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 18
+p20009_i3_a19,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 19
+p20009_i3_a20,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 20
+p20009_i3_a21,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 21
+p20009_i3_a22,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 22
+p20009_i3_a23,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 23
+p20009_i3_a24,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 24
+p20009_i3_a25,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 25
+p20009_i3_a26,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 26
+p20009_i3_a27,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 27
+p20009_i3_a28,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 28
+p20009_i3_a29,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 29
+p20009_i3_a30,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 30
+p20009_i3_a31,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 31
+p20009_i3_a32,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 32
+p20009_i3_a33,Interpolated Age of participant when non-cancer illness first diagnosed | Instance 3 | Array 33
+p20012_i0_a0,Method of recording time when cancer first diagnosed | Instance 0 | Array 0
+p20012_i0_a1,Method of recording time when cancer first diagnosed | Instance 0 | Array 1
+p20012_i0_a2,Method of recording time when cancer first diagnosed | Instance 0 | Array 2
+p20012_i0_a3,Method of recording time when cancer first diagnosed | Instance 0 | Array 3
+p20012_i0_a4,Method of recording time when cancer first diagnosed | Instance 0 | Array 4
+p20012_i0_a5,Method of recording time when cancer first diagnosed | Instance 0 | Array 5
+p20012_i1_a0,Method of recording time when cancer first diagnosed | Instance 1 | Array 0
+p20012_i1_a1,Method of recording time when cancer first diagnosed | Instance 1 | Array 1
+p20012_i1_a2,Method of recording time when cancer first diagnosed | Instance 1 | Array 2
+p20012_i1_a3,Method of recording time when cancer first diagnosed | Instance 1 | Array 3
+p20012_i1_a4,Method of recording time when cancer first diagnosed | Instance 1 | Array 4
+p20012_i1_a5,Method of recording time when cancer first diagnosed | Instance 1 | Array 5
+p20012_i2_a0,Method of recording time when cancer first diagnosed | Instance 2 | Array 0
+p20012_i2_a1,Method of recording time when cancer first diagnosed | Instance 2 | Array 1
+p20012_i2_a2,Method of recording time when cancer first diagnosed | Instance 2 | Array 2
+p20012_i2_a3,Method of recording time when cancer first diagnosed | Instance 2 | Array 3
+p20012_i2_a4,Method of recording time when cancer first diagnosed | Instance 2 | Array 4
+p20012_i2_a5,Method of recording time when cancer first diagnosed | Instance 2 | Array 5
+p20012_i3_a0,Method of recording time when cancer first diagnosed | Instance 3 | Array 0
+p20012_i3_a1,Method of recording time when cancer first diagnosed | Instance 3 | Array 1
+p20012_i3_a2,Method of recording time when cancer first diagnosed | Instance 3 | Array 2
+p20012_i3_a3,Method of recording time when cancer first diagnosed | Instance 3 | Array 3
+p20012_i3_a4,Method of recording time when cancer first diagnosed | Instance 3 | Array 4
+p20012_i3_a5,Method of recording time when cancer first diagnosed | Instance 3 | Array 5
+p20013_i0_a0,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 0
+p20013_i0_a1,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 1
+p20013_i0_a2,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 2
+p20013_i0_a3,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 3
+p20013_i0_a4,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 4
+p20013_i0_a5,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 5
+p20013_i0_a6,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 6
+p20013_i0_a7,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 7
+p20013_i0_a8,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 8
+p20013_i0_a9,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 9
+p20013_i0_a10,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 10
+p20013_i0_a11,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 11
+p20013_i0_a12,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 12
+p20013_i0_a13,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 13
+p20013_i0_a14,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 14
+p20013_i0_a15,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 15
+p20013_i0_a16,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 16
+p20013_i0_a17,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 17
+p20013_i0_a18,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 18
+p20013_i0_a19,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 19
+p20013_i0_a20,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 20
+p20013_i0_a21,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 21
+p20013_i0_a22,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 22
+p20013_i0_a23,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 23
+p20013_i0_a24,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 24
+p20013_i0_a25,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 25
+p20013_i0_a26,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 26
+p20013_i0_a27,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 27
+p20013_i0_a28,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 28
+p20013_i0_a29,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 29
+p20013_i0_a30,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 30
+p20013_i0_a31,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 31
+p20013_i0_a32,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 32
+p20013_i0_a33,Method of recording time when non-cancer illness first diagnosed | Instance 0 | Array 33
+p20013_i1_a0,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 0
+p20013_i1_a1,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 1
+p20013_i1_a2,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 2
+p20013_i1_a3,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 3
+p20013_i1_a4,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 4
+p20013_i1_a5,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 5
+p20013_i1_a6,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 6
+p20013_i1_a7,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 7
+p20013_i1_a8,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 8
+p20013_i1_a9,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 9
+p20013_i1_a10,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 10
+p20013_i1_a11,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 11
+p20013_i1_a12,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 12
+p20013_i1_a13,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 13
+p20013_i1_a14,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 14
+p20013_i1_a15,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 15
+p20013_i1_a16,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 16
+p20013_i1_a17,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 17
+p20013_i1_a18,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 18
+p20013_i1_a19,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 19
+p20013_i1_a20,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 20
+p20013_i1_a21,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 21
+p20013_i1_a22,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 22
+p20013_i1_a23,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 23
+p20013_i1_a24,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 24
+p20013_i1_a25,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 25
+p20013_i1_a26,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 26
+p20013_i1_a27,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 27
+p20013_i1_a28,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 28
+p20013_i1_a29,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 29
+p20013_i1_a30,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 30
+p20013_i1_a31,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 31
+p20013_i1_a32,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 32
+p20013_i1_a33,Method of recording time when non-cancer illness first diagnosed | Instance 1 | Array 33
+p20013_i2_a0,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 0
+p20013_i2_a1,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 1
+p20013_i2_a2,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 2
+p20013_i2_a3,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 3
+p20013_i2_a4,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 4
+p20013_i2_a5,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 5
+p20013_i2_a6,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 6
+p20013_i2_a7,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 7
+p20013_i2_a8,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 8
+p20013_i2_a9,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 9
+p20013_i2_a10,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 10
+p20013_i2_a11,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 11
+p20013_i2_a12,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 12
+p20013_i2_a13,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 13
+p20013_i2_a14,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 14
+p20013_i2_a15,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 15
+p20013_i2_a16,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 16
+p20013_i2_a17,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 17
+p20013_i2_a18,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 18
+p20013_i2_a19,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 19
+p20013_i2_a20,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 20
+p20013_i2_a21,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 21
+p20013_i2_a22,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 22
+p20013_i2_a23,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 23
+p20013_i2_a24,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 24
+p20013_i2_a25,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 25
+p20013_i2_a26,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 26
+p20013_i2_a27,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 27
+p20013_i2_a28,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 28
+p20013_i2_a29,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 29
+p20013_i2_a30,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 30
+p20013_i2_a31,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 31
+p20013_i2_a32,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 32
+p20013_i2_a33,Method of recording time when non-cancer illness first diagnosed | Instance 2 | Array 33
+p20013_i3_a0,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 0
+p20013_i3_a1,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 1
+p20013_i3_a2,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 2
+p20013_i3_a3,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 3
+p20013_i3_a4,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 4
+p20013_i3_a5,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 5
+p20013_i3_a6,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 6
+p20013_i3_a7,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 7
+p20013_i3_a8,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 8
+p20013_i3_a9,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 9
+p20013_i3_a10,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 10
+p20013_i3_a11,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 11
+p20013_i3_a12,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 12
+p20013_i3_a13,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 13
+p20013_i3_a14,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 14
+p20013_i3_a15,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 15
+p20013_i3_a16,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 16
+p20013_i3_a17,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 17
+p20013_i3_a18,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 18
+p20013_i3_a19,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 19
+p20013_i3_a20,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 20
+p20013_i3_a21,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 21
+p20013_i3_a22,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 22
+p20013_i3_a23,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 23
+p20013_i3_a24,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 24
+p20013_i3_a25,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 25
+p20013_i3_a26,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 26
+p20013_i3_a27,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 27
+p20013_i3_a28,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 28
+p20013_i3_a29,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 29
+p20013_i3_a30,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 30
+p20013_i3_a31,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 31
+p20013_i3_a32,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 32
+p20013_i3_a33,Method of recording time when non-cancer illness first diagnosed | Instance 3 | Array 33
+p40007_i0,Age at death | Instance 0
+p40007_i1,Age at death | Instance 1
+p40008_i0,Age at cancer diagnosis | Instance 0
+p40008_i1,Age at cancer diagnosis | Instance 1
+p40008_i2,Age at cancer diagnosis | Instance 2
+p40008_i3,Age at cancer diagnosis | Instance 3
+p40008_i4,Age at cancer diagnosis | Instance 4
+p40008_i5,Age at cancer diagnosis | Instance 5
+p40008_i6,Age at cancer diagnosis | Instance 6
+p40008_i7,Age at cancer diagnosis | Instance 7
+p40008_i8,Age at cancer diagnosis | Instance 8
+p40008_i9,Age at cancer diagnosis | Instance 9
+p40008_i10,Age at cancer diagnosis | Instance 10
+p40008_i11,Age at cancer diagnosis | Instance 11
+p40008_i12,Age at cancer diagnosis | Instance 12
+p40008_i13,Age at cancer diagnosis | Instance 13
+p40008_i14,Age at cancer diagnosis | Instance 14
+p40008_i15,Age at cancer diagnosis | Instance 15
+p40008_i16,Age at cancer diagnosis | Instance 16
+p40008_i17,Age at cancer diagnosis | Instance 17
+p40008_i18,Age at cancer diagnosis | Instance 18
+p40008_i19,Age at cancer diagnosis | Instance 19
+p40008_i20,Age at cancer diagnosis | Instance 20
+p40008_i21,Age at cancer diagnosis | Instance 21
+p84_i0_a0,Cancer year/age first occurred | Instance 0 | Array 0
+p84_i0_a1,Cancer year/age first occurred | Instance 0 | Array 1
+p84_i0_a2,Cancer year/age first occurred | Instance 0 | Array 2
+p84_i0_a3,Cancer year/age first occurred | Instance 0 | Array 3
+p84_i0_a4,Cancer year/age first occurred | Instance 0 | Array 4
+p84_i0_a5,Cancer year/age first occurred | Instance 0 | Array 5
+p84_i1_a0,Cancer year/age first occurred | Instance 1 | Array 0
+p84_i1_a1,Cancer year/age first occurred | Instance 1 | Array 1
+p84_i1_a2,Cancer year/age first occurred | Instance 1 | Array 2
+p84_i1_a3,Cancer year/age first occurred | Instance 1 | Array 3
+p84_i1_a4,Cancer year/age first occurred | Instance 1 | Array 4
+p84_i1_a5,Cancer year/age first occurred | Instance 1 | Array 5
+p84_i2_a0,Cancer year/age first occurred | Instance 2 | Array 0
+p84_i2_a1,Cancer year/age first occurred | Instance 2 | Array 1
+p84_i2_a2,Cancer year/age first occurred | Instance 2 | Array 2
+p84_i2_a3,Cancer year/age first occurred | Instance 2 | Array 3
+p84_i2_a4,Cancer year/age first occurred | Instance 2 | Array 4
+p84_i2_a5,Cancer year/age first occurred | Instance 2 | Array 5
+p84_i3_a0,Cancer year/age first occurred | Instance 3 | Array 0
+p84_i3_a1,Cancer year/age first occurred | Instance 3 | Array 1
+p84_i3_a2,Cancer year/age first occurred | Instance 3 | Array 2
+p84_i3_a3,Cancer year/age first occurred | Instance 3 | Array 3
+p84_i3_a4,Cancer year/age first occurred | Instance 3 | Array 4
+p84_i3_a5,Cancer year/age first occurred | Instance 3 | Array 5
+p87_i0_a0,Non-cancer illness year/age first occurred | Instance 0 | Array 0
+p87_i0_a1,Non-cancer illness year/age first occurred | Instance 0 | Array 1
+p87_i0_a2,Non-cancer illness year/age first occurred | Instance 0 | Array 2
+p87_i0_a3,Non-cancer illness year/age first occurred | Instance 0 | Array 3
+p87_i0_a4,Non-cancer illness year/age first occurred | Instance 0 | Array 4
+p87_i0_a5,Non-cancer illness year/age first occurred | Instance 0 | Array 5
+p87_i0_a6,Non-cancer illness year/age first occurred | Instance 0 | Array 6
+p87_i0_a7,Non-cancer illness year/age first occurred | Instance 0 | Array 7
+p87_i0_a8,Non-cancer illness year/age first occurred | Instance 0 | Array 8
+p87_i0_a9,Non-cancer illness year/age first occurred | Instance 0 | Array 9
+p87_i0_a10,Non-cancer illness year/age first occurred | Instance 0 | Array 10
+p87_i0_a11,Non-cancer illness year/age first occurred | Instance 0 | Array 11
+p87_i0_a12,Non-cancer illness year/age first occurred | Instance 0 | Array 12
+p87_i0_a13,Non-cancer illness year/age first occurred | Instance 0 | Array 13
+p87_i0_a14,Non-cancer illness year/age first occurred | Instance 0 | Array 14
+p87_i0_a15,Non-cancer illness year/age first occurred | Instance 0 | Array 15
+p87_i0_a16,Non-cancer illness year/age first occurred | Instance 0 | Array 16
+p87_i0_a17,Non-cancer illness year/age first occurred | Instance 0 | Array 17
+p87_i0_a18,Non-cancer illness year/age first occurred | Instance 0 | Array 18
+p87_i0_a19,Non-cancer illness year/age first occurred | Instance 0 | Array 19
+p87_i0_a20,Non-cancer illness year/age first occurred | Instance 0 | Array 20
+p87_i0_a21,Non-cancer illness year/age first occurred | Instance 0 | Array 21
+p87_i0_a22,Non-cancer illness year/age first occurred | Instance 0 | Array 22
+p87_i0_a23,Non-cancer illness year/age first occurred | Instance 0 | Array 23
+p87_i0_a24,Non-cancer illness year/age first occurred | Instance 0 | Array 24
+p87_i0_a25,Non-cancer illness year/age first occurred | Instance 0 | Array 25
+p87_i0_a26,Non-cancer illness year/age first occurred | Instance 0 | Array 26
+p87_i0_a27,Non-cancer illness year/age first occurred | Instance 0 | Array 27
+p87_i0_a28,Non-cancer illness year/age first occurred | Instance 0 | Array 28
+p87_i0_a29,Non-cancer illness year/age first occurred | Instance 0 | Array 29
+p87_i0_a30,Non-cancer illness year/age first occurred | Instance 0 | Array 30
+p87_i0_a31,Non-cancer illness year/age first occurred | Instance 0 | Array 31
+p87_i0_a32,Non-cancer illness year/age first occurred | Instance 0 | Array 32
+p87_i0_a33,Non-cancer illness year/age first occurred | Instance 0 | Array 33
+p87_i1_a0,Non-cancer illness year/age first occurred | Instance 1 | Array 0
+p87_i1_a1,Non-cancer illness year/age first occurred | Instance 1 | Array 1
+p87_i1_a2,Non-cancer illness year/age first occurred | Instance 1 | Array 2
+p87_i1_a3,Non-cancer illness year/age first occurred | Instance 1 | Array 3
+p87_i1_a4,Non-cancer illness year/age first occurred | Instance 1 | Array 4
+p87_i1_a5,Non-cancer illness year/age first occurred | Instance 1 | Array 5
+p87_i1_a6,Non-cancer illness year/age first occurred | Instance 1 | Array 6
+p87_i1_a7,Non-cancer illness year/age first occurred | Instance 1 | Array 7
+p87_i1_a8,Non-cancer illness year/age first occurred | Instance 1 | Array 8
+p87_i1_a9,Non-cancer illness year/age first occurred | Instance 1 | Array 9
+p87_i1_a10,Non-cancer illness year/age first occurred | Instance 1 | Array 10
+p87_i1_a11,Non-cancer illness year/age first occurred | Instance 1 | Array 11
+p87_i1_a12,Non-cancer illness year/age first occurred | Instance 1 | Array 12
+p87_i1_a13,Non-cancer illness year/age first occurred | Instance 1 | Array 13
+p87_i1_a14,Non-cancer illness year/age first occurred | Instance 1 | Array 14
+p87_i1_a15,Non-cancer illness year/age first occurred | Instance 1 | Array 15
+p87_i1_a16,Non-cancer illness year/age first occurred | Instance 1 | Array 16
+p87_i1_a17,Non-cancer illness year/age first occurred | Instance 1 | Array 17
+p87_i1_a18,Non-cancer illness year/age first occurred | Instance 1 | Array 18
+p87_i1_a19,Non-cancer illness year/age first occurred | Instance 1 | Array 19
+p87_i1_a20,Non-cancer illness year/age first occurred | Instance 1 | Array 20
+p87_i1_a21,Non-cancer illness year/age first occurred | Instance 1 | Array 21
+p87_i1_a22,Non-cancer illness year/age first occurred | Instance 1 | Array 22
+p87_i1_a23,Non-cancer illness year/age first occurred | Instance 1 | Array 23
+p87_i1_a24,Non-cancer illness year/age first occurred | Instance 1 | Array 24
+p87_i1_a25,Non-cancer illness year/age first occurred | Instance 1 | Array 25
+p87_i1_a26,Non-cancer illness year/age first occurred | Instance 1 | Array 26
+p87_i1_a27,Non-cancer illness year/age first occurred | Instance 1 | Array 27
+p87_i1_a28,Non-cancer illness year/age first occurred | Instance 1 | Array 28
+p87_i1_a29,Non-cancer illness year/age first occurred | Instance 1 | Array 29
+p87_i1_a30,Non-cancer illness year/age first occurred | Instance 1 | Array 30
+p87_i1_a31,Non-cancer illness year/age first occurred | Instance 1 | Array 31
+p87_i1_a32,Non-cancer illness year/age first occurred | Instance 1 | Array 32
+p87_i1_a33,Non-cancer illness year/age first occurred | Instance 1 | Array 33
+p87_i2_a0,Non-cancer illness year/age first occurred | Instance 2 | Array 0
+p87_i2_a1,Non-cancer illness year/age first occurred | Instance 2 | Array 1
+p87_i2_a2,Non-cancer illness year/age first occurred | Instance 2 | Array 2
+p87_i2_a3,Non-cancer illness year/age first occurred | Instance 2 | Array 3
+p87_i2_a4,Non-cancer illness year/age first occurred | Instance 2 | Array 4
+p87_i2_a5,Non-cancer illness year/age first occurred | Instance 2 | Array 5
+p87_i2_a6,Non-cancer illness year/age first occurred | Instance 2 | Array 6
+p87_i2_a7,Non-cancer illness year/age first occurred | Instance 2 | Array 7
+p87_i2_a8,Non-cancer illness year/age first occurred | Instance 2 | Array 8
+p87_i2_a9,Non-cancer illness year/age first occurred | Instance 2 | Array 9
+p87_i2_a10,Non-cancer illness year/age first occurred | Instance 2 | Array 10
+p87_i2_a11,Non-cancer illness year/age first occurred | Instance 2 | Array 11
+p87_i2_a12,Non-cancer illness year/age first occurred | Instance 2 | Array 12
+p87_i2_a13,Non-cancer illness year/age first occurred | Instance 2 | Array 13
+p87_i2_a14,Non-cancer illness year/age first occurred | Instance 2 | Array 14
+p87_i2_a15,Non-cancer illness year/age first occurred | Instance 2 | Array 15
+p87_i2_a16,Non-cancer illness year/age first occurred | Instance 2 | Array 16
+p87_i2_a17,Non-cancer illness year/age first occurred | Instance 2 | Array 17
+p87_i2_a18,Non-cancer illness year/age first occurred | Instance 2 | Array 18
+p87_i2_a19,Non-cancer illness year/age first occurred | Instance 2 | Array 19
+p87_i2_a20,Non-cancer illness year/age first occurred | Instance 2 | Array 20
+p87_i2_a21,Non-cancer illness year/age first occurred | Instance 2 | Array 21
+p87_i2_a22,Non-cancer illness year/age first occurred | Instance 2 | Array 22
+p87_i2_a23,Non-cancer illness year/age first occurred | Instance 2 | Array 23
+p87_i2_a24,Non-cancer illness year/age first occurred | Instance 2 | Array 24
+p87_i2_a25,Non-cancer illness year/age first occurred | Instance 2 | Array 25
+p87_i2_a26,Non-cancer illness year/age first occurred | Instance 2 | Array 26
+p87_i2_a27,Non-cancer illness year/age first occurred | Instance 2 | Array 27
+p87_i2_a28,Non-cancer illness year/age first occurred | Instance 2 | Array 28
+p87_i2_a29,Non-cancer illness year/age first occurred | Instance 2 | Array 29
+p87_i2_a30,Non-cancer illness year/age first occurred | Instance 2 | Array 30
+p87_i2_a31,Non-cancer illness year/age first occurred | Instance 2 | Array 31
+p87_i2_a32,Non-cancer illness year/age first occurred | Instance 2 | Array 32
+p87_i2_a33,Non-cancer illness year/age first occurred | Instance 2 | Array 33
+p87_i3_a0,Non-cancer illness year/age first occurred | Instance 3 | Array 0
+p87_i3_a1,Non-cancer illness year/age first occurred | Instance 3 | Array 1
+p87_i3_a2,Non-cancer illness year/age first occurred | Instance 3 | Array 2
+p87_i3_a3,Non-cancer illness year/age first occurred | Instance 3 | Array 3
+p87_i3_a4,Non-cancer illness year/age first occurred | Instance 3 | Array 4
+p87_i3_a5,Non-cancer illness year/age first occurred | Instance 3 | Array 5
+p87_i3_a6,Non-cancer illness year/age first occurred | Instance 3 | Array 6
+p87_i3_a7,Non-cancer illness year/age first occurred | Instance 3 | Array 7
+p87_i3_a8,Non-cancer illness year/age first occurred | Instance 3 | Array 8
+p87_i3_a9,Non-cancer illness year/age first occurred | Instance 3 | Array 9
+p87_i3_a10,Non-cancer illness year/age first occurred | Instance 3 | Array 10
+p87_i3_a11,Non-cancer illness year/age first occurred | Instance 3 | Array 11
+p87_i3_a12,Non-cancer illness year/age first occurred | Instance 3 | Array 12
+p87_i3_a13,Non-cancer illness year/age first occurred | Instance 3 | Array 13
+p87_i3_a14,Non-cancer illness year/age first occurred | Instance 3 | Array 14
+p87_i3_a15,Non-cancer illness year/age first occurred | Instance 3 | Array 15
+p87_i3_a16,Non-cancer illness year/age first occurred | Instance 3 | Array 16
+p87_i3_a17,Non-cancer illness year/age first occurred | Instance 3 | Array 17
+p87_i3_a18,Non-cancer illness year/age first occurred | Instance 3 | Array 18
+p87_i3_a19,Non-cancer illness year/age first occurred | Instance 3 | Array 19
+p87_i3_a20,Non-cancer illness year/age first occurred | Instance 3 | Array 20
+p87_i3_a21,Non-cancer illness year/age first occurred | Instance 3 | Array 21
+p87_i3_a22,Non-cancer illness year/age first occurred | Instance 3 | Array 22
+p87_i3_a23,Non-cancer illness year/age first occurred | Instance 3 | Array 23
+p87_i3_a24,Non-cancer illness year/age first occurred | Instance 3 | Array 24
+p87_i3_a25,Non-cancer illness year/age first occurred | Instance 3 | Array 25
+p87_i3_a26,Non-cancer illness year/age first occurred | Instance 3 | Array 26
+p87_i3_a27,Non-cancer illness year/age first occurred | Instance 3 | Array 27
+p87_i3_a28,Non-cancer illness year/age first occurred | Instance 3 | Array 28
+p87_i3_a29,Non-cancer illness year/age first occurred | Instance 3 | Array 29
+p87_i3_a30,Non-cancer illness year/age first occurred | Instance 3 | Array 30
+p87_i3_a31,Non-cancer illness year/age first occurred | Instance 3 | Array 31
+p87_i3_a32,Non-cancer illness year/age first occurred | Instance 3 | Array 32
+p87_i3_a33,Non-cancer illness year/age first occurred | Instance 3 | Array 33
+p2453_i0,Cancer diagnosed by doctor | Instance 0
+p2453_i1,Cancer diagnosed by doctor | Instance 1
+p2453_i2,Cancer diagnosed by doctor | Instance 2
+p2453_i3,Cancer diagnosed by doctor | Instance 3
