@@ -89,6 +89,8 @@
 # When running the SKAT/ACAT gene-based tests, we recommend to use at most 2 threads and instead parallelize the runs over partitions of the genome (e.g. groups of genes).
 
 # Annotation input files: to define variant sets and functional annotations which will be used to generate masks.
+# Each line contains the variant name, the set/gene name and a single annotation category (space/tab separated).
+# 
 
 
 
