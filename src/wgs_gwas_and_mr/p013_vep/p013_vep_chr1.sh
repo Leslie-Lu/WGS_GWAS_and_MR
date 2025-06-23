@@ -28,7 +28,7 @@ vep --input_file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/VEP_con
   --format vcf \
   --output_file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/VEP_annotated_vcfs/chr1_annotated.vcf.gz \
   --force_overwrite \
-  --fork 16 \
+  --fork 4 \
   --cache --dir /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/ \
   --species homo_sapiens \
   --offline \
