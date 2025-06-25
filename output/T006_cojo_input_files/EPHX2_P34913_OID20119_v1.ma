@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+rs71553864	AGTC	A	0.0551642	0.231572	0.0137497	1.20226443461741e-63	52363

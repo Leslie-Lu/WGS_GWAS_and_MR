@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+16:1973323	G	GA	0.117808	-0.0912416	0.00963726	2.86417796990659e-21	52363

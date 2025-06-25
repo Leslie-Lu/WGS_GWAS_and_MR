@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+6:32628297	C	CAG	0.482016	-0.0503817	0.00625087	7.63308326709184e-16	52363

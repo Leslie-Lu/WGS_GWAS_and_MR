@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+rs148102406	TGTGA	T	0.681813	-0.118569	0.00678481	2.19533094913983e-68	52363

@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+rs13208948	T	C	0.269117	-0.0540367	0.00748307	5.15347294020903e-13	52363

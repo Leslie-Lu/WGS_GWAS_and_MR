@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+16:71136766	C	CA	0.288571	-0.0690214	0.00686678	9.04690437738116e-24	52363

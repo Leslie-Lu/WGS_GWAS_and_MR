@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+4:173389536	A	AAAAC	0.381564	0.116002	0.00576613	5.14872860140539e-90	52363

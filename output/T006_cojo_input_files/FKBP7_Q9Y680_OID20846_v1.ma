@@ -1,0 +1,2 @@
+SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+2:178478419	C	CTTTT	0.00325589	-0.730729	0.0550062	2.84839359153236e-40	52363
