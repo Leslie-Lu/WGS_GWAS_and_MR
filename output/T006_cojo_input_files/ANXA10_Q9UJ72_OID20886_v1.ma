@@ -1,3 +1,3 @@
-SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
 1:155225280:ATTAT:A	A	ATTAT	0.424522	0.048798	0.00625932	6.3870453530259e-15	52363
 4:168160038:A:G	G	A	0.594999	0.0456899	0.00624513	2.55328915153389e-13	52363

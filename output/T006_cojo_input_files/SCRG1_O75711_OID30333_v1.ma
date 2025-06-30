@@ -1,2 +1,2 @@
-SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
 4:173389536:AAAAC:A	A	AAAAC	0.381564	0.116002	0.00576613	5.14872860140539e-90	52363

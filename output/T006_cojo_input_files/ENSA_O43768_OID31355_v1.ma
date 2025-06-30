@@ -1,3 +1,3 @@
-SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
 1:150635311:G:A	A	G	0.0391282	0.119717	0.0160965	1.02636066626415e-13	52363
 3:56815721:T:C	C	T	0.589337	0.0558703	0.00631609	9.09494338555296e-19	52363

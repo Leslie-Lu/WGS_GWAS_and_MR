@@ -1,3 +1,3 @@
-SNP_new	A1_new	A0_new	freq_new	b_new	se_new	p_new	N_new
+SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
 6:31055051:C:T	T	C	0.332322	0.400809	0.00666555	0	52363
 9:133263362:GCGCCCACCACTA:G	G	GCGCCCACCACTA	0.178296	-0.0875882	0.00795253	3.27566891936847e-28	52363
