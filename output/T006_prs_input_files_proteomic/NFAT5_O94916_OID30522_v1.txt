@@ -1,2 +1,0 @@
-SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
-12:54323724:T:TTTCTC	TTTCTC	T	0.569662	0.0463123	0.00628652	1.74622418961135e-13	52363
