@@ -1,2 +1,0 @@
-SNP_new_v2	A1_new_v2	A0_new_v2	freq_new_v2	b_new_v2	se_new_v2	p_new_v2	N_new_v2
-5:132373340:T:TAATA	TAATA	T	0.527554	0.0453316	0.00610899	1.16707831583793e-13	52363
