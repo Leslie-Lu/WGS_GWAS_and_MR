@@ -41,6 +41,7 @@
   --pgen eligible_european_plink2 \
   --keep T001_EuropeanPrePCAID.txt \
   --phenoFile ukb_phenotypes_strict.txt \
+  --bt \
   --covarFile ukb_covariates.txt \
   --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
   --strict \
@@ -49,6 +50,7 @@
   --lowmem \
   --lowmem-prefix tmpdir/regenie_tmp_preds \
   --write-null-firth \
+  --threads $threads \
   --out step1_strict_euro_cin3plus
 # a file ending with .loco which contain the genetic predictions using a LOCO scheme that will be needed for step 2,
 # as well as a prediction list file step1_strict_euro_cin3plus_pred.list, which lists the names of these predictions files and can be used as input for step 2.
@@ -69,15 +71,16 @@
   --keep T001_EuropeanPrePCAID.txt \
   --ref-first \
   --phenoFile ukb_phenotypes_strict.txt \
+  --bt \
   --covarFile ukb_covariates.txt \
   --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
   --strict \
-  --bsize 400 \
+  --bsize 1000 \
   --firth --approx \
   --pThresh 0.01 \
   --pred step1_strict_euro_cin3plus_pred.list \
-  --split \
   --use-null-firth step1_strict_euro_cin3plus_firth.list \
+  --threads $threads \
   --out step2_strict_euro_cin3plus_chr1
 # This will create separate association results files for each phenotype as step2_strict_euro_cin3plus_chr1_*.regenie
 
