@@ -9,41 +9,60 @@
 # R VERSION         : 4.5.0
 # AUTHOR            : Zhen Lu
 ################################################################################################
-# DATE MODIFIED     : 2025-06-03
-# REASON            : Initial version
+# DATE MODIFIED     : 2025-07-11
+# REASON            : Test for the phenotype of standing height
 ################################################################################################
 rm(list = ls())
 gc()
 
-# lulab.utils::test_mirror("China")
-# options(repos = c(CRAN = 'https://mirrors.ustc.edu.cn/CRAN/'))
-# install.packages("data.table")
-library(lulab.utils)
 library(magrittr)
-library(dplyr)
-library(data.table)
-library(purrr)
 
-# vep_results= fread(
-#   '/mnt/lsy/OS5300/data/public_data/vep_10K_reference_panel/Allchr.CGP.beagle52.filter.vep_annotation_info.gz'
-# )
-
-save(list = ls(), file = "WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results.RData")
-load("WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results.RData")
-
-
-vep_results %>% dim()
-vep_results %>% names()
-vep_results %>% head()
-
-extract_vep= vep_results[, .(CHR, BP, GENE, IMPACT, Consequence)]
-extract_vep[, CHR:= fifelse(CHR == "X", "23", CHR)]
-
-# waiting for merging with gwas summary statistics
-meta_gwas= fread(
-  "WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/meta_gwas_summary_cin3plus.meta.format.gz",
-  sep = ""
+inputFile1 = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs_info.gz"
+annotated_info= data.table::fread(
+  inputFile1,
+  header = FALSE,
+  col.names = c(
+    "CHR", "BP", "ID", "Existing_variation",
+    "SYMBOL", "Gene", "NEAREST",
+    "IMPACT", "Consequence"
+  )
 )
+annotated_info %>% head()
+annotated_info %>% dim()
+saveRDS(annotated_info,
+        file = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs_info.rds",
+        compress = "xz")
+
+# save(list = ls(), file = "WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs_info.RData")
+
+# load("WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs_info.RData")
+
+
+
+
+# annotated_vcf %>% dim()
+# annotated_vcf %>% names()
+# annotated_vcf %>% head()
+
+# CHR    BP GENE IMPACT Consequence
+  
+
+# save(list = ls(), file = "WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs.RData")
+# load("WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results.RData")
+
+
+# vep_results %>% dim()
+# vep_results %>% names()
+# vep_results %>% head()
+
+# extract_vep= vep_results[, .(CHR, BP, GENE, IMPACT, Consequence)]
+# extract_vep[, CHR:= fifelse(CHR == "X", "23", CHR)]
+
+# # waiting for merging with gwas summary statistics
+# meta_gwas= fread(
+#   "WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/meta_gwas_summary_cin3plus.meta.format.gz",
+#   sep = ""
+# )
 
 
 
