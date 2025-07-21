@@ -1,0 +1,32 @@
+start at:
+Sat Jul 19 15:18:22 CST 2025
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 296087 15.9     692257   37   481251 25.8
+Vcells 515268  4.0    8388608   64  1924569 14.7
+Empty data.table (0 rows and 3 cols): CHR,BP,N
+[1] 41
+[1] 42
+[1] 0
+            mask     N
+          <char> <int>
+1:     Noncoding 16133
+2:      Missense   257
+3:           LoF    33
+4:    Synonymous   103
+5: Splice_Region    40
+            gene     N
+          <char> <int>
+    1: LINC01128     4
+    2:    SAMD11     2
+    3:     NOC2L     1
+    4:    KLHL17     1
+    5:      HES4     1
+   ---                
+15104:  MAPK8IP2     3
+15105:    SHANK3     3
+15106:       ACR     1
+15107:  SNRPA1P2     1
+15108:    RABL2B     1
+Empty data.table (0 rows and 2 cols): SNP,N
+end at:
+Sat Jul 19 15:46:57 CST 2025

@@ -1,0 +1,33 @@
+start at:
+Sun Jul 13 14:24:20 CST 2025
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 296087 15.9     692257   37   481251 25.8
+Vcells 515268  4.0    8388608   64  1924569 14.7
+      CHR    BP     ID Existing_variation    GENE NEAREST   IMPACT
+   <char> <int> <char>             <char>  <char>  <char>   <char>
+1:   chr1 10061      .                  . DDX11L1   OR4F5 MODIFIER
+2:   chr1 10067      .       rs1489251879 DDX11L1   OR4F5 MODIFIER
+3:   chr1 10073      .                  . DDX11L1   OR4F5 MODIFIER
+4:   chr1 10075      .                  . DDX11L1   OR4F5 MODIFIER
+5:   chr1 10079      .                  . DDX11L1   OR4F5 MODIFIER
+6:   chr1 10108      .                  . DDX11L1   OR4F5 MODIFIER
+             Consequence          SNP
+                  <char>       <char>
+1: upstream_gene_variant            .
+2: upstream_gene_variant rs1489251879
+3: upstream_gene_variant            .
+4: upstream_gene_variant            .
+5: upstream_gene_variant            .
+6: upstream_gene_variant            .
+[1] 1058848774          9
+      CHR    BP    GENE   IMPACT           Consequence
+   <char> <int>  <char>   <char>                <char>
+1:   chr1 10061 DDX11L1 MODIFIER upstream_gene_variant
+2:   chr1 10067 DDX11L1 MODIFIER upstream_gene_variant
+3:   chr1 10073 DDX11L1 MODIFIER upstream_gene_variant
+4:   chr1 10075 DDX11L1 MODIFIER upstream_gene_variant
+5:   chr1 10079 DDX11L1 MODIFIER upstream_gene_variant
+6:   chr1 10108 DDX11L1 MODIFIER upstream_gene_variant
+[1] 1058848774          5
+end at:
+Sun Jul 13 16:41:30 CST 2025

@@ -141,7 +141,6 @@ regenie \
 # Additionally, a header line is included (starting with ##) which contains mask definition information.
 # Masks will have name <set_name>.<mask_name>.<AAF_cutoff> with the chromosome and physical position having been defined in the set list file, 
 # and the reference allele being ref, and the alternate allele corresponding to <mask_name>.<AAF_cutoff>.
-# When using --mask-lovo, the mask name will be the same as above but have suffix _<variant_name> to specify the variant which was excluded when building the mask.
 # When using --rgc-gene-p, it will apply the single p-value per gene GENE_P strategy using all masks.
 # Mask file
 # This file specifies which annotation categories should be combined into masks.
@@ -161,26 +160,50 @@ regenie \
 # If you only want to output the results for the joint tests (ignore the marginal tests), use --joint-only.
 
 
-regenie --check-burden-files \
-  --set-list UKB_exome.sets.txt \
-  --anno-file UKB_exome.annotations.txt \
-  --mask-def UKB_exome.masks
 
+
+
+
+source /home/student/miniconda3/bin/activate regenie_env
 regenie \
   --step 2 \
-  --bed ${GENO} \
-  --phenoFile ${PHENO}  --phenoCol <Trait> \
-  --covarFile ${COVAR}  --covarColList Sex,Age,PC{1:10} \
-  --pred results_step1_pred.list \
-  --set-list ${SET} \
-  --anno-file ${ANNO} \
-  --mask-def ${MASK} \
-  --aaf-bins 0.01 \
-  --vc-tests acato-full \
-  --threads 8 \
-  --out gene_test_results
+  --bed /home/student/USER/GWAS/data/European_1w_linear \
+  --ref-first \
+  --phenoFile /home/student/USER/GWAS/data/phenotype.txt \
+  --strict \
+  --bsize 200 \
+  --apply-rint \
+  --pred ./output/regenie_step1_pred.list \
+  --check-burden-files \
+  --anno-file /home/student/USER/GWAS/data/anno_file.txt \
+  --set-list /home/student/USER/GWAS/data/set_list.txt \
+  --mask-def /home/student/USER/GWAS/data/mask_file.txt \
+  --skip-test \
+  --strict-check-burden \
+  --out ./output/burden_check
+conda deactivate
 
 
-
+source /home/student/miniconda3/bin/activate regenie_env
+regenie \
+  --step 2 \
+  --bed /home/student/USER/GWAS/data/European_1w_linear \
+  --ref-first \
+  --phenoFile /home/student/USER/GWAS/data/phenotype.txt \
+  --strict \
+  --bsize 1000 \
+  --apply-rint \
+  --pred ./output/regenie_step1_pred.list \
+  --anno-file /home/student/USER/GWAS/data/anno_file.txt \
+  --set-list /home/student/USER/GWAS/data/set_list.txt \
+  --mask-def /home/student/USER/GWAS/data/mask_file.txt \
+  --aaf-bins 0.1,0.05 \
+  --rgc-gene-p \
+  --vc-tests skato,acato-full \
+  --joint acat,sbat \
+  --vc-MACthr 10 \
+  --write-mask \
+  --out ./output/gene_based_testing
+conda deactivate
 
 
