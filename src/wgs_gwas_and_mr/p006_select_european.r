@@ -15,9 +15,9 @@
 rm(list = ls())
 gc()
 
-lulab.utils::test_mirror("China")
+# lulab.utils::test_mirror("China")
 # options(repos = c(CRAN = 'https://mirrors.ustc.edu.cn/CRAN/'))
-install.packages("data.table")
+# install.packages("data.table")
 library(magrittr)
 library(dplyr)
 library(data.table)
@@ -62,7 +62,3 @@ D007_european %>%
     "./data/output/D007EligibleCasesandControls_outcome_european.csv",
     row.names = FALSE
   )
-
-
-
-

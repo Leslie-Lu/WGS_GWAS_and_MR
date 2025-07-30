@@ -201,7 +201,7 @@ D008European %>% na.omit() %>% dim()
 # Phenotype2: of CC (eligible_cin3==0)
 # D008European$eligible_cc %>% table(useNA = "always")
 # D008European$eligible_cin3 %>% table(useNA = "always")
-# Phenotype3: of CIN3+ (eligible_cc==0)
+# Phenotype3: of CIN3 (eligible_cc==0)
 D008European_P= D008European %>%
   # select(
   #   -c(eid,eligible_cc,eligible_cin3)

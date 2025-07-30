@@ -5,19 +5,22 @@
 # DATE CREATED      : 2025-07-15
 # PYTHON VERSION    : 3.12.10
 ################################################################################################
-# DATE MODIFIED     : 2025-07-15
-# REASON            : Initial version
+# DATE MODIFIED     : 2025-07-30
+# REASON            : Ploting PCA results using the package omixvizpy
 ################################################################################################
 
-import sys
-sys.path.append("/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/")
-from p020_plot_pca import plot_pca_plots
+from omixvizpy import plot_pca
 
-plot_pca_plots(
-    eigenvec_file="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/backup_20250715/smartpca_outcome_cc_cin3/euro_cc_cin3_fig.eigenvec",
-    country_file="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/D009_GWAS_CIN3Plus_European.csv",
-    fig_path="/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/Figure/",
-    fig1_name="SF007_pairPlotofPCA",
-    fig2_name="SF008_scatterPlotofPCA",
+plot_pca(
+    eigenvec_file="path/to/your/eigenvec.txt",
+    covar_file="path/to/your/covariates.csv",
+    cov1="Country_of_birth",
+    legend_title_cov1="Country of Birth",
+    cov1_levels=["England", "Wales", "Scotland", "Others"],
+    fig_path="output/directory",
+    fig1_name="variance_explained",
+    fig2_name="pc1_vs_pc2", 
+    fig3_name="pca_by_country",
+    fig4_name="pca_by_ethnicity",
     save_figs=True
 )
