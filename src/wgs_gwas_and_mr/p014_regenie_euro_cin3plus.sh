@@ -39,9 +39,8 @@
 mkdir -p tmpdir
 regenie \
   --step 1 \
-  --pgen eligible_european_plink2 \ # needs to be updated to the path of the pgen file
-  --keep T001_EuropeanPrePCAID.txt \ # needs to be updated
-  --phenoFile ukb_phenotypes_strict.txt \ # needs to be updated
+  --pgen EuroPrePCA_ref38_rsID \
+  --phenoFile T002_CIN3plus_phenotype.txt \
   --bt \
   --covarFile ukb_covariates.txt \ # needs to be updated
   --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \ # needs to be updated

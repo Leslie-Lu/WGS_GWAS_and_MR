@@ -143,9 +143,9 @@
 # # recode phenotype values (eligible_cc_cin3) in .fam
 
 # output_path="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european"
-# awk '{print $1, $4+1}' \
+# awk -F'\t' -v OFS='\t' 'BEGIN { print "FID","IID","CIN3plus" } {print $1, $1, $4}' \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt" > \
-#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt"
+#   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_CIN3plus_phenotype.txt"
 # awk '{count[$4]++} END {for (value in count) print value, count[value]}' \
 #   "/share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt"
 # awk '{count[$2]++} END {for (value in count) print value, count[value]}' \
