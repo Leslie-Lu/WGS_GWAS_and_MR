@@ -8,3 +8,5 @@ backup
 .VenvPython313
 
 .lintr
+
+output/Figure
