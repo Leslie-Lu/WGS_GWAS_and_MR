@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=vep
 #SBATCH --nodes=1 
-#SBATCH --cpus-per-task=32    
+#SBATCH --cpus-per-task=64    
 #SBATCH --time=50-00:00:00
-#SBATCH --mem=242G
-#SBATCH --partition=gpu
+#SBATCH --mem=442G
+#SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
 EXEC=/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p013_vep/p013_annotation.sh

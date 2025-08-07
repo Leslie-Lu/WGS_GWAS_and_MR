@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=vep
 #SBATCH --nodes=1 
-#SBATCH --cpus-per-task=32    
+#SBATCH --cpus-per-task=64    
 #SBATCH --time=50-00:00:00
-#SBATCH --mem=196G
+#SBATCH --mem=498G
 #SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
