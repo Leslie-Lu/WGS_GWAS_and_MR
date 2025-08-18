@@ -16,11 +16,10 @@ set -e
 
 source /share/home/lsy_luzhen/software/miniconda3/bin/activate bcftools
 
-output_dir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/"
+output_dir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2"
 mkdir -p "$output_dir"
 vcf=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results/allAnnotatedChrs.vcf.gz
 ref_fasta=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
-remap=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/rename_map.txt
 
 # # Step 1:
 # bcftools query -f '%CHROM\n' "$vcf" | sort -u > "$output_dir/vcf_chroms.txt"
@@ -30,6 +29,7 @@ remap=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/ren
 #   | sed 's/^/<only-in-vcf>\t/'
 
 # # Step 2:
+# remap=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/rename_map.txt
 # echo "--------Processing VCF annotation extraction--------"
 # echo "1a. Renaming chromosomes in VCF to match reference genome..."
 # bcftools annotate --rename-chrs "$remap" \
@@ -41,17 +41,33 @@ remap=/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/ren
 #   -Oz -o "${output_dir}/split.vcf.gz" "${output_dir}/renamed.vcf.gz" --threads 64
 # bcftools index -f "${output_dir}/split.vcf.gz" --threads 64
 
-# echo "2. Setting variant IDs to CHROM:POS:REF:ALT format..."
-# bcftools annotate \
-#   --set-id '%CHROM:%POS:%REF:%ALT' \
-#   -Oz -o "${output_dir}/all_chrposrefalt.vcf.gz" \
-#   "${output_dir}/split.vcf.gz" --threads 64
-# bcftools index -f "${output_dir}/all_chrposrefalt.vcf.gz" --threads 64
+echo "1c. Adding old rsIDs to INFO field..."
+bcftools view -h "${output_dir}/split.vcf.gz" | \
+  sed '0,/^##INFO=/{/^##INFO=/a ##INFO=<ID=OLD_RS,Number=1,Type=String,Description="Original rsID">
+}' > "${output_dir}/map_header.vcf"
+bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t.\t.\tOLD_RS=%ID\n' \
+  "${output_dir}/split.vcf.gz" \
+  | sort -k1,1 -k2,2n >> "${output_dir}/map_header.vcf"
+bgzip -c "${output_dir}/map_header.vcf" > "${output_dir}/map.vcf.gz"
+bcftools index -f "${output_dir}/map.vcf.gz" --threads 64
+bcftools annotate \
+  -a "${output_dir}/map.vcf.gz" \
+  -c CHROM,POS,REF,ALT,INFO/OLD_RS \
+  -Oz -o "${output_dir}/tmp_with_old.vcf.gz" \
+  "${output_dir}/split.vcf.gz" --threads 64
+bcftools index -f "${output_dir}/tmp_with_old.vcf.gz" --threads 64
 
-# Step 2:
+echo "2. Setting variant IDs to CHROM:POS:REF:ALT format..."
+bcftools annotate \
+  --set-id '%CHROM:%POS:%REF:%ALT' \
+  -Oz -o "${output_dir}/all_chrposrefalt.vcf.gz" \
+  "${output_dir}/tmp_with_old.vcf.gz" --threads 64
+bcftools index -f "${output_dir}/all_chrposrefalt.vcf.gz" --threads 64
+
+# Step 3:
 echo "3. Extracting VEP annotations..."
 bcftools +split-vep "${output_dir}/all_chrposrefalt.vcf.gz" \
-  -f '%CHROM %POS %ID %Existing_variation %SYMBOL %Gene %NEAREST %IMPACT %Consequence\n' \
+  -f '%CHROM %POS %ID %INFO/OLD_RS %Existing_variation %SYMBOL %Gene %NEAREST %IMPACT %Consequence\n' \
   -d > "${output_dir}/allAnnotatedChrsInfo.tsv"
 conda deactivate
 echo "--------done"

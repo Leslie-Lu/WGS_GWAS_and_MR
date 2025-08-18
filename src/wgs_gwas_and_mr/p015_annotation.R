@@ -13,57 +13,68 @@
 # DATE MODIFIED     : 2025-08-07
 # REASON            : Fix the annotation error
 ################################################################################################
+
 rm(list = ls())
 gc()
 
 library(magrittr)
 library(data.table)
 
-# --- Step 1. Read raw data ---
-inputFile1 = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/allAnnotatedChrsInfo.tsv"
-outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2"
-annotated_info= data.table::fread(
-  inputFile1,
-  header = FALSE,
-  col.names = c(
-    "CHR", "BP", "ID", "Existing_variation",
-    "SYMBOL", "Gene", "NEAREST",
-    "IMPACT", "Consequence"
-  )
-)
-annotated_info %>% head()
-annotated_info %>% dim()
+# # --- Step 1. Read raw data ---
+# inputFile1 = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/allAnnotatedChrsInfo.tsv"
+# outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2"
+# annotated_info= data.table::fread(
+#   inputFile1,
+#   header = FALSE,
+#   col.names = c(
+#     "CHR", "BP", "ID", "OLD_RS", "Existing_variation",
+#     "SYMBOL", "Gene", "NEAREST",
+#     "IMPACT", "Consequence"
+#   )
+# )
+# annotated_info %>% head()
+# annotated_info %>% dim()
 # annotated_info[SYMBOL == "A4GALT", ] %>%
 #   data.table::fwrite(file.path(outputDir, "A4GALT_annotated_info.txt"), sep = "\t", quote = FALSE)
-saveRDS(annotated_info,
-        file = file.path(outputDir, "allAnnotatedChrsInfo.rds"),
-        compress = "xz")
+# saveRDS(annotated_info,
+#         file = file.path(outputDir, "allAnnotatedChrsInfo.rds"),
+#         compress = "xz")
 
-# --- 2. Tidy vep data ---
-data.table::setDT(annotated_info)
-message("Number of NA in ID: ", sum(is.na(annotated_info$ID) | annotated_info$ID == "."))
-annotated_info[
-  , `:=`(
-    SNP= data.table::fifelse(
-      ID != "." & !is.na(ID),
-      ID,
-      Existing_variation,
-      "Error"
-    ),
-    Gene= NULL
-  )
-] %>%
-  data.table::setnames(c("SYMBOL"), c("GENE"))
-annotated_info %>% head()
-annotated_info %>% dim()
+# # --- 2. Tidy vep data ---
+# data.table::setDT(annotated_info)
+# message("Number of NA in ID: ", sum(is.na(annotated_info$ID) | annotated_info$ID == "."))
+# message("Number of NA in OLD_RS: ", sum(is.na(annotated_info$OLD_RS) | annotated_info$OLD_RS == "."))
+# message("Number of NA in Existing_variation: ", sum(is.na(annotated_info$Existing_variation) | annotated_info$Existing_variation == "."))
+# message("Number of . in ID: ", sum(annotated_info$ID == ".", na.rm = TRUE))
+# message("Number of . in OLD_RS: ", sum(annotated_info$OLD_RS == ".", na.rm = TRUE))
+# message("Number of . in Existing_variation: ", sum(annotated_info$Existing_variation == ".", na.rm = TRUE))
+# annotated_info[
+#   , `:=`(
+#     OLD_RS= data.table::fifelse(
+#       OLD_RS != "." & !is.na(OLD_RS),
+#       OLD_RS,
+#       Existing_variation,
+#       "Error"
+#     ),
+#     Gene= NULL
+#   )
+# ] %>%
+#   data.table::setnames(c("SYMBOL", "ID"), c("GENE", "SNP"))
+# annotated_info %>% head()
+# annotated_info %>% dim()
 
-used_info= annotated_info[, .(CHR, BP, SNP, GENE, IMPACT, Consequence)]
-used_info %>% head()
-used_info %>% dim()
-saveRDS(used_info,
-        file = file.path(outputDir, "allAnnotatedChrs_info_used.rds"))
+# used_info= annotated_info[, .(CHR, BP, SNP, OLD_RS, GENE, IMPACT, Consequence)]
+# rm(annotated_info)
+# used_info %>% head()
+# used_info %>% dim()
+# saveRDS(used_info,
+#         file = file.path(outputDir, "allAnnotatedChrs_info_used.rds"))
 
 # --- 3. format used_info ---
+outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2"
+used_info= readRDS(
+  file = file.path(outputDir, "allAnnotatedChrs_info_used.rds")
+)
 data.table::setDT(used_info)
 message("Unique chromosomes in used_info: ", paste(used_info$CHR %>% unique() %>% sort(), collapse = ", "))
 used_info[,
@@ -74,11 +85,23 @@ used_info[,
 message("Number of variants by chromosomes: ")
 print(used_info[, .N, by = CHR])
 message("Dimensions of used_info: ", paste(dim(used_info), collapse = ", "))
-dup_snps <- used_info[, .N, by = SNP][N > 1]
-message("Number of duplicated SNPs: ", nrow(dup_snps))
-print(dup_snps)
-used_info[, .(SNP, GENE)] %>%
-  unique(., by = c("SNP", "GENE")) %>%
+# --- 3b. debug ---
+# tryCatch({
+#   message("Number of unique SNPs in used_info: ", data.table::uniqueN(used_info, by = "SNP"))
+# }, error = function(e) {
+#   message("Error in counting unique SNPs in used_info: ", e$message)
+# }, warning = function(w) {
+#   message("Warning in counting unique SNPs in used_info: ", w$message)
+# })
+# variantsMap2Genes= used_info[, .(SNP)]
+# tryCatch({
+#   message("Number of unique SNPs in variantsMap2Genes: ", data.table::uniqueN(variantsMap2Genes, by = "SNP"))
+# }, error = function(e) {
+#   message("Error in counting unique SNPs in variantsMap2Genes: ", e$message)
+# }, warning = function(w) {
+#   message("Warning in counting unique SNPs in variantsMap2Genes: ", w$message)
+# })
+used_info[, .(SNP, OLD_RS, GENE)] %>%
   data.table::fwrite(
     file = file.path(outputDir, "variantsMap2Genes.txt"),
     sep = "\t",
