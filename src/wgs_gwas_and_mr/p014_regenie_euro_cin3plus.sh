@@ -91,7 +91,6 @@ regenie \
 # To avoid inflation in the gene-based tets due to rare variants as well as reduce computation time, we have implemented the collapsing approach proposed in SAIGE-GENE+,
 # where ultra-rare variants are aggregated into a mask.
 
-
 # Annotation input files: to define variant sets and functional annotations which will be used to generate masks.
 # Each line contains the variant name, the set/gene name and a single annotation category (space/tab separated).
 # Variants not in this file will be assigned to a default "NULL" category. A maximum of 63 annotation categories (+NULL category) is allowed.
@@ -117,27 +116,6 @@ regenie \
 # all genotyped variants in the set list file must be in the annotation file (for the corresponding set)
 # all annotations in the mask definition file must be present in the annotation file
 
-
-
-# build and test masks in Step 2
-regenie \
-  --step 2 \
-  --pgen ukb24308_c1_b0_v1 \ # needs to be updated
-  --keep T001_EuropeanPrePCAID.txt \ # needs to be updated
-  --phenoFile ukb_phenotypes_strict.txt \ # needs to be updated
-  --bt \
-  --covarFile ukb_covariates.txt \ # needs to be updated
-  --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \ # needs to be updated
-  --strict \
-  --bsize 1000 \
-  --firth --approx \
-  --pred regenie_step1_euro_cin3plus_pred.list \
-  --anno-file example/example_3chr.annotations \ # needs to be updated
-  --set-list example/example_3chr.setlist \ # needs to be updated
-  --mask-def example/example_3chr.masks \ # needs to be updated
-  --aaf-bins 0.1,0.05 \
-  --write-mask \
-  --out regenie_test_euro_cin3plus_firth
 # For each set, this will produce masks using 3 AAF cutoffs (singletons, 5% and 10% AAF).
 # The masks are written to PLINK bed file (in regenie_test_euro_cin3plus_firth_masks.{bed,bim,fam})
 # and tested for association with each binary trait using Firth approximate test (summary stats in regenie_test_euro_cin3plus_firth_<phenotype_name>.regenie).
@@ -148,7 +126,6 @@ regenie \
 # Mask file
 # This file specifies which annotation categories should be combined into masks.
 # Each line contains a mask name followed by a comma-separated list of categories included in the mask (i.e. union is taken over categories).
-
 
 # SKAT/ACAT tests
 # When running the SKAT/ACAT gene-based tests, we recommend to use at most 2 threads and instead parallelize the runs over partitions of the genome (e.g. groups of genes).
@@ -162,49 +139,27 @@ regenie \
 # The ACAT test combines the p-values of the individual burden masks using the Cauchy combination method.
 # If you only want to output the results for the joint tests (ignore the marginal tests), use --joint-only.
 
-
-
-
-
-
-source /home/student/miniconda3/bin/activate regenie_env
 regenie \
   --step 2 \
-  --bed /home/student/USER/GWAS/data/European_1w_linear \
-  --ref-first \
-  --phenoFile /home/student/USER/GWAS/data/phenotype.txt \
-  --strict \
-  --bsize 200 \
-  --apply-rint \
-  --pred ./output/regenie_step1_pred.list \
-  --check-burden-files \
-  --anno-file /home/student/USER/GWAS/data/anno_file.txt \
-  --set-list /home/student/USER/GWAS/data/set_list.txt \
-  --mask-def /home/student/USER/GWAS/data/mask_file.txt \
-  --skip-test \
-  --strict-check-burden \
-  --out ./output/burden_check
-conda deactivate
-
-
-source /home/student/miniconda3/bin/activate regenie_env
-regenie \
-  --step 2 \
-  --bed /home/student/USER/GWAS/data/European_1w_linear \
-  --ref-first \
-  --phenoFile /home/student/USER/GWAS/data/phenotype.txt \
+  --pgen EuroPrePCA_ref38_rsID \
+  --chr \${chr} \
+  --phenoFile T002_CIN3plus_phenotype.txt \
+  --bt \
+  --covarFile T002_CIN3plus_covars.txt \
+  --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
   --strict \
   --bsize 1000 \
-  --apply-rint \
-  --pred ./output/regenie_step1_pred.list \
-  --anno-file /home/student/USER/GWAS/data/anno_file.txt \
-  --set-list /home/student/USER/GWAS/data/set_list.txt \
-  --mask-def /home/student/USER/GWAS/data/mask_file.txt \
-  --aaf-bins 0.1,0.05 \
-  --rgc-gene-p \
-  --vc-tests skato,acato-full \
-  --joint acat,sbat \
+  --firth --approx \
+  --pred regenie_step1_euro_cin3plus_pred.list \
+  --use-null-firth regenie_step1_euro_cin3plus_firth.list \
+  --anno-file anno_file_unique.txt \
+  --set-list set_list_unique.txt \
+  --mask-def mask_file.txt \
+  --aaf-bins 0.001,0.01,0.05,0.1 \
   --vc-MACthr 10 \
+  --joint acat,sbat \
+  --vc-tests skato,acato-full \
+  --rgc-gene-p \
   --write-mask \
-  --out ./output/gene_based_testing
-conda deactivate
+  --out step2_gb_euro_cin3plus_chr\${chr}
+  

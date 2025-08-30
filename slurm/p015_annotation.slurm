@@ -31,23 +31,42 @@ date
 # # 20250827
 # Rscript $EXEC
 
-# 20250829
+# # 20250829
+# outputDir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based"
+# anno_file_lines=$(wc -l < "${outputDir}/anno_file.txt")
+# echo "Number of lines in anno_file.txt: $anno_file_lines"
+# head -n 5 "${outputDir}/anno_file.txt"
+# sort "${outputDir}/anno_file.txt" | uniq > "${outputDir}/anno_file_unique.txt"
+# unique_anno_file_lines=$(wc -l < "${outputDir}/anno_file_unique.txt")
+# echo "Number of unique lines in anno_file_unique.txt: $unique_anno_file_lines"
+
+# set_list_lines=$(wc -l < "${outputDir}/set_list.txt")
+# echo "Number of lines in set_list.txt: $set_list_lines"
+# head -n 5 "${outputDir}/set_list.txt"
+# sort "${outputDir}/set_list.txt" | uniq > "${outputDir}/set_list_unique.txt"
+# unique_set_list_lines=$(wc -l < "${outputDir}/set_list_unique.txt")
+# echo "Number of unique lines in set_list_unique.txt: $unique_set_list_lines"
+
+# grep "A4GALT" "${outputDir}/set_list_unique.txt" \
+#  > "${outputDir}/A4GALT_in_set_list.txt"
+
+# 20250830
 outputDir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based"
-anno_file_lines=$(wc -l < "${outputDir}/anno_file.txt")
-echo "Number of lines in anno_file.txt: $anno_file_lines"
-head -n 5 "${outputDir}/anno_file.txt"
-sort "${outputDir}/anno_file.txt" | uniq > "${outputDir}/anno_file_unique.txt"
-unique_anno_file_lines=$(wc -l < "${outputDir}/anno_file_unique.txt")
-echo "Number of unique lines in anno_file_unique.txt: $unique_anno_file_lines"
+# na_gene_count=$(awk '$1 == "."' "${outputDir}/set_list_unique.txt" | wc -l)
+# echo "Number of lines with '.' as gene name: $na_gene_count"
+# awk '$1 != "."' "${outputDir}/set_list_unique.txt" > "${outputDir}/set_list_unique_filtered.txt"
+# awk '$1 == "."' "${outputDir}/set_list_unique.txt" > "${outputDir}/set_list_unique_na.txt"
 
-set_list_lines=$(wc -l < "${outputDir}/set_list.txt")
-echo "Number of lines in set_list.txt: $set_list_lines"
-head -n 5 "${outputDir}/set_list.txt"
-sort "${outputDir}/set_list.txt" | uniq > "${outputDir}/set_list_unique.txt"
-unique_set_list_lines=$(wc -l < "${outputDir}/set_list_unique.txt")
-echo "Number of unique lines in set_list_unique.txt: $unique_set_list_lines"
+# na_gene_count_for_anno=$(awk '$2 == "."' "${outputDir}/anno_file_unique.txt" | wc -l)
+# echo "Number of lines with '.' as gene name in annotation file: $na_gene_count_for_anno"
+# awk '$2 != "."' "${outputDir}/anno_file_unique.txt" > "${outputDir}/anno_file_unique_filtered.txt"
+# awk '$2 == "."' "${outputDir}/anno_file_unique.txt" > "${outputDir}/anno_file_unique_na.txt"
 
-grep "A4GALT" "${outputDir}/set_list_unique.txt" \
- > "${outputDir}/A4GALT_in_set_list.txt"
+# head -n 1 "${outputDir}/set_list_unique_na.txt" > "${outputDir}/set_list_unique_na_head.txt"
+# head -n 1 "${outputDir}/anno_file_unique_na.txt" > "${outputDir}/anno_file_unique_na_head.txt"
+# grep -o "," "${outputDir}/set_list_unique_na.txt" | wc -l
+
+# wc -l < "${outputDir}/set_list_unique_filtered.txt"
+awk '{print $2, $1}' "${outputDir}/set_list_unique_filtered.txt" | sort | uniq | awk '{print $1}' | sort | uniq -c | sort -nr
 echo 'end at:'
 date
