@@ -3,7 +3,7 @@
 #SBATCH --nodes=1 
 #SBATCH --cpus-per-task=64    
 #SBATCH --time=50-00:00:00
-#SBATCH --mem=490G
+#SBATCH --mem=498G
 #SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
@@ -15,6 +15,10 @@ exec > $OUTPUT_FILE 2>&1
 
 echo 'start at:'
 date
+# 20250826
+Rscript $EXEC
+bash /share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p015_annotation.sh
+
 # # 20250827
 # OUTPUT_DIR1="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step2"
 # OUTPUT_DIR2="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/gene_based_testing"
@@ -51,7 +55,7 @@ date
 #  > "${outputDir}/A4GALT_in_set_list.txt"
 
 # 20250830
-outputDir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based"
+# outputDir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based"
 # na_gene_count=$(awk '$1 == "."' "${outputDir}/set_list_unique.txt" | wc -l)
 # echo "Number of lines with '.' as gene name: $na_gene_count"
 # awk '$1 != "."' "${outputDir}/set_list_unique.txt" > "${outputDir}/set_list_unique_filtered.txt"
@@ -67,6 +71,12 @@ outputDir="/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gen
 # grep -o "," "${outputDir}/set_list_unique_na.txt" | wc -l
 
 # wc -l < "${outputDir}/set_list_unique_filtered.txt"
-awk '{print $2, $1}' "${outputDir}/set_list_unique_filtered.txt" | sort | uniq | awk '{print $1}' | sort | uniq -c | sort -nr
+# awk '{print $2, $1}' "${outputDir}/set_list_unique_filtered.txt" | sort | uniq | awk '{print $1}' | sort | uniq -c | sort -nr
+
+# 20250831
+# awk -F'\t' '$1 ~ /^X:/{print $3}' "${outputDir}/anno_file_unique_filtered.txt" | wc -l
+# awk -F'\t' '$1 ~ /^X:/{print $3}' "${outputDir}/anno_file_unique_filtered.txt" | sort | uniq -c | sort -nr
+# 20250901
+# awk '{split($1,a,":"); print a[1]}' "${outputDir}/anno_file_unique_filtered.txt" | sort | uniq -c | sort -nr
 echo 'end at:'
 date
