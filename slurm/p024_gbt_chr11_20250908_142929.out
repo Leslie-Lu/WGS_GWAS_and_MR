@@ -1,0 +1,1391 @@
+start at:
+Mon Sep  8 14:29:29 CST 2025
+This directory already exists.
+regenie version:
+v4.1.gz
+--------start
+Start time: Mon Sep  8 14:29:32 2025
+
+              |===========================|
+              |      REGENIE v4.1.gz      |
+              |===========================|
+
+Copyright (c) 2020-2024 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/testing_results/step2_gb_euro_cin3plus_chr11.log
+
+Options in effect:
+  --step 2 \
+  --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
+  --chr 11 \
+  --phenoFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt \
+  --bt \
+  --covarFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt \
+  --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
+  --strict \
+  --bsize 1000 \
+  --firth \
+  --approx \
+  --threads 16 \
+  --pred /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list \
+  --use-null-firth /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_firth.list \
+  --anno-file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt \
+  --set-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt \
+  --mask-def /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt \
+  --aaf-bins 0.001,0.01,0.05,0.1 \
+  --vc-MACthr 10 \
+  --joint acat,sbat \
+  --vc-tests skato,acato-full \
+  --rgc-gene-p \
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/testing_results/step2_gb_euro_cin3plus_chr11
+
+Association testing mode (joint tests) with fast multithreading using OpenMP
+ * pvar             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.pvar] n_snps = 1400147917
+ * psam             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.psam] n_samples = 202952
+ * pgen             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.pgen] 
+ * phenotypes       : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt] n_pheno = 1
+   -dropping observations with missing values at any of the phenotypes
+   -number of phenotyped individuals with no missing data = 202952
+ * covariates       : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt] n_cov = 26
+   -number of individuals with covariate data = 202952
+ * number of individuals used in analysis = 202952
+ * case-control counts for each trait:
+   - 'CIN3plus': 5544 cases and 197408 controls
+ * LOCO predictions : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list]
+   -file [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_1.loco] for phenotype 'CIN3plus'
+ * annotations      : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt] 
+   +number of annotations categories = 6
+ * masks            : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt] n_masks = 7
+ * aaf cutoffs      : [ 4 : 0.001 0.01 0.05 0.1 ] + singletons
+ * set file         : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt] n_sets = 1912
+WARNING: Detected 24 sets with variants not in genetic data or annotation files.
+ * # threads        : [16]
+ * # tested sets    : [1912]
+ * max block size   : [1000]
+ * rule used to build masks : max
+ * computing gene-based tests for each set of variants included in a mask (rho=[0,0.01,0.04,0.09,0.16,0.25,0.5,1])
+  -variants with MAC <= 10 are collapsed into a mask
+  -weights are obtained from Beta(MAF,1,25)
+  -list of gene-based tests run: ACATO,ACATV,SKATO,SKATO-ACAT
+ * applying ACAT to output overall gene p-value
+ * approximate memory usage : 16526GB
+ * using minimum MAC of 5 (masks with lower MAC are ignored)
+ * using fast Firth correction for logistic/cox regression p-values less than 0.05
+ * user specified to test only on select chromosomes
+WARNING: Joint SBAT test only for QTs.
+ * number of mask groups run through gene-p strategy = 2
+ * list of joint tests run on burden masks: ACAT
+
+Chromosome 11 [1912 sets in total]
+   -reading loco predictions for the chromosome...done (8886ms) 
+   -fitting null logistic regression on binary phenotypes...done (530ms) 
+   -fitting null Firth logistic regression on binary phenotypes...done (3398ms) 
+ set [1/1912] : AAMDC - 22318 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (40514ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [2/1912] : AASDHPPT - 9998 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17152ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [3/1912] : ABCC8 - 38339 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (59253ms) 
+     -computing association tests...done (88ms) 
+     -computing joint association tests...done (0ms) 
+ set [4/1912] : ABCG4 - 8051 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12321ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [5/1912] : ABTB2 - 88111 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (222368ms) 
+     -computing association tests...done (84ms) 
+     -computing joint association tests...done (0ms) 
+ set [6/1912] : ACAD8 - 7274 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13086ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [7/1912] : ACAT1 - 17439 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (25559ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [8/1912] : ACCS - 13106 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18066ms) 
+     -computing association tests...done (17ms) 
+     -computing joint association tests...done (0ms) 
+ set [9/1912] : ACCSL - 6899 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9032ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [10/1912] : ACER3 - 71937 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (151539ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [11/1912] : ACP2 - 3643 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (14278ms) 
+     -computing association tests...done (91ms) 
+     -computing joint association tests...done (0ms) 
+ set [12/1912] : ACRV1 - 8008 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13412ms) 
+     -computing association tests...done (79ms) 
+     -computing joint association tests...done (0ms) 
+ set [13/1912] : ACTE1P - 24500 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (48458ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [14/1912] : ACTN3 - 9482 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15503ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [15/1912] : ACY3 - 6238 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9505ms) 
+     -computing association tests...done (75ms) 
+     -computing joint association tests...done (0ms) 
+ set [16/1912] : ADAMTS15 - 21750 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (38777ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [17/1912] : ADAMTS8 - 14384 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (24108ms) 
+     -computing association tests...done (86ms) 
+     -computing joint association tests...done (0ms) 
+ set [18/1912] : ADM - 5427 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9258ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [19/1912] : AGBL2 - 31688 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (83776ms) 
+     -computing association tests...done (92ms) 
+     -computing joint association tests...done (0ms) 
+ set [20/1912] : AHNAK - 47228 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (88606ms) 
+     -computing association tests...done (106ms) 
+     -computing joint association tests...done (0ms) 
+ set [21/1912] : AIP - 10057 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13200ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [22/1912] : AKIP1 - 8855 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18212ms) 
+     -computing association tests...done (32ms) 
+     -computing joint association tests...done (0ms) 
+ set [23/1912] : AKR1B1P3 - 4838 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9793ms) 
+     -computing association tests...done (84ms) 
+     -computing joint association tests...done (0ms) 
+ set [24/1912] : AKTIPP3 - 4716 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7367ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [25/1912] : ALDH3B1 - 8523 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16524ms) 
+     -computing association tests...done (78ms) 
+     -computing joint association tests...done (0ms) 
+ set [26/1912] : ALDH3B2 - 12438 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31506ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [27/1912] : ALG1L9P - 5018 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8378ms) 
+     -computing association tests...done (72ms) 
+     -computing joint association tests...done (0ms) 
+ set [28/1912] : ALG8 - 23776 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (36677ms) 
+     -computing association tests...done (29ms) 
+     -computing joint association tests...done (0ms) 
+ set [29/1912] : ALG9 - 35658 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (50265ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [30/1912] : ALKBH3 - 18853 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29647ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [31/1912] : ALKBH3-AS1 - 246 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (847ms) 
+     -computing association tests...done (4ms) 
+     -computing joint association tests...done (0ms) 
+ set [32/1912] : ALKBH8 - 26649 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (45288ms) 
+     -computing association tests...done (32ms) 
+     -computing joint association tests...done (0ms) 
+ set [33/1912] : ALX4 - 26204 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (40871ms) 
+     -computing association tests...done (100ms) 
+     -computing joint association tests...done (0ms) 
+ set [34/1912] : AMBRA1 - 90308 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (227345ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [35/1912] : AMOTL1 - 52407 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (87891ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [36/1912] : AMPD3 - 74810 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (143214ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [37/1912] : ANAPC15 - 1146 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7048ms) 
+     -computing association tests...done (11ms) 
+     -computing joint association tests...done (0ms) 
+ set [38/1912] : ANGPTL5 - 13651 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29505ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [39/1912] : ANKK1 - 9137 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12083ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [40/1912] : ANKRD13D - 7478 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17383ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [41/1912] : ANKRD33BP10 - 5713 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (25552ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [42/1912] : ANKRD33BP2 - 14801 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (66367ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [43/1912] : ANKRD33BP3 - 2948 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3847ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [44/1912] : ANKRD33BP5 - 7733 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10949ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [45/1912] : ANKRD33BP6 - 3794 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8332ms) 
+     -computing association tests...done (73ms) 
+     -computing joint association tests...done (0ms) 
+ set [46/1912] : ANKRD33BP7 - 4427 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (14819ms) 
+     -computing association tests...done (17ms) 
+     -computing joint association tests...done (0ms) 
+ set [47/1912] : ANKRD33BP8 - 965 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8183ms) 
+     -computing association tests...done (12ms) 
+     -computing joint association tests...done (0ms) 
+ set [48/1912] : ANKRD33BP9 - 2342 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (27354ms) 
+     -computing association tests...done (48ms) 
+     -computing joint association tests...done (0ms) 
+ set [49/1912] : ANKRD42 - 25885 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (43132ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [50/1912] : ANKRD49 - 5799 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12145ms) 
+     -computing association tests...done (132ms) 
+     -computing joint association tests...done (0ms) 
+ set [51/1912] : ANO1 - 62618 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (171885ms) 
+     -computing association tests...done (106ms) 
+     -computing joint association tests...done (0ms) 
+ set [52/1912] : ANO3 - 180088 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (694465ms) 
+     -computing association tests...done (109ms) 
+     -computing joint association tests...done (0ms) 
+ set [53/1912] : ANO3-AS1 - 21389 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29980ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [54/1912] : ANO5 - 150600 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (372534ms) 
+     -computing association tests...done (98ms) 
+     -computing joint association tests...done (0ms) 
+ set [55/1912] : ANO9 - 19406 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (56519ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [56/1912] : AP2A2 - 47127 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (96248ms) 
+     -computing association tests...done (78ms) 
+     -computing joint association tests...done (0ms) 
+ set [57/1912] : AP5B1 - 7795 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12267ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [58/1912] : APBB1 - 10619 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16288ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [59/1912] : API5 - 24603 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (62142ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [60/1912] : APIP - 15419 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (21774ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [61/1912] : APLNR - 5946 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (30520ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [62/1912] : APLP2 - 39536 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (65697ms) 
+     -computing association tests...done (96ms) 
+     -computing joint association tests...done (0ms) 
+ set [63/1912] : APOA1 - 4442 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8255ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [64/1912] : APOA4 - 9934 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31646ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [65/1912] : APOA5 - 2584 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13933ms) 
+     -computing association tests...done (82ms) 
+     -computing joint association tests...done (0ms) 
+ set [66/1912] : APOC3 - 2496 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8374ms) 
+     -computing association tests...done (103ms) 
+     -computing joint association tests...done (0ms) 
+ set [67/1912] : AQP11 - 13125 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (20440ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [68/1912] : ARAP1 - 27360 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (44162ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [69/1912] : ARCN1 - 18050 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (32882ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [70/1912] : ARFGAP2 - 8537 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19609ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [71/1912] : ARHGAP1 - 11891 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18217ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [72/1912] : ARHGAP20 - 59545 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (136651ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [73/1912] : ARHGAP32 - 108600 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (250266ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [74/1912] : ARHGAP42 - 140393 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (326424ms) 
+     -computing association tests...done (108ms) 
+     -computing joint association tests...done (0ms) 
+ set [75/1912] : ARHGAP42-AS1 - 1794 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (2719ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [76/1912] : ARHGEF12 - 63460 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (121466ms) 
+     -computing association tests...done (109ms) 
+     -computing joint association tests...done (0ms) 
+ set [77/1912] : ARHGEF17 - 31165 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (62395ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [78/1912] : ARL14EP - 11702 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (25410ms) 
+     -computing association tests...done (38ms) 
+     -computing joint association tests...done (0ms) 
+ set [79/1912] : ARL14EP-DT - 113271 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (243509ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [80/1912] : ARL2 - 5903 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10490ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [81/1912] : ARL6IP1P3 - 4507 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6937ms) 
+     -computing association tests...done (13ms) 
+     -computing joint association tests...done (0ms) 
+ set [82/1912] : ARPC3P3 - 173 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (786ms) 
+     -computing association tests...done (1ms) 
+     -computing joint association tests...done (0ms) 
+ set [83/1912] : ARRB1 - 42255 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (71992ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [84/1912] : ART1 - 14439 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26575ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [85/1912] : ART2BP - 4665 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11176ms) 
+     -computing association tests...done (77ms) 
+     -computing joint association tests...done (0ms) 
+ set [86/1912] : ART2P - 1174 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8787ms) 
+     -computing association tests...done (75ms) 
+     -computing joint association tests...done (0ms) 
+ set [87/1912] : ART5 - 3936 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6699ms) 
+     -computing association tests...done (94ms) 
+     -computing joint association tests...done (0ms) 
+ set [88/1912] : ASCL2 - 6070 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13261ms) 
+     -computing association tests...done (15ms) 
+     -computing joint association tests...done (0ms) 
+ set [89/1912] : ASCL3 - 4969 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9596ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [90/1912] : ASRGL1 - 37797 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (61816ms) 
+     -computing association tests...done (102ms) 
+     -computing joint association tests...done (0ms) 
+ set [91/1912] : ASS1P13 - 4629 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9714ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [92/1912] : ATF4P4 - 91 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (2701ms) 
+     -computing association tests...done (1ms) 
+     -computing joint association tests...done (0ms) 
+ set [93/1912] : ATG13 - 22156 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31059ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [94/1912] : ATG16L2 - 10748 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19269ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [95/1912] : ATG2A - 14327 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (28837ms) 
+     -computing association tests...done (85ms) 
+     -computing joint association tests...done (0ms) 
+ set [96/1912] : ATL3 - 25010 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (41951ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [97/1912] : ATM - 62044 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (108891ms) 
+     -computing association tests...done (104ms) 
+     -computing joint association tests...done (0ms) 
+ set [98/1912] : ATP5MG - 10768 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26466ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [99/1912] : ATP5MGP1 - 54 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (5776ms) 
+     -computing association tests...done (1ms) 
+     -computing joint association tests...done (0ms) 
+ set [100/1912] : B3GAT1 - 19848 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (41079ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [101/1912] : B3GAT1-DT - 61636 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (226292ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [102/1912] : B3GAT3 - 4863 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10283ms) 
+     -computing association tests...done (78ms) 
+     -computing joint association tests...done (0ms) 
+ set [103/1912] : B3GNT6 - 9796 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (33216ms) 
+     -computing association tests...done (85ms) 
+     -computing joint association tests...done (0ms) 
+ set [104/1912] : B4GALNT4 - 21331 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (115733ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [105/1912] : B4GAT1 - 3117 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (5722ms) 
+     -computing association tests...done (102ms) 
+     -computing joint association tests...done (0ms) 
+ set [106/1912] : B4GAT1-DT - 1970 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3446ms) 
+     -computing association tests...done (8ms) 
+     -computing joint association tests...done (0ms) 
+ set [107/1912] : BACE1 - 16917 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (32085ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [108/1912] : BAD - 12409 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23837ms) 
+     -computing association tests...done (30ms) 
+     -computing joint association tests...done (0ms) 
+ set [109/1912] : BAK1P2 - 287 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (881ms) 
+     -computing association tests...done (17ms) 
+     -computing joint association tests...done (0ms) 
+ set [110/1912] : BANF1 - 4402 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7401ms) 
+     -computing association tests...done (40ms) 
+     -computing joint association tests...done (0ms) 
+ set [111/1912] : BARX2 - 33954 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (50350ms) 
+     -computing association tests...done (125ms) 
+     -computing joint association tests...done (0ms) 
+ set [112/1912] : BATF2 - 8228 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15972ms) 
+     -computing association tests...done (76ms) 
+     -computing joint association tests...done (0ms) 
+ set [113/1912] : BBOX1 - 38497 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (53780ms) 
+     -computing association tests...done (80ms) 
+     -computing joint association tests...done (0ms) 
+ set [114/1912] : BBOX1-AS1 - 45071 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (72827ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (0ms) 
+ set [115/1912] : BBS1 - 12377 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18168ms) 
+     -computing association tests...done (83ms) 
+     -computing joint association tests...done (0ms) 
+ set [116/1912] : BCAS2P1 - 1888 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12779ms) 
+     -computing association tests...done (10ms) 
+     -computing joint association tests...done (0ms) 
+ set [117/1912] : BCL9L - 13696 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22259ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [118/1912] : BCO2 - 17669 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (35547ms) 
+     -computing association tests...done (86ms) 
+     -computing joint association tests...done (0ms) 
+ set [119/1912] : BDNF - 21827 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (32563ms) 
+     -computing association tests...done (94ms) 
+     -computing joint association tests...done (0ms) 
+ set [120/1912] : BDNF-AS - 53492 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (100120ms) 
+     -computing association tests...done (33ms) 
+     -computing joint association tests...done (0ms) 
+ set [121/1912] : BEST1 - 7797 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12506ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [122/1912] : BET1L - 4493 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12785ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [123/1912] : BIRC2 - 20292 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (40312ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [124/1912] : BIRC3 - 13797 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23796ms) 
+     -computing association tests...done (90ms) 
+     -computing joint association tests...done (0ms) 
+ set [125/1912] : BLID - 4288 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (21477ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [126/1912] : BMAL1 - 48140 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (79224ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [127/1912] : BMPR1AP2 - 405 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (1834ms) 
+     -computing association tests...done (76ms) 
+     -computing joint association tests...done (0ms) 
+ set [128/1912] : BOLA3P1 - 2391 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3458ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [129/1912] : BRD9P1 - 2997 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4438ms) 
+     -computing association tests...done (15ms) 
+     -computing joint association tests...done (0ms) 
+ set [130/1912] : BRMS1 - 3374 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8457ms) 
+     -computing association tests...done (116ms) 
+     -computing joint association tests...done (0ms) 
+ set [131/1912] : BRSK2 - 55095 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (180449ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [132/1912] : BSCL2 - 4113 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9271ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [133/1912] : BSX - 6579 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9542ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [134/1912] : BTBD10 - 33285 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (45538ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [135/1912] : BTBD18 - 4600 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8932ms) 
+     -computing association tests...done (111ms) 
+     -computing joint association tests...done (0ms) 
+ set [136/1912] : BTG4 - 10586 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19984ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [137/1912] : BUD13 - 10100 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15714ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [138/1912] : BUD13P1 - 2467 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3736ms) 
+     -computing association tests...done (82ms) 
+     -computing joint association tests...done (0ms) 
+ set [139/1912] : C11orf16 - 3080 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6800ms) 
+     -computing association tests...done (32ms) 
+     -computing joint association tests...done (0ms) 
+ set [140/1912] : C11orf21 - 3534 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12793ms) 
+     -computing association tests...done (16ms) 
+     -computing joint association tests...done (0ms) 
+ set [141/1912] : C11orf24 - 13361 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (25975ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [142/1912] : C11orf40 - 9920 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17566ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [143/1912] : C11orf42 - 6409 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15448ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [144/1912] : C11orf52 - 7015 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18633ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (0ms) 
+ set [145/1912] : C11orf54 - 14373 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23789ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [146/1912] : C11orf58 - 12949 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23892ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [147/1912] : C11orf65 - 44862 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (71884ms) 
+     -computing association tests...done (87ms) 
+     -computing joint association tests...done (0ms) 
+ set [148/1912] : C11orf68 - 1038 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (1997ms) 
+     -computing association tests...done (13ms) 
+     -computing joint association tests...done (0ms) 
+ set [149/1912] : C11orf71 - 8364 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26326ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [150/1912] : C11orf86 - 5605 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17582ms) 
+     -computing association tests...done (17ms) 
+     -computing joint association tests...done (0ms) 
+ set [151/1912] : C11orf87 - 7478 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11613ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [152/1912] : C11orf91 - 5141 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11675ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [153/1912] : C11orf96 - 4977 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10346ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [154/1912] : C11orf97 - 11173 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26451ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [155/1912] : C1QTNF4 - 4955 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7328ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [156/1912] : C1QTNF5 - 430 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (2774ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [157/1912] : C2CD2L - 3895 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7466ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [158/1912] : C2CD3 - 64996 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (123173ms) 
+     -computing association tests...done (30ms) 
+     -computing joint association tests...done (0ms) 
+ set [159/1912] : CABP2 - 6473 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17076ms) 
+     -computing association tests...done (83ms) 
+     -computing joint association tests...done (0ms) 
+ set [160/1912] : CABP4 - 7343 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10261ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [161/1912] : CADM1 - 148076 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (451017ms) 
+     -computing association tests...done (94ms) 
+     -computing joint association tests...done (0ms) 
+ set [162/1912] : CALCA - 6917 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11562ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [163/1912] : CALCB - 60102 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (117427ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [164/1912] : CALCP - 4156 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8629ms) 
+     -computing association tests...done (17ms) 
+     -computing joint association tests...done (0ms) 
+ set [165/1912] : CAPN1 - 18277 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31310ms) 
+     -computing association tests...done (37ms) 
+     -computing joint association tests...done (0ms) 
+ set [166/1912] : CAPN5 - 30123 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (48039ms) 
+     -computing association tests...done (110ms) 
+     -computing joint association tests...done (0ms) 
+ set [167/1912] : CAPRIN1 - 26826 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (43573ms) 
+     -computing association tests...done (77ms) 
+     -computing joint association tests...done (0ms) 
+ set [168/1912] : CARD16 - 5230 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12010ms) 
+     -computing association tests...done (77ms) 
+     -computing joint association tests...done (0ms) 
+ set [169/1912] : CARD18 - 159698 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (408605ms) 
+     -computing association tests...done (84ms) 
+     -computing joint association tests...done (0ms) 
+ set [170/1912] : CARNS1 - 4406 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8244ms) 
+     -computing association tests...done (111ms) 
+     -computing joint association tests...done (0ms) 
+ set [171/1912] : CARS1 - 29289 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (47524ms) 
+     -computing association tests...done (100ms) 
+     -computing joint association tests...done (0ms) 
+ set [172/1912] : CASC23 - 6840 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12131ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [173/1912] : CASP1 - 8812 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17019ms) 
+     -computing association tests...done (100ms) 
+     -computing joint association tests...done (0ms) 
+ set [174/1912] : CASP12 - 9155 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13063ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [175/1912] : CASP1P1 - 5103 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9252ms) 
+     -computing association tests...done (69ms) 
+     -computing joint association tests...done (0ms) 
+ set [176/1912] : CASP1P2 - 4163 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6749ms) 
+     -computing association tests...done (73ms) 
+     -computing joint association tests...done (0ms) 
+ set [177/1912] : CASP4 - 14764 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22194ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [178/1912] : CASP4LP - 8452 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (14089ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [179/1912] : CASP5 - 14359 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (20740ms) 
+     -computing association tests...done (79ms) 
+     -computing joint association tests...done (0ms) 
+ set [180/1912] : CAT - 16897 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (21300ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [181/1912] : CATSPER1 - 7765 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11519ms) 
+     -computing association tests...done (78ms) 
+     -computing joint association tests...done (0ms) 
+ set [182/1912] : CATSPERZ - 6559 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11167ms) 
+     -computing association tests...done (73ms) 
+     -computing joint association tests...done (0ms) 
+ set [183/1912] : CAVIN3 - 4717 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8306ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [184/1912] : CBL - 48210 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (92688ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (1ms) 
+ set [185/1912] : CBLIF - 10597 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16450ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [186/1912] : CBX3P8 - 2374 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7253ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [187/1912] : CCDC15 - 36738 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (61506ms) 
+     -computing association tests...done (103ms) 
+     -computing joint association tests...done (0ms) 
+ set [188/1912] : CCDC15-DT - 30 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (847ms) 
+     -computing association tests...done (2ms) 
+     -computing joint association tests...done (0ms) 
+ set [189/1912] : CCDC179 - 13536 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (32871ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [190/1912] : CCDC34 - 17419 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26635ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [191/1912] : CCDC73 - 76388 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (169648ms) 
+     -computing association tests...done (85ms) 
+     -computing joint association tests...done (0ms) 
+ set [192/1912] : CCDC81 - 22153 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (35788ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [193/1912] : CCDC82 - 14837 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22830ms) 
+     -computing association tests...done (80ms) 
+     -computing joint association tests...done (0ms) 
+ set [194/1912] : CCDC83 - 31773 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (46963ms) 
+     -computing association tests...done (83ms) 
+     -computing joint association tests...done (0ms) 
+ set [195/1912] : CCDC86 - 5428 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9422ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [196/1912] : CCDC86-AS1 - 120 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (583ms) 
+     -computing association tests...done (1ms) 
+     -computing joint association tests...done (0ms) 
+ set [197/1912] : CCDC87 - 1551 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3187ms) 
+     -computing association tests...done (11ms) 
+     -computing joint association tests...done (0ms) 
+ set [198/1912] : CCDC88B - 12490 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23080ms) 
+     -computing association tests...done (90ms) 
+     -computing joint association tests...done (0ms) 
+ set [199/1912] : CCDC89 - 5098 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11128ms) 
+     -computing association tests...done (37ms) 
+     -computing joint association tests...done (0ms) 
+ set [200/1912] : CCDC90B - 15435 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29259ms) 
+     -computing association tests...done (113ms) 
+     -computing joint association tests...done (0ms) 
+ set [201/1912] : CCDC90B-AS1 - 62641 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (130680ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [202/1912] : CCKBR - 10431 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (24672ms) 
+     -computing association tests...done (91ms) 
+     -computing joint association tests...done (0ms) 
+ set [203/1912] : CCND1 - 11497 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16879ms) 
+     -computing association tests...done (103ms) 
+     -computing joint association tests...done (0ms) 
+ set [204/1912] : CCS - 9785 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15740ms) 
+     -computing association tests...done (79ms) 
+     -computing joint association tests...done (0ms) 
+ set [205/1912] : CD248 - 5516 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11368ms) 
+     -computing association tests...done (71ms) 
+     -computing joint association tests...done (0ms) 
+ set [206/1912] : CD3D - 7954 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19519ms) 
+     -computing association tests...done (75ms) 
+     -computing joint association tests...done (0ms) 
+ set [207/1912] : CD3E - 8432 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12516ms) 
+     -computing association tests...done (127ms) 
+     -computing joint association tests...done (0ms) 
+ set [208/1912] : CD3G - 5398 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9511ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [209/1912] : CD44 - 43496 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (69926ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [210/1912] : CD44-DT - 2823 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4182ms) 
+     -computing association tests...done (16ms) 
+     -computing joint association tests...done (0ms) 
+ set [211/1912] : CD5 - 16370 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (33151ms) 
+     -computing association tests...done (93ms) 
+     -computing joint association tests...done (0ms) 
+ set [212/1912] : CD59 - 13873 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23048ms) 
+     -computing association tests...done (76ms) 
+     -computing joint association tests...done (0ms) 
+ set [213/1912] : CD6 - 25417 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (41938ms) 
+     -computing association tests...done (79ms) 
+     -computing joint association tests...done (0ms) 
+ set [214/1912] : CD81 - 16262 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23594ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [215/1912] : CD81-AS1 - 21989 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (32614ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [216/1912] : CD82 - 28093 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (46871ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [217/1912] : CDC42BPG - 15946 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26770ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [218/1912] : CDC42EP2 - 7868 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18573ms) 
+     -computing association tests...done (36ms) 
+     -computing joint association tests...done (4ms) 
+ set [219/1912] : CDCA5 - 8502 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13718ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [220/1912] : CDHR5 - 6373 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9670ms) 
+     -computing association tests...done (99ms) 
+     -computing joint association tests...done (0ms) 
+ set [221/1912] : CDK2AP2 - 5226 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7695ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [222/1912] : CDKN1C - 6910 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13906ms) 
+     -computing association tests...done (88ms) 
+     -computing joint association tests...done (0ms) 
+ set [223/1912] : CDON - 49976 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (99617ms) 
+     -computing association tests...done (105ms) 
+     -computing joint association tests...done (0ms) 
+ set [224/1912] : CELF1 - 47119 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (92500ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [225/1912] : CENATAC - 10739 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19701ms) 
+     -computing association tests...done (83ms) 
+     -computing joint association tests...done (0ms) 
+ set [226/1912] : CENATAC-DT - 1261 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3382ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [227/1912] : CEND1 - 3428 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7486ms) 
+     -computing association tests...done (100ms) 
+     -computing joint association tests...done (0ms) 
+ set [228/1912] : CENPUP1 - 2987 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12134ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [229/1912] : CEP126 - 35377 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (50954ms) 
+     -computing association tests...done (74ms) 
+     -computing joint association tests...done (0ms) 
+ set [230/1912] : CEP164 - 37980 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (57321ms) 
+     -computing association tests...done (118ms) 
+     -computing joint association tests...done (0ms) 
+ set [231/1912] : CEP295 - 29335 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (49363ms) 
+     -computing association tests...done (121ms) 
+     -computing joint association tests...done (0ms) 
+ set [232/1912] : CEP57 - 14858 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (24447ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [233/1912] : CFAP300 - 18925 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (35547ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [234/1912] : CFAP68 - 6628 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12326ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [235/1912] : CFL1 - 5394 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17061ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [236/1912] : CHEK1 - 14647 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (24751ms) 
+     -computing association tests...done (88ms) 
+     -computing joint association tests...done (0ms) 
+ set [237/1912] : CHID1 - 28117 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (48630ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [238/1912] : CHKA - 31321 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (55629ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [239/1912] : CHKA-DT - 4411 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8232ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [240/1912] : CHORDC1 - 13563 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (27527ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [241/1912] : CHRDL2 - 17528 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (25757ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [242/1912] : CHRM1 - 10575 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22550ms) 
+     -computing association tests...done (81ms) 
+     -computing joint association tests...done (0ms) 
+ set [243/1912] : CHRM4 - 3658 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4735ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [244/1912] : CHRNA10 - 5241 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9260ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [245/1912] : CHST1 - 11668 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23320ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [246/1912] : CIMAP1A - 8719 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (53912ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (0ms) 
+ set [247/1912] : CIR1P3 - 2348 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4806ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [248/1912] : CKAP5 - 41531 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (67045ms) 
+     -computing association tests...done (94ms) 
+     -computing joint association tests...done (0ms) 
+ set [249/1912] : CLCF1 - 8788 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (13062ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [250/1912] : CLDN25 - 2689 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (5855ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (0ms) 
+ set [251/1912] : CLMP - 60099 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (122197ms) 
+     -computing association tests...done (91ms) 
+     -computing joint association tests...done (0ms) 
+ set [252/1912] : CLNS1A - 30343 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (49403ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [253/1912] : CLP1 - 4371 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (9294ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [254/1912] : CLPB - 59629 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (99975ms) 
+     -computing association tests...done (86ms) 
+     -computing joint association tests...done (0ms) 
+ set [255/1912] : CNGA4 - 6448 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12918ms) 
+     -computing association tests...done (107ms) 
+     -computing joint association tests...done (0ms) 
+ set [256/1912] : CNIH2 - 3982 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7895ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [257/1912] : CNTF - 3952 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7211ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [258/1912] : CNTN5 - 648299 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6787343ms) 
+     -computing association tests...done (12297ms) 
+     -computing joint association tests...done (3ms) 
+ set [259/1912] : COA4 - 2317 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6460ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (1ms) 
+ set [260/1912] : COLCA1 - 977 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4991ms) 
+     -computing association tests...done (114ms) 
+     -computing joint association tests...done (0ms) 
+ set [261/1912] : COMMD9 - 14080 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (26917ms) 
+     -computing association tests...done (36ms) 
+     -computing joint association tests...done (2ms) 
+ set [262/1912] : COPB1 - 24674 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (34987ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [263/1912] : COPS8P3 - 185 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (847ms) 
+     -computing association tests...done (2ms) 
+     -computing joint association tests...done (0ms) 
+ set [264/1912] : CORO1B - 5971 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8900ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [265/1912] : COX5BP4 - 160 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (735ms) 
+     -computing association tests...done (4ms) 
+     -computing joint association tests...done (0ms) 
+ set [266/1912] : COX6A1P4 - 4103 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6254ms) 
+     -computing association tests...done (76ms) 
+     -computing joint association tests...done (0ms) 
+ set [267/1912] : COX6CP5 - 3390 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4945ms) 
+     -computing association tests...done (14ms) 
+     -computing joint association tests...done (0ms) 
+ set [268/1912] : COX8A - 5357 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11555ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [269/1912] : CPSF7 - 8589 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17916ms) 
+     -computing association tests...done (100ms) 
+     -computing joint association tests...done (0ms) 
+ set [270/1912] : CPT1A - 40116 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (72371ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (1ms) 
+ set [271/1912] : CRACR2B - 7580 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12528ms) 
+     -computing association tests...done (92ms) 
+     -computing joint association tests...done (0ms) 
+ set [272/1912] : CREB3L1 - 22132 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31945ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [273/1912] : CREBZF - 8989 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (12438ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (1ms) 
+ set [274/1912] : CRTAM - 19275 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (38320ms) 
+     -computing association tests...done (101ms) 
+     -computing joint association tests...done (0ms) 
+ set [275/1912] : CRY2 - 18354 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29206ms) 
+     -computing association tests...done (86ms) 
+     -computing joint association tests...done (0ms) 
+ set [276/1912] : CRYAB - 1479 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (2524ms) 
+     -computing association tests...done (7ms) 
+     -computing joint association tests...done (0ms) 
+ set [277/1912] : CSRP3 - 11343 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (19457ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (0ms) 
+ set [278/1912] : CSRP3-AS1 - 33725 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (51572ms) 
+     -computing association tests...done (27ms) 
+     -computing joint association tests...done (0ms) 
+ set [279/1912] : CST6 - 3008 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (8454ms) 
+     -computing association tests...done (28ms) 
+     -computing joint association tests...done (0ms) 
+ set [280/1912] : CSTF3 - 36589 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (69398ms) 
+     -computing association tests...done (113ms) 
+     -computing joint association tests...done (1ms) 
+ set [281/1912] : CSTF3-DT - 37234 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (64734ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [282/1912] : CSTPP1 - 93019 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (377655ms) 
+     -computing association tests...done (125ms) 
+     -computing joint association tests...done (0ms) 
+ set [283/1912] : CTBP2P6 - 4866 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6482ms) 
+     -computing association tests...done (19ms) 
+     -computing joint association tests...done (0ms) 
+ set [284/1912] : CTNND1 - 26131 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (36250ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [285/1912] : CTR9 - 20809 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (33504ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [286/1912] : CTSC - 35058 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (51914ms) 
+     -computing association tests...done (94ms) 
+     -computing joint association tests...done (3ms) 
+ set [287/1912] : CTSD - 7138 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11400ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [288/1912] : CTSF - 2766 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (7379ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [289/1912] : CTSW - 4886 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (14113ms) 
+     -computing association tests...done (119ms) 
+     -computing joint association tests...done (0ms) 
+ set [290/1912] : CTTN - 22222 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (37940ms) 
+     -computing association tests...done (25ms) 
+     -computing joint association tests...done (0ms) 
+ set [291/1912] : CTTN-DT - 2037 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (3211ms) 
+     -computing association tests...done (13ms) 
+     -computing joint association tests...done (0ms) 
+ set [292/1912] : CUL5 - 48198 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (86307ms) 
+     -computing association tests...done (104ms) 
+     -computing joint association tests...done (0ms) 
+ set [293/1912] : CWC15 - 6515 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15076ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (2ms) 
+ set [294/1912] : CWF19L2 - 77033 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (258324ms) 
+     -computing association tests...done (133ms) 
+     -computing joint association tests...done (0ms) 
+ set [295/1912] : CXCR5 - 10317 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (17011ms) 
+     -computing association tests...done (118ms) 
+     -computing joint association tests...done (0ms) 
+ set [296/1912] : CYB561A3 - 5657 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10736ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [297/1912] : CYB5R2 - 12356 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29519ms) 
+     -computing association tests...done (70ms) 
+     -computing joint association tests...done (0ms) 
+ set [298/1912] : CYCSP26 - 1452 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6147ms) 
+     -computing association tests...done (7051ms) 
+     -computing joint association tests...done (4585ms) 
+ set [299/1912] : CYP2R1 - 10263 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16381ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [300/1912] : DAGLA - 28669 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (48018ms) 
+     -computing association tests...done (127ms) 
+     -computing joint association tests...done (0ms) 
+ set [301/1912] : DBX1 - 6862 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11147ms) 
+     -computing association tests...done (20ms) 
+     -computing joint association tests...done (0ms) 
+ set [302/1912] : DCDC1 - 216258 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (759890ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [303/1912] : DCHS1 - 16243 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (30993ms) 
+     -computing association tests...done (92ms) 
+     -computing joint association tests...done (0ms) 
+ set [304/1912] : DCPS - 25745 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (53560ms) 
+     -computing association tests...done (89ms) 
+     -computing joint association tests...done (0ms) 
+ set [305/1912] : DCUN1D5 - 26957 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (59689ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (2ms) 
+ set [306/1912] : DDB1 - 16292 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (30926ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [307/1912] : DDB2 - 14483 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (23740ms) 
+     -computing association tests...done (90ms) 
+     -computing joint association tests...done (0ms) 
+ set [308/1912] : DDIAS - 17767 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (29026ms) 
+     -computing association tests...done (21ms) 
+     -computing joint association tests...done (0ms) 
+ set [309/1912] : DDX10 - 118253 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (256702ms) 
+     -computing association tests...done (93ms) 
+     -computing joint association tests...done (0ms) 
+ set [310/1912] : DDX25 - 12492 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18854ms) 
+     -computing association tests...done (96ms) 
+     -computing joint association tests...done (0ms) 
+ set [311/1912] : DDX6 - 28684 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (49920ms) 
+     -computing association tests...done (101ms) 
+     -computing joint association tests...done (1ms) 
+ set [312/1912] : DEAF1 - 35799 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (83164ms) 
+     -computing association tests...done (95ms) 
+     -computing joint association tests...done (0ms) 
+ set [313/1912] : DEFB108B - 8021 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (16135ms) 
+     -computing association tests...done (23ms) 
+     -computing joint association tests...done (0ms) 
+ set [314/1912] : DEFB131B - 7536 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (10719ms) 
+     -computing association tests...done (75ms) 
+     -computing joint association tests...done (1ms) 
+ set [315/1912] : DENND2B - 80041 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (159172ms) 
+     -computing association tests...done (32ms) 
+     -computing joint association tests...done (0ms) 
+ set [316/1912] : DENND5A - 62053 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (110939ms) 
+     -computing association tests...done (26ms) 
+     -computing joint association tests...done (1ms) 
+ set [317/1912] : DEPDC7 - 9052 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (15580ms) 
+     -computing association tests...done (122ms) 
+     -computing joint association tests...done (0ms) 
+ set [318/1912] : DEUP1 - 56012 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (238804ms) 
+     -computing association tests...done (31ms) 
+     -computing joint association tests...done (0ms) 
+ set [319/1912] : DGAT2 - 16635 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (27579ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [320/1912] : DGAT2-DT - 82 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (625ms) 
+     -computing association tests...done (2ms) 
+     -computing joint association tests...done (0ms) 
+ set [321/1912] : DGKZ - 15717 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22816ms) 
+     -computing association tests...done (107ms) 
+     -computing joint association tests...done (0ms) 
+ set [322/1912] : DHCR7 - 8357 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (11535ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [323/1912] : DISC1FP1 - 317545 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (1447079ms) 
+     -computing association tests...done (29ms) 
+     -computing joint association tests...done (0ms) 
+ set [324/1912] : DIXDC1 - 41071 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (79729ms) 
+     -computing association tests...done (22ms) 
+     -computing joint association tests...done (0ms) 
+ set [325/1912] : DKK3 - 23542 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (31339ms) 
+     -computing association tests...done (83ms) 
+     -computing joint association tests...done (0ms) 
+ set [326/1912] : DLAT - 15828 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (22990ms) 
+     -computing association tests...done (77ms) 
+     -computing joint association tests...done (0ms) 
+ set [327/1912] : DLG2 - 1015691 variants...
+     -reading in genotypes, computing gene-based tests and building masks...
