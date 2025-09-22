@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=gbt_p3
 #SBATCH --nodes=1 
-#SBATCH --cpus-per-task=16    
+#SBATCH --cpus-per-task=2    
 #SBATCH --time=88-00:00:00
-#SBATCH --mem=330G
-#SBATCH --partition=inspur
+#SBATCH --mem=1000G
+#SBATCH --partition=bigmem
 #SBATCH --output=/dev/null
-#SBATCH --array=16-18
+#SBATCH --array=16
 
 echo "Task ${SLURM_ARRAY_TASK_ID} (Job ID: ${SLURM_JOB_ID}, Array Job ID: ${SLURM_ARRAY_JOB_ID}) is trying to run the script..."
 EXEC="/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p024_gene_based_testing/p024_gbt_chr${SLURM_ARRAY_TASK_ID}.sh"

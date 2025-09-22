@@ -26,7 +26,7 @@ echo 'regenie version:'
 regenie --version
 
 echo "--------start"
-THREADS=16 && \
+THREADS=2 && \
   regenie \
     --step 2 \
     --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \

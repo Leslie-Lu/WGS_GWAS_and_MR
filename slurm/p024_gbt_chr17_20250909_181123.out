@@ -1,0 +1,127 @@
+start at:
+Tue Sep  9 18:11:23 CST 2025
+This directory already exists.
+regenie version:
+v4.1.gz
+--------start
+Start time: Tue Sep  9 18:13:18 2025
+
+              |===========================|
+              |      REGENIE v4.1.gz      |
+              |===========================|
+
+Copyright (c) 2020-2024 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/testing_results/step2_gb_euro_cin3plus_chr17.log
+
+Options in effect:
+  --step 2 \
+  --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
+  --chr 17 \
+  --phenoFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt \
+  --bt \
+  --covarFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt \
+  --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
+  --strict \
+  --bsize 1000 \
+  --firth \
+  --approx \
+  --threads 16 \
+  --pred /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list \
+  --use-null-firth /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_firth.list \
+  --anno-file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt \
+  --set-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt \
+  --mask-def /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt \
+  --aaf-bins 0.001,0.01,0.05,0.1 \
+  --vc-MACthr 10 \
+  --joint acat,sbat \
+  --vc-tests skato,acato-full \
+  --rgc-gene-p \
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/testing_results/step2_gb_euro_cin3plus_chr17
+
+Association testing mode (joint tests) with fast multithreading using OpenMP
+ * pvar             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.pvar] n_snps = 1400147917
+ * psam             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.psam] n_samples = 202952
+ * pgen             : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.pgen] 
+ * phenotypes       : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt] n_pheno = 1
+   -dropping observations with missing values at any of the phenotypes
+   -number of phenotyped individuals with no missing data = 202952
+ * covariates       : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt] n_cov = 26
+   -number of individuals with covariate data = 202952
+ * number of individuals used in analysis = 202952
+ * case-control counts for each trait:
+   - 'CIN3plus': 5544 cases and 197408 controls
+ * LOCO predictions : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list]
+   -file [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_1.loco] for phenotype 'CIN3plus'
+ * annotations      : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt] 
+   +number of annotations categories = 6
+ * masks            : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt] n_masks = 7
+ * aaf cutoffs      : [ 4 : 0.001 0.01 0.05 0.1 ] + singletons
+ * set file         : [/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt] n_sets = 1498
+WARNING: Detected 34 sets with variants not in genetic data or annotation files.
+ * # threads        : [16]
+ * # tested sets    : [1498]
+ * max block size   : [1000]
+ * rule used to build masks : max
+ * computing gene-based tests for each set of variants included in a mask (rho=[0,0.01,0.04,0.09,0.16,0.25,0.5,1])
+  -variants with MAC <= 10 are collapsed into a mask
+  -weights are obtained from Beta(MAF,1,25)
+  -list of gene-based tests run: ACATO,ACATV,SKATO,SKATO-ACAT
+ * applying ACAT to output overall gene p-value
+ * approximate memory usage : 1437GB
+ * using minimum MAC of 5 (masks with lower MAC are ignored)
+ * using fast Firth correction for logistic/cox regression p-values less than 0.05
+ * user specified to test only on select chromosomes
+WARNING: Joint SBAT test only for QTs.
+ * number of mask groups run through gene-p strategy = 2
+ * list of joint tests run on burden masks: ACAT
+
+Chromosome 17 [1498 sets in total]
+   -reading loco predictions for the chromosome...done (8247ms) 
+   -fitting null logistic regression on binary phenotypes...done (2850ms) 
+   -fitting null Firth logistic regression on binary phenotypes...done (3357ms) 
+ set [1/1498] : 5S_rRNA - 1069 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (6378ms) 
+     -computing association tests...done (6ms) 
+     -computing joint association tests...done (0ms) 
+ set [2/1498] : 7SK - 1357 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (4857ms) 
+     -computing association tests...done (12ms) 
+     -computing joint association tests...done (0ms) 
+ set [3/1498] : AA06 - 10751 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18352ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [4/1498] : AANAT - 7399 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (14045ms) 
+     -computing association tests...done (82ms) 
+     -computing joint association tests...done (0ms) 
+ set [5/1498] : AARSD1 - 7995 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (18912ms) 
+     -computing association tests...done (18ms) 
+     -computing joint association tests...done (0ms) 
+ set [6/1498] : AATF - 44515 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (85911ms) 
+     -computing association tests...done (108ms) 
+     -computing joint association tests...done (0ms) 
+ set [7/1498] : AATK - 21998 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (61804ms) 
+     -computing association tests...done (87ms) 
+     -computing joint association tests...done (0ms) 
+ set [8/1498] : ABCA10 - 41392 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (93278ms) 
+     -computing association tests...done (99ms) 
+     -computing joint association tests...done (0ms) 
+ set [9/1498] : ABCA5 - 50157 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (114445ms) 
+     -computing association tests...done (24ms) 
+     -computing joint association tests...done (0ms) 
+ set [10/1498] : ABCA6 - 29068 variants...
+     -reading in genotypes, computing gene-based tests and building masks...done (50040ms) 
+     -computing association tests...done (78ms) 
+     -computing joint association tests...done (0ms) 
+ set [11/1498] : ABCA8 - 45108 variants...
+     -reading in genotypes, computing gene-based tests and building masks...
