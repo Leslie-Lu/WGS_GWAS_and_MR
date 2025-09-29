@@ -15,12 +15,18 @@ exec > $OUTPUT_FILE 2>&1
 
 echo 'start at:'
 date
-grep "^1:145711327:" /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted.ids
-file /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt
-dos2unix /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt
-sort /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt
-sort /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted.ids -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids
-comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids > /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_unmatch_20250929.txt
-comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids | wc -l
+# grep "^1:145711327:" /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted.ids
+# file /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt
+# dos2unix /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt
+# sort /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted.txt -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt
+# sort /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted.ids -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids
+# comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids > /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_unmatch_20250929.txt
+# comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids | wc -l
+
+file /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted.txt
+dos2unix /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted.txt
+sort /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted.txt -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted_v2.txt
+comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids > /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_unmatch_20250929_v2.txt
+comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids | wc -l
 echo 'end at:'
 date
