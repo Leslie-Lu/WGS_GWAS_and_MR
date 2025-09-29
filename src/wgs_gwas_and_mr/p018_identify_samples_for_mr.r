@@ -10,6 +10,9 @@
 # DATE MODIFIED     : 2025-07-01
 # REASON            : Confirm the logic of selecting samples for MR analysis
 ################################################################################################
+# DATE MODIFIED     : 2025-09-29
+# REASON            : Reconfirm the code and debug
+################################################################################################
 rm(list = ls())
 gc()
 
@@ -28,6 +31,7 @@ T001EuropeanPrePCAID= data.table::fread(
   header = FALSE
 )
 T001EuropeanPrePCAID %>% dim()
+T001EuropeanPrePCAID %>% head()
 T001EuropeanPrePCAID %>% names()
 T001EuropeanPrePCAID %<>%
   rename(
@@ -41,6 +45,7 @@ protein_olink= data.table::fread(
   header = TRUE,
 )
 protein_olink %>% dim()
+protein_olink %>% head()
 protein_olink_eid= protein_olink[, .(eid)] %>%
   unique(., by= "eid")
 protein_olink_eid %>% dim()
@@ -76,7 +81,10 @@ T001EuropeanPrePCAID %>% dim()
 MR_samples_protein %>% dim()
 MR_samples_metabolomics %>% dim()
 
-file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCAID.txt")
+
+
+file.remove(file.path(getwd(), "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt"))
+MR_samples_protein %>% head
 MR_samples_protein %>%
   fwrite(
     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt",
@@ -84,6 +92,8 @@ MR_samples_protein %>%
     row.names = FALSE,
     sep = "\t"
   )
+file.remove(file.path(getwd(), "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCAID.txt"))
+MR_samples_metabolomics %>% head
 MR_samples_metabolomics %>%
   fwrite(
     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCAID.txt",
@@ -92,62 +102,65 @@ MR_samples_metabolomics %>%
     sep = "\t"
   )
 
-# T002_EuropeanPrePCA_outcome
-T002_EuropeanPrePCA_outcome= fread(
-  "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt",
-  header = FALSE
-) %>%
-  rename(
-    eid= V1,
-    eligible_cc= V2,
-    eligible_cin3= V3,
-    eligible_cc_cin3= V4
-  )
-T002_EuropeanPrePCA_outcome %>% head()
-setkeyv(T002_EuropeanPrePCA_outcome, c("eid"))
-
-file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome.txt")
-T002_EuropeanPrePCA_outcome[!protein_olink_eid,] %>%
-  fwrite(
-    "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome.txt",
-    col.names = FALSE,
-    row.names = FALSE,
-    sep = "\t"
-  )
-T002_EuropeanPrePCA_outcome[!metabolomics_data_2_eid,] %>%
-  fwrite(
-    "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome.txt",
-    col.names = FALSE,
-    row.names = FALSE,
-    sep = "\t"
-  )
 
 
-# T002_EuropeanPrePCA_outcome_recode_cc_cin3
-T002_EuropeanPrePCA_outcome_recode_cc_cin3= fread(
-  "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-  header = FALSE
-) %>%
-  rename(
-    eid= V1,
-    eligible_cc_cin3= V2
-  )
-T002_EuropeanPrePCA_outcome_recode_cc_cin3 %>% head()
-setkeyv(T002_EuropeanPrePCA_outcome_recode_cc_cin3, c("eid"))
+
+# # T002_EuropeanPrePCA_outcome
+# T002_EuropeanPrePCA_outcome= fread(
+#   "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt",
+#   header = FALSE
+# ) %>%
+#   rename(
+#     eid= V1,
+#     eligible_cc= V2,
+#     eligible_cin3= V3,
+#     eligible_cc_cin3= V4
+#   )
+# T002_EuropeanPrePCA_outcome %>% head()
+# setkeyv(T002_EuropeanPrePCA_outcome, c("eid"))
+
+# file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome.txt")
+# T002_EuropeanPrePCA_outcome[!protein_olink_eid,] %>%
+#   fwrite(
+#     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome.txt",
+#     col.names = FALSE,
+#     row.names = FALSE,
+#     sep = "\t"
+#   )
+# T002_EuropeanPrePCA_outcome[!metabolomics_data_2_eid,] %>%
+#   fwrite(
+#     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome.txt",
+#     col.names = FALSE,
+#     row.names = FALSE,
+#     sep = "\t"
+#   )
 
 
-file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome_recode_cc_cin3.txt")
-T002_EuropeanPrePCA_outcome_recode_cc_cin3[!protein_olink_eid,] %>%
-  fwrite(
-    "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-    col.names = FALSE,
-    row.names = FALSE,
-    sep = "\t"
-  )
-T002_EuropeanPrePCA_outcome_recode_cc_cin3[!metabolomics_data_2_eid,] %>%
-  fwrite(
-    "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-    col.names = FALSE,
-    row.names = FALSE,
-    sep = "\t"
-  )
+# # T002_EuropeanPrePCA_outcome_recode_cc_cin3
+# T002_EuropeanPrePCA_outcome_recode_cc_cin3= fread(
+#   "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
+#   header = FALSE
+# ) %>%
+#   rename(
+#     eid= V1,
+#     eligible_cc_cin3= V2
+#   )
+# T002_EuropeanPrePCA_outcome_recode_cc_cin3 %>% head()
+# setkeyv(T002_EuropeanPrePCA_outcome_recode_cc_cin3, c("eid"))
+
+
+# file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome_recode_cc_cin3.txt")
+# T002_EuropeanPrePCA_outcome_recode_cc_cin3[!protein_olink_eid,] %>%
+#   fwrite(
+#     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
+#     col.names = FALSE,
+#     row.names = FALSE,
+#     sep = "\t"
+#   )
+# T002_EuropeanPrePCA_outcome_recode_cc_cin3[!metabolomics_data_2_eid,] %>%
+#   fwrite(
+#     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
+#     col.names = FALSE,
+#     row.names = FALSE,
+#     sep = "\t"
+#   )
