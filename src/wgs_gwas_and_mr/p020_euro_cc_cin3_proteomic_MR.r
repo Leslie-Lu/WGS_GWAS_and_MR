@@ -24,8 +24,10 @@ library(data.table)
 # if(!requireNamespace("omixVizR", quietly = TRUE)) {
 #   install.packages("omixVizR", repos = c('https://leslie-lu.r-universe.dev'))
 # }
+packageVersion("omixVizR")
 
-outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic"
+# outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic"
+outputDir = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/data/input"
 
 ## --- Part1 ---
 # phenoFile = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt"
@@ -73,83 +75,98 @@ outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic"
 
 
 ## --- Part3 ---
+# MR_2SLS_results = readRDS(
+#   file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.rds")
+# )
+# mr_results = MR_2SLS_results$mr_results
+# data.table::setDT(mr_results)
+# mr_results %>% dim()
+# mr_results %>% head()
+# mr_results %>% names()
+# # mr_results %>%
+# #   openxlsx::write.xlsx(
+# #     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.xlsx"),
+# #     sheetName = "Table S6",
+# #     rowNames = FALSE,
+# #     colWidths = "auto"
+# #   )
+# col_name <- "Significant with a Bonferroni correction (0.05/147=3.40e-04)"
+# mr_results[get(col_name) == "Yes", .N]
+# mr_results[get(col_name) == "Yes", ] %>% head()
+# mr_results[get(col_name) == "Yes", length(unique(Metabolite))]
+
+# sig_metabolites = mr_results[get(col_name) == "Yes", ]
+# sig_metabolites %>% dim()
+# sig_metabolites %>% str()
+# sig_metabolites[, `:=`(
+#   `Raw P value` = as.numeric(`Raw P value`),
+#   OR = as.numeric(OR),
+#   OR.confint.lower = as.numeric(OR.confint.lower),
+#   OR.confint.upper = as.numeric(OR.confint.upper)
+# )]
+# data.table::setorder(sig_metabolites, -OR)
+# sig_metabolites %>% head()
+
+
+# # p_left_data = sig_metabolites[, .(Metabolite, `Sample size`, Cases, Controls)]
+# p_left_data = sig_metabolites[, .(Metabolite)]
+# p_left_data %>% head()
+
+# p_right_data = sig_metabolites[, .(`Odds ratio (95% CI)`, `P value`, `Significant with a Bonferroni correction (0.05/147=3.40e-04)`)]
+# p_right_data %>% head()
+
+# min(sig_metabolites$OR.confint.lower)
+# max(sig_metabolites$OR.confint.upper)
+# mr_forest_plot = omixVizR::plot_forest(p_left_data = p_left_data,
+#                                        point_estimate = sig_metabolites$OR,
+#                                        ci_lower_bound = sig_metabolites$OR.confint.lower,
+#                                        ci_upper_bound = sig_metabolites$OR.confint.upper,
+#                                        ci_sep = ", ",
+#                                        p_right_data = p_right_data,
+#                                        precision_digits = 3,
+#                                        p_mid_width = 45,
+#                                        null_line_at = 1,
+#                                        output_path = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic",
+#                                        dpi = 600,
+#                                        display = TRUE,
+#                                        font_family = c("MetroSans"),
+#                                        p_left_data_name = c('Metabolite'),
+#                                        p_right_data_name = c("Adjusted odds ratio (95% CI)", "P", "Bonferroni significance"),
+#                                        stripe_colour = "#eff3f2",
+#                                        background_colour = "white",
+#                                        x_scale_linear = TRUE,
+#                                        xlim = c(0.8, 1.2),
+#                                        xbreaks = c(0.8, 0.9, 1.0, 1.1, 1.2),
+#                                        nudge_y = -0.5,
+#                                        nudge_x = 1,
+#                                        nudge_height = 0,
+#                                        nudge_width = 0,
+#                                        justify = c(0, 0.5, 0.5, 0.5),
+#                                        arrows = TRUE,
+#                                        arrow_labels = c("Lower risk", "Higher risk"),
+#                                        risk_colors = c("#E52B25", "#2981B3"),
+#                                        arrow_nudge_y = 0.2,
+#                                        add_plot = NULL,
+#                                        add_plot_width = 1,
+#                                        add_plot_gap = FALSE,
+#                                        point_sizes = 2.5,
+#                                        point_shapes = 15,
+#                                        p_mid_forest = NULL,
+#                                        lower_header_row = FALSE,
+#                                        render_as = "png",
+#                                        table_theme = NULL)
+
+
+## --- Part4 ---
 MR_2SLS_results = readRDS(
   file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.rds")
 )
-mr_results = MR_2SLS_results$mr_results
-data.table::setDT(mr_results)
-mr_results %>% dim()
-mr_results %>% head()
-mr_results %>% names()
-# mr_results %>%
-#   openxlsx::write.xlsx(
-#     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.xlsx"),
-#     sheetName = "Table S6",
-#     rowNames = FALSE,
-#     colWidths = "auto"
-#   )
-col_name <- "Significant with a Bonferroni correction (0.05/147=3.40e-04)"
-mr_results[get(col_name) == "Yes", .N]
-mr_results[get(col_name) == "Yes", ] %>% head()
-mr_results[get(col_name) == "Yes", length(unique(Metabolite))]
+cor_mat = MR_2SLS_results$correlation_matrix
 
-sig_metabolites = mr_results[get(col_name) == "Yes", ]
-sig_metabolites %>% dim()
-sig_metabolites %>% str()
-sig_metabolites[, `:=`(
-  `Raw P value` = as.numeric(`Raw P value`),
-  OR = as.numeric(OR),
-  OR.confint.lower = as.numeric(OR.confint.lower),
-  OR.confint.upper = as.numeric(OR.confint.upper)
-)]
-data.table::setorder(sig_metabolites, -OR)
-sig_metabolites %>% head()
+cor_mat %>% str()
+new_colnames = purrr::map_chr(colnames(cor_mat), ~ stringr::str_extract(.x, "(?<=beta_)[^_]+(?=_)"))
+new_rownames = purrr::map_chr(rownames(cor_mat), ~ stringr::str_extract(.x, "(?<=beta_)[^_]+(?=_)"))
+colnames(cor_mat) = new_colnames
+rownames(cor_mat) = new_rownames
 
-
-# p_left_data = sig_metabolites[, .(Metabolite, `Sample size`, Cases, Controls)]
-p_left_data = sig_metabolites[, .(Metabolite)]
-p_left_data %>% head()
-
-p_right_data = sig_metabolites[, .(`Odds ratio (95% CI)`, `P value`, `Significant with a Bonferroni correction (0.05/147=3.40e-04)`)]
-p_right_data %>% head()
-
-min(sig_metabolites$OR.confint.lower)
-max(sig_metabolites$OR.confint.upper)
-mr_forest_plot = omixVizR::plot_forest(p_left_data = p_left_data,
-                                       point_estimate = sig_metabolites$OR,
-                                       ci_lower_bound = sig_metabolites$OR.confint.lower,
-                                       ci_upper_bound = sig_metabolites$OR.confint.upper,
-                                       ci_sep = ", ",
-                                       p_right_data = p_right_data,
-                                       precision_digits = 3,
-                                       p_mid_width = 45,
-                                       null_line_at = 1,
-                                       output_path = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic",
-                                       dpi = 600,
-                                       display = TRUE,
-                                       font_family = c("MetroSans"),
-                                       p_left_data_name = c('Metabolite'),
-                                       p_right_data_name = c("Adjusted odds ratio (95% CI)", "P", "Bonferroni significance"),
-                                       stripe_colour = "#eff3f2",
-                                       background_colour = "white",
-                                       x_scale_linear = TRUE,
-                                       xlim = c(0.8, 1.2),
-                                       xbreaks = c(0.8, 0.9, 1.0, 1.1, 1.2),
-                                       nudge_y = -0.5,
-                                       nudge_x = 1,
-                                       nudge_height = 0,
-                                       nudge_width = 0,
-                                       justify = c(0, 0.5, 0.5, 0.5),
-                                       arrows = TRUE,
-                                       arrow_labels = c("Lower risk", "Higher risk"),
-                                       risk_colors = c("#E52B25", "#2981B3"),
-                                       arrow_nudge_y = 0.2,
-                                       add_plot = NULL,
-                                       add_plot_width = 1,
-                                       add_plot_gap = FALSE,
-                                       point_sizes = 2.5,
-                                       point_shapes = 15,
-                                       p_mid_forest = NULL,
-                                       lower_header_row = FALSE,
-                                       render_as = "png",
-                                       table_theme = NULL)
+omixVizR::plot_heatmap(cor_mat, output_path = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/output/Figure")
