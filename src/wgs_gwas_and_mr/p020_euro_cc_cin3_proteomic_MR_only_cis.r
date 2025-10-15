@@ -27,8 +27,8 @@ library(data.table)
 # }
 # packageVersion("omixVizR")
 
-outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis"
-# outputDir = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/data/input"
+# outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis"
+outputDir = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/data/input"
 
 ## --- Part1 ---
 # phenoFile = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt"
@@ -84,13 +84,13 @@ data.table::setDT(mr_results)
 mr_results %>% dim()
 mr_results %>% head()
 mr_results %>% names()
-mr_results %>%
-  openxlsx::write.xlsx(
-    file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.xlsx"),
-    sheetName = "Table S7",
-    rowNames = FALSE,
-    colWidths = "auto"
-  )
+# mr_results %>%
+#   openxlsx::write.xlsx(
+#     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.xlsx"),
+#     sheetName = "Table S7",
+#     rowNames = FALSE,
+#     colWidths = "auto"
+#   )
 col_name <- "Significant with a Bonferroni correction (0.05/1701=2.94e-05)"
 mr_results[get(col_name) == "Yes", .N]
 mr_results[get(col_name) == "Yes", ] %>% head()
@@ -127,7 +127,7 @@ mr_forest_plot = omixVizR::plot_forest(p_left_data = p_left_data,
                                        precision_digits = 3,
                                        p_mid_width = 45,
                                        null_line_at = 1,
-                                       output_path = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis",
+                                       output_path = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/output/Figure",
                                        dpi = 600,
                                        display = TRUE,
                                        font_family = c("MetroSans"),
@@ -170,4 +170,4 @@ new_rownames = purrr::map_chr(rownames(cor_mat), ~ stringr::str_extract(.x, "(?<
 colnames(cor_mat) = new_colnames
 rownames(cor_mat) = new_rownames
 
-omixVizR::plot_heatmap(cor_mat, output_path = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis")
+omixVizR::plot_heatmap(cor_mat)
