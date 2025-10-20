@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=prs_check
-#SBATCH --nodes=2
-#SBATCH --cpus-per-task=48  
+#SBATCH --job-name=prs_check_only_cis
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=4  
 #SBATCH --time=04-00:00:00
-#SBATCH --mem=240G
+#SBATCH --mem=162G
 #SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
-EXEC=/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/p016_prs_check.slurm
+EXEC=/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/p016_prs_check_only_cis.slurm
 SCRIPT_NAME=$(basename $EXEC .slurm)
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 OUTPUT_FILE="/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/${SCRIPT_NAME}_${TIMESTAMP}.out"
@@ -22,8 +22,8 @@ plink2 \
   --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt \
   --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_only_cis_v3.txt \
   --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_only_cis_input_files_proteomic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants \
-  --score-col-nums 3-1910 \
-  --memory 239276 \
+  --score-col-nums 3-1911 \
+  --memory 162276 \
   --threads $threads \
   --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis
 wc -l /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore.vars

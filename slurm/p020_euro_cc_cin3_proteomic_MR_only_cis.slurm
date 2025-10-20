@@ -1,10 +1,10 @@
 #!/bin/bash -l
-#SBATCH --job-name=proteomic_MR
-#SBATCH --nodes=2 
-#SBATCH --cpus-per-task=48    
+#SBATCH --job-name=proteomic_MR_only_cis
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=8    
 #SBATCH --time=88-00:00:00
-#SBATCH --mem=218G
-#SBATCH --partition=inspur
+#SBATCH --mem=158G
+#SBATCH --partition=bigmem
 #SBATCH --output=/dev/null
 
 EXEC="/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p020_euro_cc_cin3_proteomic_MR_only_cis.r"

@@ -1,22 +1,22 @@
 start at:
-Wed Oct 15 01:16:58 CST 2025
+Mon Oct 20 01:21:15 CST 2025
 PLINK v2.0.0-a.6.2LM 64-bit Intel (24 Nov 2024)    cog-genomics.org/plink/2.0/
 (C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
 Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.log.
 Options in effect:
   --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_only_cis_v3.txt
   --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt
-  --memory 239276
+  --memory 162276
   --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis
   --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID
   --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_only_cis_input_files_proteomic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants
-  --score-col-nums 3-1910
-  --threads 48
+  --score-col-nums 3-1911
+  --threads 4
 
-Start time: Wed Oct 15 01:17:00 2025
-515603 MiB RAM detected, ~392268 available; reserving 239276 MiB for main
+Start time: Mon Oct 20 01:21:16 2025
+515616 MiB RAM detected, ~485635 available; reserving 162276 MiB for main
 workspace.
-Using up to 48 threads (change this with --threads).
+Using up to 4 compute threads.
 202952 samples (202946 females, 6 males; 202952 founders) loaded from
 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.psam.
 1400147917 variants loaded from
@@ -33,9 +33,9 @@ Calculating allele frequencies... 0%1%1%2%2%3%3%4%4%5%5%6%
 --score: Results written to
 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore
 .
-End time: Wed Oct 15 01:35:20 2025
+End time: Mon Oct 20 01:40:22 2025
 1898 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore.vars
 181462 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore
-1909
+1910
 end at:
-Wed Oct 15 01:35:58 CST 2025
+Mon Oct 20 01:41:02 CST 2025
