@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#SBATCH --job-name=identify_samples_for_mr
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=64    
+#SBATCH --time=88-00:00:00
+#SBATCH --mem=160G
+#SBATCH --partition=inspur
+#SBATCH --output=/dev/null
+
+EXEC="/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p016_identify_samples_for_mr.r"
+SCRIPT_NAME=$(basename $EXEC .r)
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+OUTPUT_FILE="/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/${SCRIPT_NAME}_${TIMESTAMP}.out"
+exec > $OUTPUT_FILE 2>&1
+
+echo 'start at:'
+date
+source /share/home/lsy_luzhen/software/miniconda3/bin/activate r-441
+Rscript $EXEC
+conda deactivate
+echo 'end at:'
+date
