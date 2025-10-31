@@ -5,7 +5,8 @@ etc
 tmp_ssh_data
 backup
 .vscode
-.VenvPython313
+.venvPy313
+.venvPy312
 
 .lintr
 

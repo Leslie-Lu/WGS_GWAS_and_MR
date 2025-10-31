@@ -26,7 +26,7 @@ echo 'regenie version:'
 regenie --version
 
 echo "--------start"
-THREADS=2 && \
+THREADS=1 && \
   regenie \
     --step 2 \
     --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
@@ -36,7 +36,7 @@ THREADS=2 && \
     --covarFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt \
     --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
     --strict \
-    --bsize 1000 \
+    --bsize 100 \
     --firth --approx \
     --threads $THREADS \
     --pred /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list \
