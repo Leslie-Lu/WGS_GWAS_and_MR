@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=gbt_p1
 #SBATCH --nodes=1 
-#SBATCH --cpus-per-task=96    
+#SBATCH --cpus-per-task=4    
 #SBATCH --time=88-00:00:00
-#SBATCH --mem=1503G
+#SBATCH --mem=950G
 #SBATCH --partition=bigmem
 #SBATCH --output=/dev/null
 #SBATCH --array=9

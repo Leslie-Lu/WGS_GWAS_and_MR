@@ -304,124 +304,64 @@ saveRDS(proteins_corr_data,
 
 
 
-
-
-
-
-
-
-
-# # metabolomics data
-# metabolomics_data_1= data.table::fread(
-#   "/mnt/lsy/OS5300/user/lsy-bianshengzhe/Project/Pro7_NMRmetabo0821/1.metab/1.1_metab_50w.tab",
-#   header = TRUE,
-# )
-# metabolomics_data_1 %>% dim()
-# metabolomics_data_1 %>% head()
-# metabolomics_data_1 %>% names() %>% head()
-# metabolomics_data_2= metabolomics_data_1 %>%
-#   filter(
-#     rowSums(is.na(
-#       across(-contains(".eid"))
-#     )) < ncol(select(., -contains(".eid")))
-#   )
-# # get eid
-# metabolomics_data_2_eid= metabolomics_data_2[, .(f.eid)] %>%
-#   unique(., by= "f.eid")
-# metabolomics_data_2_eid %>% dim()
-# metabolomics_data_2_eid %>% head()
-# setnames(metabolomics_data_2_eid, "f.eid", "eid")
-
-# # get european samples used for MR analysis
-# setkeyv(T001EuropeanPrePCAID, c("eid"))
-# setkeyv(protein_olink_eid, c("eid"))
-# setkeyv(metabolomics_data_2_eid, c("eid"))
-# MR_samples_protein= T001EuropeanPrePCAID[!protein_olink_eid,]
-# MR_samples_metabolomics= T001EuropeanPrePCAID[!metabolomics_data_2_eid,]
-# T001EuropeanPrePCAID %>% dim()
-# MR_samples_protein %>% dim()
-# MR_samples_metabolomics %>% dim()
-
-
-
-# file.remove(file.path(getwd(), "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt"))
-# MR_samples_protein %>% head
-# MR_samples_protein %>%
-#   fwrite(
-#     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt",
-#     col.names = FALSE,
-#     row.names = FALSE,
-#     sep = "\t"
-#   )
-# file.remove(file.path(getwd(), "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCAID.txt"))
-# MR_samples_metabolomics %>% head
-# MR_samples_metabolomics %>%
-#   fwrite(
-#     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCAID.txt",
-#     col.names = FALSE,
-#     row.names = FALSE,
-#     sep = "\t"
-#   )
-
-
-
-
-# # # T002_EuropeanPrePCA_outcome
-# # T002_EuropeanPrePCA_outcome= fread(
-# #   "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome.txt",
-# #   header = FALSE
-# # ) %>%
-# #   rename(
-# #     eid= V1,
-# #     eligible_cc= V2,
-# #     eligible_cin3= V3,
-# #     eligible_cc_cin3= V4
-# #   )
-# # T002_EuropeanPrePCA_outcome %>% head()
-# # setkeyv(T002_EuropeanPrePCA_outcome, c("eid"))
-
-# # file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome.txt")
-# # T002_EuropeanPrePCA_outcome[!protein_olink_eid,] %>%
-# #   fwrite(
-# #     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome.txt",
-# #     col.names = FALSE,
-# #     row.names = FALSE,
-# #     sep = "\t"
-# #   )
-# # T002_EuropeanPrePCA_outcome[!metabolomics_data_2_eid,] %>%
-# #   fwrite(
-# #     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome.txt",
-# #     col.names = FALSE,
-# #     row.names = FALSE,
-# #     sep = "\t"
-# #   )
-
-
-# # # T002_EuropeanPrePCA_outcome_recode_cc_cin3
-# # T002_EuropeanPrePCA_outcome_recode_cc_cin3= fread(
-# #   "WGS_GWAS_and_MR/output/T002_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-# #   header = FALSE
-# # ) %>%
-# #   rename(
-# #     eid= V1,
-# #     eligible_cc_cin3= V2
-# #   )
-# # T002_EuropeanPrePCA_outcome_recode_cc_cin3 %>% head()
-# # setkeyv(T002_EuropeanPrePCA_outcome_recode_cc_cin3, c("eid"))
-
-
-# # file.remove("WGS_GWAS_and_MR/output/T005_MR_EuropeanPrePCA_outcome_recode_cc_cin3.txt")
-# # T002_EuropeanPrePCA_outcome_recode_cc_cin3[!protein_olink_eid,] %>%
-# #   fwrite(
-# #     "WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-# #     col.names = FALSE,
-# #     row.names = FALSE,
-# #     sep = "\t"
-# #   )
-# # T002_EuropeanPrePCA_outcome_recode_cc_cin3[!metabolomics_data_2_eid,] %>%
-# #   fwrite(
-# #     "WGS_GWAS_and_MR/output/T005_MR_metabolomics_EuropeanPrePCA_outcome_recode_cc_cin3.txt",
-# #     col.names = FALSE,
-# #     row.names = FALSE,
-# #     sep = "\t"
-# #   )
+# ## --- Part 3: tidy NMR data ---
+# ## --- Part 4: join with covars data ---
+# protein olink data
+inPath = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/NMR"
+olink_subset_wide = data.table::fread(
+  file.path(inPath, "NMR_subset_instance0_wide.csv"),
+  header = TRUE
+)
+olink_subset_wide %>% names() %>% tail()
+olink_subset_wide[, all_nas := NULL]
+olink_subset_wide %>% dim()
+protein_measured_eid = data.table::fread(
+  file.path(inPath, "NMR_metabolite_measured_eid.txt"),
+  header = TRUE
+)
+protein_measured_eid %>% dim()
+# select eligible pre-pca european data
+T001EuropeanPrePCAID= data.table::fread(
+  "WGS_GWAS_and_MR/output/T001_EuropeanPrePCAID.txt",
+  header = FALSE
+)
+T001EuropeanPrePCAID %>% dim()
+T001EuropeanPrePCAID %>% head()
+data.table::setnames(T001EuropeanPrePCAID, c("V1", "V2"), c("eid", "eid1"))
+T001EuropeanPrePCAID[, eid1 := NULL]
+# --- Part 4.1 ---
+phenoFile = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt"
+covarFile = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt"
+pheno = data.table::fread(phenoFile)
+covar = data.table::fread(covarFile)
+catCovarList = c(
+    "Smoking_status","Alcohol_intake_frequency","Genotype_measurement_batch"
+)
+purrr::map(catCovarList, ~ table(covar[[.x]], useNA = "always"))
+covar[, (catCovarList) := lapply(.SD, as.factor), .SDcols = catCovarList]
+purrr::map(catCovarList, ~ levels(covar[[.x]]))
+# Merge pheno and covar
+pheno %>% dim() # 203972
+covar %>% dim() # 203972
+pheno_covar = pheno[covar, on = c("FID", "IID"), nomatch = 0]
+pheno_covar %>% dim() # 203972
+pheno_covar[, `:=`(eid = IID, FID = NULL, IID = NULL)]
+euros_pheno_covar = T001EuropeanPrePCAID[pheno_covar, on = "eid"]
+message("Total European pre-PCA samples with both phenotype and covariates: ", nrow(euros_pheno_covar)) # 203972
+MR_samples_protein = euros_pheno_covar[!protein_measured_eid, on = "eid"]
+message("Total European pre-PCA samples eligible for MR analysis: ", nrow(MR_samples_protein)) # 89305
+MR_samples_protein[, .(eid)] %>%
+  dplyr::distinct() %>%
+  data.table::fwrite(
+    "WGS_GWAS_and_MR/output/T005_MR_metabolite_EuropeanPrePCAID.txt",
+    col.names = FALSE,
+    row.names = FALSE,
+    sep = "\t"
+  )
+outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/NMR"
+saveRDS(MR_samples_protein,
+        file = file.path(outputDir, "CIN3plus_metabolite_MR_samples_phenos.rds"))
+proteins_corr_data = euros_pheno_covar[olink_subset_wide, on = "eid"]
+message("Total European pre-PCA samples with both phenotype, covariates and protein measurements: ", nrow(proteins_corr_data)) # 274235
+saveRDS(proteins_corr_data,
+        file = file.path(outputDir, "CIN3plus_metabolites_corr_full_data.rds"))

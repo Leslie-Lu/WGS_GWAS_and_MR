@@ -26,7 +26,32 @@ echo 'regenie version:'
 regenie --version
 
 echo "--------start"
-THREADS=1 && \
+# THREADS=2 && \
+#   regenie \
+#     --step 2 \
+#     --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
+#     --chr 9 \
+#     --phenoFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype.txt \
+#     --bt \
+#     --covarFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt \
+#     --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
+#     --strict \
+#     --bsize 1000 \
+#     --firth --approx \
+#     --threads $THREADS \
+#     --pred /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list \
+#     --use-null-firth /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_firth.list \
+#     --anno-file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt \
+#     --set-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt \
+#     --mask-def /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt \
+#     --aaf-bins 0.001,0.01,0.05,0.1 \
+#     --vc-MACthr 10 \
+#     --joint acat,sbat \
+#     --vc-tests skato,acato-full \
+#     --rgc-gene-p \
+#     --out "${output_dir}/step2_gb_euro_cin3plus_chr9"
+
+THREADS=2 && \
   regenie \
     --step 2 \
     --pgen /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
@@ -36,7 +61,7 @@ THREADS=1 && \
     --covarFile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars.txt \
     --catCovarList Smoking_status,Alcohol_intake_frequency,Genotype_measurement_batch \
     --strict \
-    --bsize 100 \
+    --bsize 1000 \
     --firth --approx \
     --threads $THREADS \
     --pred /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step1/regenie_step1_euro_cin3plus_pred.list \
@@ -44,7 +69,7 @@ THREADS=1 && \
     --anno-file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/anno_file_unique_filtered.txt \
     --set-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/set_list_unique_filtered.txt \
     --mask-def /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/mask_file.txt \
-    --aaf-bins 0.001,0.01,0.05,0.1 \
+    --aaf-bins 0.001,0.01 \
     --vc-MACthr 10 \
     --joint acat,sbat \
     --vc-tests skato,acato-full \
