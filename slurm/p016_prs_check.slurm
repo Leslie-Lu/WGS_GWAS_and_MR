@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=prs_check
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=40  
+#SBATCH --cpus-per-task=48  
 #SBATCH --time=04-00:00:00
 #SBATCH --mem=230G
-#SBATCH --partition=gpu
+#SBATCH --partition=inspur
 #SBATCH --output=/dev/null
 
 EXEC=/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/p016_prs_check.slurm
@@ -29,15 +29,22 @@ date
 # comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids > /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_unmatch_20250929_v2.txt
 # comm -23 /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v2_sorted_v2.txt /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VariantIDs/ref_rsID_sorted_v2.ids | wc -l
 
+source "$HOME/.bashrc"
+# awk '{print $1 "\t" $1}' /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt \
+#   > /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID_v2.txt
 threads=$(nproc)
 plink2 \
   --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID \
-  --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID.txt \
+  --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID_v2.txt \
   --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_v3.txt \
   --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_input_files_proteomic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants \
   --score-col-nums 3-2419 \
-  --memory 239276 \
+  --memory 192276 \
   --threads $threads \
   --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS
+wc -l /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS.sscore.vars
+wc -l /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS.sscore
+awk -F'\t' '{print NF; exit}' /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS.sscore
+awk -F'\t' 'NR==1 {for(i=1;i<=NF;i++) print i, $i}' /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS.sscore > /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic/Euro_MR_proteomic_PRS_colnames.txt
 echo 'end at:'
 date

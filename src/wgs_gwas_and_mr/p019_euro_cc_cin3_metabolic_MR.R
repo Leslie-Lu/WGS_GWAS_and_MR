@@ -1,6 +1,6 @@
 ###############################################################################################
-# PROJECT NAME      : WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p019_euro_cc_cin3_proteomic_MR_only_cis.r
-# DESCRIPTION       : Perform Mendelian Randomization (MR) analysis using proteomic data
+# PROJECT NAME      : WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p019_euro_cc_cin3_metabolic_MR.r
+# DESCRIPTION       : Perform Mendelian Randomization (MR) analysis using metabolic data
 # DATE CREATED      : 2025-10-15
 # INPUT             : 
 # OUTPUT            : 
@@ -27,19 +27,19 @@ library(data.table)
 # }
 # packageVersion("omixVizR")
 
-outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis"
+outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic"
 ## --- Part1 ---
-inDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/olink_proteins"
+inDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/NMR"
 MR_samples_protein = readRDS(
-  file = file.path(inDir, "CIN3plus_proteomic_MR_samples_phenos.rds")
+  file = file.path(inDir, "CIN3plus_metabolite_MR_samples_phenos.rds")
 )
-message("Dimensions of MR samples with proteomic data: ", dim(MR_samples_protein)[1], " x ", dim(MR_samples_protein)[2])
-message("Head of MR samples with proteomic data:")
+message("Dimensions of MR samples with metabolic data: ", dim(MR_samples_protein)[1], " x ", dim(MR_samples_protein)[2])
+message("Head of MR samples with metabolic data:")
 print(head(MR_samples_protein))
-message("Names of MR samples with proteomic data:")
+message("Names of MR samples with metabolic data:")
 print(names(MR_samples_protein))
 prs_data = data.table::fread(
-  file = file.path(outputDir, "Euro_MR_proteomic_PRS_only_cis.sscore"),
+  file = file.path(outputDir, "Euro_MR_metabolic_PRS.sscore"),
   header = TRUE
 )
 data.table::setnames(prs_data, c("#IID"), c("eid"))
@@ -47,33 +47,38 @@ message("Dimensions of PRS data: ", dim(prs_data)[1], " x ", dim(prs_data)[2])
 pheno_covar_prs = MR_samples_protein[prs_data, on = "eid"][, `:=`(eid = NULL)]
 message("Dimensions of phenotype, covariate and PRS combined data: ", dim(pheno_covar_prs)[1], " x ", dim(pheno_covar_prs)[2])
 saveRDS(pheno_covar_prs,
-        file = file.path(outputDir, "CIN3plus_proteomic_pheno_covar_prs_only_cis.rds"))
+        file = file.path(outputDir, "CIN3plus_metabolic_pheno_covar_prs.rds"))
 proteins_corr_data = readRDS(
-  file = file.path(inDir, "CIN3plus_proteomic_proteins_corr_full_data.rds")
+  file = file.path(inDir, "CIN3plus_metabolites_corr_full_data.rds")
 )
-protein_ids_final = data.table::fread(
-  file.path(outputDir, "pqlts_only_cis_20251020_protein_assay_rsID.txt")
-)
-message("Dimensions of protein IDs final data: ", dim(protein_ids_final)[1], " x ", dim(protein_ids_final)[2])
-data.table::uniqueN(protein_ids_final, by = "Assay.Target_lower")
-data.table::uniqueN(protein_ids_final, by = "UKBPPP.ProteinID.new.v2")
-proteins_subset = protein_ids_final$Assay.Target_lower %>% unique() %>%
-  gsub("-", "_", ., fixed = TRUE)
-message("Dimensions of proteomic correlation data: ", dim(proteins_corr_data)[1], " x ", dim(proteins_corr_data)[2])
+# protein_ids_final = data.table::fread(
+#   file.path(outputDir, "pqlts_20251104_metabolite_assay_rsID.txt")
+# )
+# message("Dimensions of protein IDs final data: ", dim(protein_ids_final)[1], " x ", dim(protein_ids_final)[2])
+# data.table::uniqueN(protein_ids_final, by = "Assay.Target_lower")
+# data.table::uniqueN(protein_ids_final, by = "UKBPPP.ProteinID.new.v2")
+# proteins_subset = protein_ids_final$Assay.Target_lower %>% unique() %>%
+#   gsub("-", "_", ., fixed = TRUE)
+message("Dimensions of metabolic correlation data: ", dim(proteins_corr_data)[1], " x ", dim(proteins_corr_data)[2])
 proteins_corr_data %>%
   dplyr::select(dplyr::contains("hla") | dplyr::contains(".")) %>%
   names()
-message("Head 30 names of proteomic correlation data:")
+message("Head 30 names of metabolic correlation data:")
 print(head(names(proteins_corr_data), 30))
-message("Tail 30 names of proteomic correlation data:")
+message("Tail 30 names of metabolic correlation data:")
 print(tail(names(proteins_corr_data), 30))
 old_col_names = names(MR_samples_protein)
+message("Old column names to match PRS data:")
+print(old_col_names)
 new_col_names = gsub("-", "_", old_col_names, fixed = TRUE)
-proteins_corr_subset = proteins_corr_data[, .SD, .SDcols = c(new_col_names, proteins_subset)]
-message("Dimensions of proteomic correlation subset data: ", dim(proteins_corr_subset)[1], " x ", dim(proteins_corr_subset)[2])
+# proteins_corr_subset = proteins_corr_data[, .SD, .SDcols = c(new_col_names, proteins_subset)]
+proteins_corr_subset = proteins_corr_data
+message("Dimensions of metabolic correlation subset data: ", dim(proteins_corr_subset)[1], " x ", dim(proteins_corr_subset)[2])
+data.table::setnames(proteins_corr_subset, "3_Hydroxybutyrate", "X3_Hydroxybutyrate")
 proteins_measured = setdiff(names(proteins_corr_subset), new_col_names)
 message("Number of proteins measured: ", length(proteins_measured))
 proteins_corr_subset[, eid := NULL]
+
 
 ## --- Part2 ---
 message("Starting MR 2SLS analysis...")
@@ -90,13 +95,13 @@ MR_2SLS_results = omixVizR::MR_2SLS(
   .progress = TRUE
 )
 saveRDS(MR_2SLS_results,
-        file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.rds"))
+        file = file.path(outputDir, "CIN3plus_metabolic_MR_2SLS_results.rds"))
 
 
 # outputDir = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/data/input"
 # ## --- Part3 ---
 # MR_2SLS_results = readRDS(
-#   file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.rds")
+#   file = file.path(outputDir, "CIN3plus_metabolic_MR_2SLS_results.rds")
 # )
 # mr_results = MR_2SLS_results$mr_results
 # data.table::setDT(mr_results)
@@ -104,7 +109,7 @@ saveRDS(MR_2SLS_results,
 # mr_results %>% head()
 # # annotate the results
 # protein_ids_final = data.table::fread(
-#   file.path(outputDir, "pqlts_only_cis_20251020_protein_assay_rsID.txt")
+#   file.path(outputDir, "pqlts_20251104_metabolite_assay_rsID.txt")
 # )
 # protein_ids_final %>% dim()
 # protein_ids_final %>% head()
@@ -136,7 +141,7 @@ saveRDS(MR_2SLS_results,
 #     "FitCons_score", "IMPACT"))
 # mr_results_new %>%
 #   openxlsx::write.xlsx(
-#     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.xlsx"),
+#     file = file.path(outputDir, "CIN3plus_metabolic_MR_2SLS_results.xlsx"),
 #     sheetName = "Table S7",
 #     rowNames = FALSE,
 #     colWidths = "auto"

@@ -1,14 +1,14 @@
 #!/bin/bash -l
-#SBATCH --job-name=proteomic_MR
+#SBATCH --job-name=metabolic_MR
 #SBATCH --nodes=1 
 #SBATCH --cpus-per-task=40    
 #SBATCH --time=88-00:00:00
-#SBATCH --mem=118G
+#SBATCH --mem=168G
 #SBATCH --partition=gpu
 #SBATCH --output=/dev/null
 
-EXEC="/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p020_euro_cc_cin3_proteomic_MR.r"
-SCRIPT_NAME=$(basename $EXEC .r)
+EXEC="/share/home/lsy_luzhen/WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p019_euro_cc_cin3_metabolic_MR.R"
+SCRIPT_NAME=$(basename $EXEC .R)
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 OUTPUT_FILE="/share/home/lsy_luzhen/WGS_GWAS_and_MR/slurm/${SCRIPT_NAME}_${TIMESTAMP}.out"
 exec > $OUTPUT_FILE 2>&1

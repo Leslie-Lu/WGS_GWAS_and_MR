@@ -1,5 +1,5 @@
 ###############################################################################################
-# PROJECT NAME      : WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p019_euro_cc_cin3_proteomic_MR_only_cis.r
+# PROJECT NAME      : WGS_GWAS_and_MR/src/wgs_gwas_and_mr/p019_euro_cc_cin3_proteomic_MR.r
 # DESCRIPTION       : Perform Mendelian Randomization (MR) analysis using proteomic data
 # DATE CREATED      : 2025-10-15
 # INPUT             : 
@@ -27,7 +27,7 @@ library(data.table)
 # }
 # packageVersion("omixVizR")
 
-outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis"
+outputDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic"
 ## --- Part1 ---
 inDir = "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/olink_proteins"
 MR_samples_protein = readRDS(
@@ -39,7 +39,7 @@ print(head(MR_samples_protein))
 message("Names of MR samples with proteomic data:")
 print(names(MR_samples_protein))
 prs_data = data.table::fread(
-  file = file.path(outputDir, "Euro_MR_proteomic_PRS_only_cis.sscore"),
+  file = file.path(outputDir, "Euro_MR_proteomic_PRS.sscore"),
   header = TRUE
 )
 data.table::setnames(prs_data, c("#IID"), c("eid"))
@@ -47,12 +47,12 @@ message("Dimensions of PRS data: ", dim(prs_data)[1], " x ", dim(prs_data)[2])
 pheno_covar_prs = MR_samples_protein[prs_data, on = "eid"][, `:=`(eid = NULL)]
 message("Dimensions of phenotype, covariate and PRS combined data: ", dim(pheno_covar_prs)[1], " x ", dim(pheno_covar_prs)[2])
 saveRDS(pheno_covar_prs,
-        file = file.path(outputDir, "CIN3plus_proteomic_pheno_covar_prs_only_cis.rds"))
+        file = file.path(outputDir, "CIN3plus_proteomic_pheno_covar_prs.rds"))
 proteins_corr_data = readRDS(
   file = file.path(inDir, "CIN3plus_proteomic_proteins_corr_full_data.rds")
 )
 protein_ids_final = data.table::fread(
-  file.path(outputDir, "pqlts_only_cis_20251020_protein_assay_rsID.txt")
+  file.path(outputDir, "pqlts_20251020_protein_assay_rsID.txt")
 )
 message("Dimensions of protein IDs final data: ", dim(protein_ids_final)[1], " x ", dim(protein_ids_final)[2])
 data.table::uniqueN(protein_ids_final, by = "Assay.Target_lower")
@@ -90,13 +90,13 @@ MR_2SLS_results = omixVizR::MR_2SLS(
   .progress = TRUE
 )
 saveRDS(MR_2SLS_results,
-        file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.rds"))
+        file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.rds"))
 
 
 # outputDir = "C:/luzh29/Library/Projects/WGS_GWAS_and_MR/data/input"
 # ## --- Part3 ---
 # MR_2SLS_results = readRDS(
-#   file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.rds")
+#   file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.rds")
 # )
 # mr_results = MR_2SLS_results$mr_results
 # data.table::setDT(mr_results)
@@ -104,7 +104,7 @@ saveRDS(MR_2SLS_results,
 # mr_results %>% head()
 # # annotate the results
 # protein_ids_final = data.table::fread(
-#   file.path(outputDir, "pqlts_only_cis_20251020_protein_assay_rsID.txt")
+#   file.path(outputDir, "pqlts_20251020_protein_assay_rsID.txt")
 # )
 # protein_ids_final %>% dim()
 # protein_ids_final %>% head()
@@ -136,7 +136,7 @@ saveRDS(MR_2SLS_results,
 #     "FitCons_score", "IMPACT"))
 # mr_results_new %>%
 #   openxlsx::write.xlsx(
-#     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results_only_cis.xlsx"),
+#     file = file.path(outputDir, "CIN3plus_proteomic_MR_2SLS_results.xlsx"),
 #     sheetName = "Table S7",
 #     rowNames = FALSE,
 #     colWidths = "auto"

@@ -1,0 +1,274 @@
+start at:
+Wed Nov  5 01:27:54 CST 2025
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294455 15.8     692222   37   478328 25.6
+Vcells 511127  3.9    8388608   64  1925004 14.7
+Dimensions of MR samples with metabolic data: 89305 x 28
+Head of MR samples with metabolic data:
+       eid CIN3plus Age_at_recruitment Body_mass_index
+     <int>    <int>              <int>           <num>
+1: 1000035        0                 45         24.8724
+2: 1000046        0                 46         30.8968
+3: 1000054        0                 56         28.7778
+4: 1000063        0                 55         29.6830
+5: 1000129        0                 62         20.8528
+6: 1000198        0                 57         22.2727
+   Townsend_deprivation_index_at_recruitment Smoking_status
+                                       <num>         <fctr>
+1:                                      4.30              2
+2:                                     -3.74              1
+3:                                      2.88              0
+4:                                      0.21              0
+5:                                     -5.28              0
+6:                                     -3.22              0
+   Alcohol_intake_frequency Genotype_measurement_batch     PC1     PC2     PC3
+                     <fctr>                     <fctr>   <num>   <num>   <num>
+1:                        3                          2  0.0036  0.0012  0.0015
+2:                        2                          2  0.0040  0.0027  0.0015
+3:                        2                          2 -0.0010  0.0003 -0.0021
+4:                        3                          2 -0.0007 -0.0004 -0.0004
+5:                        2                          2  0.0029  0.0003 -0.0008
+6:                        4                          2 -0.0027  0.0001 -0.0001
+       PC4     PC5     PC6     PC7     PC8     PC9    PC10    PC11    PC12
+     <num>   <num>   <num>   <num>   <num>   <num>   <num>   <num>   <num>
+1: -0.0013 -0.0012  0.0002 -0.0031  0.0004 -0.0029 -0.0025 -0.0006  0.0011
+2:  0.0025 -0.0016 -0.0014  0.0022 -0.0020 -0.0031 -0.0019 -0.0047 -0.0032
+3:  0.0002 -0.0018  0.0003 -0.0015  0.0004  0.0005 -0.0033 -0.0006  0.0000
+4: -0.0024 -0.0002  0.0010 -0.0019 -0.0041  0.0009  0.0026 -0.0026  0.0006
+5:  0.0002 -0.0008  0.0009 -0.0009  0.0030  0.0000 -0.0029  0.0007  0.0013
+6: -0.0028  0.0009 -0.0007  0.0010  0.0023 -0.0005 -0.0002  0.0001 -0.0010
+      PC13    PC14    PC15    PC16    PC17    PC18    PC19    PC20
+     <num>   <num>   <num>   <num>   <num>   <num>   <num>   <num>
+1: -0.0012  0.0002 -0.0016  0.0007  0.0014 -0.0011  0.0000 -0.0006
+2:  0.0032 -0.0033 -0.0027 -0.0008 -0.0030 -0.0021  0.0002 -0.0014
+3:  0.0011 -0.0020 -0.0014  0.0036 -0.0002  0.0002  0.0034  0.0053
+4:  0.0007  0.0003 -0.0021 -0.0010 -0.0007  0.0005  0.0029  0.0036
+5: -0.0021  0.0053 -0.0010  0.0020 -0.0001 -0.0034  0.0002  0.0012
+6: -0.0003  0.0018  0.0005 -0.0033  0.0006 -0.0019 -0.0029  0.0030
+Names of MR samples with metabolic data:
+ [1] "eid"                                      
+ [2] "CIN3plus"                                 
+ [3] "Age_at_recruitment"                       
+ [4] "Body_mass_index"                          
+ [5] "Townsend_deprivation_index_at_recruitment"
+ [6] "Smoking_status"                           
+ [7] "Alcohol_intake_frequency"                 
+ [8] "Genotype_measurement_batch"               
+ [9] "PC1"                                      
+[10] "PC2"                                      
+[11] "PC3"                                      
+[12] "PC4"                                      
+[13] "PC5"                                      
+[14] "PC6"                                      
+[15] "PC7"                                      
+[16] "PC8"                                      
+[17] "PC9"                                      
+[18] "PC10"                                     
+[19] "PC11"                                     
+[20] "PC12"                                     
+[21] "PC13"                                     
+[22] "PC14"                                     
+[23] "PC15"                                     
+[24] "PC16"                                     
+[25] "PC17"                                     
+[26] "PC18"                                     
+[27] "PC19"                                     
+[28] "PC20"                                     
+Dimensions of PRS data: 88887 x 226
+Dimensions of phenotype, covariate and PRS combined data: 88887 x 252
+Dimensions of metabolic correlation data: 274235 x 279
+character(0)
+Head 30 names of metabolic correlation data:
+ [1] "eid"                                      
+ [2] "CIN3plus"                                 
+ [3] "Age_at_recruitment"                       
+ [4] "Body_mass_index"                          
+ [5] "Townsend_deprivation_index_at_recruitment"
+ [6] "Smoking_status"                           
+ [7] "Alcohol_intake_frequency"                 
+ [8] "Genotype_measurement_batch"               
+ [9] "PC1"                                      
+[10] "PC2"                                      
+[11] "PC3"                                      
+[12] "PC4"                                      
+[13] "PC5"                                      
+[14] "PC6"                                      
+[15] "PC7"                                      
+[16] "PC8"                                      
+[17] "PC9"                                      
+[18] "PC10"                                     
+[19] "PC11"                                     
+[20] "PC12"                                     
+[21] "PC13"                                     
+[22] "PC14"                                     
+[23] "PC15"                                     
+[24] "PC16"                                     
+[25] "PC17"                                     
+[26] "PC18"                                     
+[27] "PC19"                                     
+[28] "PC20"                                     
+[29] "3_Hydroxybutyrate"                        
+[30] "Acetate"                                  
+Tail 30 names of metabolic correlation data:
+ [1] "Triglycerides_in_chylomicrons_and_extremely_large_VLDL"                      
+ [2] "Triglycerides_in_large_HDL"                                                  
+ [3] "Triglycerides_in_large_LDL"                                                  
+ [4] "Triglycerides_in_large_VLDL"                                                 
+ [5] "Triglycerides_in_medium_HDL"                                                 
+ [6] "Triglycerides_in_medium_LDL"                                                 
+ [7] "Triglycerides_in_medium_VLDL"                                                
+ [8] "Triglycerides_in_small_HDL"                                                  
+ [9] "Triglycerides_in_small_LDL"                                                  
+[10] "Triglycerides_in_small_VLDL"                                                 
+[11] "Triglycerides_in_very_large_HDL"                                             
+[12] "Triglycerides_in_very_large_VLDL"                                            
+[13] "Triglycerides_in_very_small_VLDL"                                            
+[14] "Triglycerides_to_total_lipids_ratio_in_IDL"                                  
+[15] "Triglycerides_to_total_lipids_ratio_in_chylomicrons_and_extremely_large_VLDL"
+[16] "Triglycerides_to_total_lipids_ratio_in_large_HDL"                            
+[17] "Triglycerides_to_total_lipids_ratio_in_large_LDL"                            
+[18] "Triglycerides_to_total_lipids_ratio_in_large_VLDL"                           
+[19] "Triglycerides_to_total_lipids_ratio_in_medium_HDL"                           
+[20] "Triglycerides_to_total_lipids_ratio_in_medium_LDL"                           
+[21] "Triglycerides_to_total_lipids_ratio_in_medium_VLDL"                          
+[22] "Triglycerides_to_total_lipids_ratio_in_small_HDL"                            
+[23] "Triglycerides_to_total_lipids_ratio_in_small_LDL"                            
+[24] "Triglycerides_to_total_lipids_ratio_in_small_VLDL"                           
+[25] "Triglycerides_to_total_lipids_ratio_in_very_large_HDL"                       
+[26] "Triglycerides_to_total_lipids_ratio_in_very_large_VLDL"                      
+[27] "Triglycerides_to_total_lipids_ratio_in_very_small_VLDL"                      
+[28] "Tyrosine"                                                                    
+[29] "VLDL_cholesterol"                                                            
+[30] "Valine"                                                                      
+Old column names to match PRS data:
+ [1] "eid"                                      
+ [2] "CIN3plus"                                 
+ [3] "Age_at_recruitment"                       
+ [4] "Body_mass_index"                          
+ [5] "Townsend_deprivation_index_at_recruitment"
+ [6] "Smoking_status"                           
+ [7] "Alcohol_intake_frequency"                 
+ [8] "Genotype_measurement_batch"               
+ [9] "PC1"                                      
+[10] "PC2"                                      
+[11] "PC3"                                      
+[12] "PC4"                                      
+[13] "PC5"                                      
+[14] "PC6"                                      
+[15] "PC7"                                      
+[16] "PC8"                                      
+[17] "PC9"                                      
+[18] "PC10"                                     
+[19] "PC11"                                     
+[20] "PC12"                                     
+[21] "PC13"                                     
+[22] "PC14"                                     
+[23] "PC15"                                     
+[24] "PC16"                                     
+[25] "PC17"                                     
+[26] "PC18"                                     
+[27] "PC19"                                     
+[28] "PC20"                                     
+Dimensions of metabolic correlation subset data: 274235 x 279
+Number of proteins measured: 251
+Starting MR 2SLS analysis...
+Part1: Read and prepare the data...
+Part2: Calculate the effective number of indepedent metabolites...
+ ■■■                                6% |  ETA:  1m
+ ■■■■                              11% |  ETA:  1m
+ ■■■■■■                            17% |  ETA: 47s
+ ■■■■■■■■                          23% |  ETA: 42s
+ ■■■■■■■■■■                        29% |  ETA: 38s
+ ■■■■■■■■■■■■                      35% |  ETA: 35s
+ ■■■■■■■■■■■■■                     41% |  ETA: 31s
+ ■■■■■■■■■■■■■■■                   47% |  ETA: 28s
+ ■■■■■■■■■■■■■■■                   47% |  ETA: 33s
+ ■■■■■■■■■■■■■■■■                  49% |  ETA: 33s
+ ■■■■■■■■■■■■■■■■■                 55% |  ETA: 28s
+ ■■■■■■■■■■■■■■■■■■■               61% |  ETA: 24s
+ ■■■■■■■■■■■■■■■■■■■■■             67% |  ETA: 20s
+ ■■■■■■■■■■■■■■■■■■■■■■■           73% |  ETA: 16s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■         79% |  ETA: 12s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■        84% |  ETA:  9s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■      90% |  ETA:  5s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    96% |  ETA:  2s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    97% |  ETA:  2s
+The dimension of residuals matrix is: 114666 x 251
+Checking the correlation matrix of residuals...
+Removing 0 metabolites with zero standard deviation or insufficient non-missing/non-infinite values.
+The new dimension of residuals matrix is: 114666 x 251
+Imputate missing values or infinite values with column medians...
+The dimension of imputed residuals matrix is: 114666 x 251
+The number of independent metabolites is 7 among 251 metabolites.
+Part3: Perform stage 2 of Two stage least square (2SLS) estimation of MR...
+Checking the PRS data...
+The raw dimension of PRS data matrix is: 88887 x 252
+The new dimension of data matrix is: 88887 x 252
+ ■■                                 3% |  ETA:  3m
+ ■■                                 4% |  ETA:  5m
+ ■■■                                5% |  ETA:  4m
+ ■■■                                7% |  ETA:  4m
+ ■■■■                               8% |  ETA:  4m
+ ■■■■                               9% |  ETA:  4m
+ ■■■■                              12% |  ETA:  3m
+ ■■■■■                             13% |  ETA:  3m
+ ■■■■■■                            15% |  ETA:  3m
+ ■■■■■■                            16% |  ETA:  3m
+ ■■■■■■                            18% |  ETA:  3m
+ ■■■■■■■                           19% |  ETA:  3m
+ ■■■■■■■                           21% |  ETA:  3m
+ ■■■■■■■■                          23% |  ETA:  3m
+ ■■■■■■■■                          25% |  ETA:  3m
+ ■■■■■■■■■                         27% |  ETA:  3m
+ ■■■■■■■■■■                        28% |  ETA:  2m
+ ■■■■■■■■■■                        31% |  ETA:  2m
+ ■■■■■■■■■■■                       32% |  ETA:  2m
+ ■■■■■■■■■■■                       34% |  ETA:  2m
+ ■■■■■■■■■■■■                      36% |  ETA:  2m
+ ■■■■■■■■■■■■                      38% |  ETA:  2m
+ ■■■■■■■■■■■■■                     40% |  ETA:  2m
+ ■■■■■■■■■■■■■                     41% |  ETA:  2m
+ ■■■■■■■■■■■■■■                    43% |  ETA:  2m
+ ■■■■■■■■■■■■■■                    45% |  ETA:  2m
+ ■■■■■■■■■■■■■■■                   46% |  ETA:  2m
+ ■■■■■■■■■■■■■■■                   47% |  ETA:  2m
+ ■■■■■■■■■■■■■■■■                  49% |  ETA:  2m
+ ■■■■■■■■■■■■■■■■                  51% |  ETA:  2m
+ ■■■■■■■■■■■■■■■■■                 53% |  ETA:  2m
+ ■■■■■■■■■■■■■■■■■■                55% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■                56% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■                58% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■               60% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■               61% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■              63% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■             65% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■             67% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■■            69% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■■            71% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■■■           72% |  ETA:  1m
+ ■■■■■■■■■■■■■■■■■■■■■■■           74% |  ETA: 49s
+ ■■■■■■■■■■■■■■■■■■■■■■■■          76% |  ETA: 46s
+ ■■■■■■■■■■■■■■■■■■■■■■■■          78% |  ETA: 41s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■         80% |  ETA: 38s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■        82% |  ETA: 34s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■        82% |  ETA: 34s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■        84% |  ETA: 32s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■       85% |  ETA: 28s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■       88% |  ETA: 24s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■       88% |  ETA: 24s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■      89% |  ETA: 22s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■      91% |  ETA: 17s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■     93% |  ETA: 14s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■     95% |  ETA: 10s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    96% |  ETA:  7s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    98% |  ETA:  4s
+ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% |  ETA:  1s
+The dimension of MR results is: 225 x 16
+Done.
+Warning messages:
+1: In (function (..., deparse.level = 1)  :
+  number of rows of result is not a multiple of vector length (arg 1)
+2: In Matrix::nearPD(corr_results, corr = TRUE, keepDiag = TRUE, do2eigen = TRUE) :
+  'nearPD()' did not converge in 100 iterations
+end at:
+Wed Nov  5 01:32:40 CST 2025

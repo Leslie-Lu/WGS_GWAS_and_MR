@@ -1,5 +1,5 @@
 start at:
-Fri Oct 24 17:03:46 CST 2025
+Tue Nov  4 22:41:49 CST 2025
 PLINK v2.0.0-a.6.2LM 64-bit Intel (24 Nov 2024)    cog-genomics.org/plink/2.0/
 (C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
 Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.log.
@@ -10,11 +10,11 @@ Options in effect:
   --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis
   --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID
   --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_only_cis_input_files_proteomic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants
-  --score-col-nums 3-1911
+  --score-col-nums 3-1910
   --threads 64
 
-Start time: Fri Oct 24 17:03:50 2025
-515603 MiB RAM detected, ~495295 available; reserving 162276 MiB for main
+Start time: Tue Nov  4 22:41:53 2025
+515616 MiB RAM detected, ~496027 available; reserving 162276 MiB for main
 workspace.
 Using up to 64 threads (change this with --threads).
 202952 samples (202946 females, 6 males; 202952 founders) loaded from
@@ -33,9 +33,9 @@ Calculating allele frequencies... 0%1%1%2%2%3%3%4%4%5%5%6%
 --score: Results written to
 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore
 .
-End time: Fri Oct 24 17:23:58 2025
+End time: Tue Nov  4 23:02:43 2025
 1898 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore.vars
 181343 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis.sscore
-1910
+1909
 end at:
-Fri Oct 24 17:24:39 CST 2025
+Tue Nov  4 23:03:28 CST 2025

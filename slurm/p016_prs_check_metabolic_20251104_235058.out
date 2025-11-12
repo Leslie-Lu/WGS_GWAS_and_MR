@@ -1,0 +1,41 @@
+start at:
+Tue Nov  4 23:50:58 CST 2025
+PLINK v2.0.0-a.6.2LM 64-bit Intel (24 Nov 2024)    cog-genomics.org/plink/2.0/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS.log.
+Options in effect:
+  --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20251104_v3.txt
+  --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_metabolite_EuropeanPrePCAID_v2.txt
+  --memory 162276
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS
+  --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID
+  --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_input_files_metabolic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants
+  --score-col-nums 3-227
+  --threads 64
+
+Start time: Tue Nov  4 23:51:00 2025
+515616 MiB RAM detected, ~496024 available; reserving 162276 MiB for main
+workspace.
+Using up to 64 threads (change this with --threads).
+202952 samples (202946 females, 6 males; 202952 founders) loaded from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.psam.
+1400147917 variants loaded from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/gene_based/EuroPrePCA_ref38_rsID.pvar.
+Note: No phenotype data present.
+--extract: 1415 variants remaining.
+--keep: 88887 samples remaining.
+88887 samples (88883 females, 4 males; 88887 founders) remaining after main
+filters.
+Calculating allele frequencies... 0%0%1%1%2%3%4%5%5%6%7%7%8%10%12%13%14%14%15%15%16%16%17%17%18%19%20%20%21%21%22%23%24%24%25%26%26%27%27%28%28%29%29%30%31%32%32%33%33%34%34%35%35%36%37%38%39%40%40%41%41%42%42%44%45%45%46%47%47%48%49%49%50%51%52%53%54%54%55%56%57%57%58%59%60%61%61%62%63%63%64%64%65%66%66%67%68%68%69%70%72%73%73%74%74%75%76%77%77%78%79%80%81%82%82%83%83%84%85%85%86%87%87%88%89%90%91%91%92%93%94%94%95%96%97%98%99%done.
+1415 variants remaining after main filters.
+--score: 1415 variants processed.
+--score: Variant list written to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS.sscore.vars .
+--score: Results written to
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS.sscore
+.
+End time: Wed Nov  5 00:08:09 2025
+1415 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS.sscore.vars
+88888 /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/metabolic/Euro_MR_metabolic_PRS.sscore
+226
+end at:
+Wed Nov  5 00:08:18 CST 2025

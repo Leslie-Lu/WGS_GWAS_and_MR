@@ -24,7 +24,7 @@ plink2 \
   --keep /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T005_MR_protein_EuropeanPrePCAID_v2.txt \
   --extract /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_total_rsID_20250929_only_cis_v3.txt \
   --score /share/home/lsy_luzhen/WGS_GWAS_and_MR/output/T006_prs_only_cis_input_files_proteomic_in_wide_format.txt 1 2 header-read cols=scoresums list-variants \
-  --score-col-nums 3-1911 \
+  --score-col-nums 3-1910 \
   --memory 162276 \
   --threads $threads \
   --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/Euro_MR_proteomic_PRS_only_cis
