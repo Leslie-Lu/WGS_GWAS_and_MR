@@ -1,5 +1,11 @@
-Code for the paper.
+# WGS_GWAS_and_MR
 
-If you use this code in your research, please cite our paper:
->
+## 📖 Citation
 
+
+
+Please cite the paper and give us a STAR if you find this repository useful for your research.
+
+## 💖 Contributing
+
+We welcome any contributions\!
