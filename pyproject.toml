@@ -1,0 +1,16 @@
+[project]
+name = "wgs-gwas-and-mr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Leslie-Lu", email = "luzh29@mail2.sysu.edu.cn" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dxpy>=0.400.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.15,<0.10.0"]
+build-backend = "uv_build"
