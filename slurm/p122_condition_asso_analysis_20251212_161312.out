@@ -1,0 +1,99 @@
+start at:
+Fri Dec 12 16:13:12 CST 2025
+No-conditional analysis start:
+No-conditional analysis finish
+Iterative conditional analysis start:
+Round1 begins:
+Significant SNPs number before condition analysis: 685
+The lead SNP(s) from last round is/are in file: /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt
+----------------------------------------
+6:31409942:T:C
+----------------------------------------
+Running condition analysis for round 1...
+PLINK v2.0.0-a.6.2LM 64-bit Intel (24 Nov 2024)    cog-genomics.org/plink/2.0/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_r1_cis_iv_region_phased.log.
+Options in effect:
+  --1
+  --ci 0.95
+  --condition-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt
+  --covar /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical_20251211.txt
+  --covar-variance-standardize
+  --glm no-x-sex hide-covar cols=+a1freq,+a1count
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_r1_cis_iv_region_phased
+  --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased
+  --pheno /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype_20251211.txt
+  --pheno-name CIN3plus
+  --threads 61
+
+Start time: Fri Dec 12 16:13:14 2025
+1547177 MiB RAM detected, ~1483685 available; reserving 773588 MiB for main
+workspace.
+Using up to 61 threads (change this with --threads).
+202868 samples (0 females, 0 males, 202868 ambiguous; 202868 founders) loaded
+from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased.psam.
+186143 variants loaded from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased.pvar.
+1 binary phenotype loaded (5542 cases, 197326 controls).
+26 covariates loaded from /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical_20251211.txt.
+--covar-variance-standardize: 23 covariates transformed.
+Calculating allele frequencies... 0%35%70%done.
+--condition-list: 1 variant ID loaded.
+--glm logistic-Firth hybrid regression on phenotype 'CIN3plus': 0%35%70%done.
+Results written to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_r1_cis_iv_region_phased.CIN3plus.glm.logistic.hybrid .
+End time: Fri Dec 12 19:50:15 2025
+
+real	217m1.312s
+user	11180m3.481s
+sys	0m27.919s
+Condition analysis for round 1 completed.
+Extracting significant SNPs for round 1...
+Round1 completed.
+Round2 begins:
+Significant SNPs number before condition analysis: 347
+The lead SNP(s) from last round is/are in file: /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt
+----------------------------------------
+6:31409942:T:C
+6:31481675:GAA:G
+----------------------------------------
+Running condition analysis for round 2...
+PLINK v2.0.0-a.6.2LM 64-bit Intel (24 Nov 2024)    cog-genomics.org/plink/2.0/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_r2_cis_iv_region_phased.log.
+Options in effect:
+  --1
+  --ci 0.95
+  --condition-list /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt
+  --covar /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical_20251211.txt
+  --covar-variance-standardize
+  --glm no-x-sex hide-covar cols=+a1freq,+a1count
+  --out /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_r2_cis_iv_region_phased
+  --pfile /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased
+  --pheno /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_phenotype_20251211.txt
+  --pheno-name CIN3plus
+  --threads 61
+
+Start time: Fri Dec 12 19:50:15 2025
+1547177 MiB RAM detected, ~1511044 available; reserving 773588 MiB for main
+workspace.
+Using up to 61 threads (change this with --threads).
+202868 samples (0 females, 0 males, 202868 ambiguous; 202868 founders) loaded
+from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased.psam.
+186143 variants loaded from
+/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/cis_iv_region_phased.pvar.
+1 binary phenotype loaded (5542 cases, 197326 controls).
+26 covariates loaded from /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical_20251211.txt.
+--covar-variance-standardize: 23 covariates transformed.
+Calculating allele frequencies... 0%35%70%done.
+--condition-list: 2 variant IDs loaded.
+Error: --condition[-list] includes a multiallelic variant, but 'multiallelic'
+modifier was not specified.
+End time: Fri Dec 12 19:50:16 2025
+
+real	0m0.795s
+user	0m1.509s
+sys	0m0.297s
+end at:
+Fri Dec 12 19:50:16 CST 2025
