@@ -1,8 +1,0 @@
-start at:
-Mon Jun 30 18:53:00 CST 2025
-This directory already exists.
---------start
-WARNING: 1016067 : substr outside of string at /share/home/lsy_luzhen/software/miniconda3/envs/test/share/ensembl-vep-114.1-0/Bio/EnsEMBL/Variation/Utils/VariationEffect.pm line 1061, <$fh> line 27933407.
---------done
-end at:
-Tue Jul  1 01:21:12 CST 2025

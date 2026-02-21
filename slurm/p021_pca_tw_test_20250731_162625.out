@@ -1,5 +1,0 @@
-start at:
-Thu Jul 31 16:26:25 CST 2025
-/share/home/lsy_luzhen/software/miniconda3/envs/eigensoft/bin/twstats -t /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/smartpca_outcome_cc_cin3/euro_cc_cin3.eigenvec -i /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/smartpca_outcome_cc_cin3/eigen.eval -o /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/smartpca_outcome_cc_cin3/twstats.out
-end at:
-Thu Jul 31 16:26:26 CST 2025

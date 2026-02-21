@@ -1,8 +1,0 @@
-start at:
-Fri Jun 27 16:00:35 CST 2025
-This directory already exists.
---------start
-WARNING: 3966219 : Use of uninitialized value $cds in substr at /share/home/lsy_luzhen/software/miniconda3/envs/test/share/ensembl-vep-114.1-0/Bio/EnsEMBL/Variation/TranscriptVariationAllele.pm line 877.
---------done
-end at:
-Sat Jun 28 03:48:11 CST 2025

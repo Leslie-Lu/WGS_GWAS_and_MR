@@ -3,7 +3,7 @@ snpname:        /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european
 indivname:      /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/european_pre_pca_data_outcome_cc_cin3.fam
 evecoutname:    /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/smartpca_outcome_cc_cin3/euro_cc_cin3.eigenvec
 evaloutname:    /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/PCA_european/smartpca_outcome_cc_cin3/euro_cc_cin3.eigenval
-numoutevec:     200
+numoutevec:     30
 numoutlieriter: 0
 numthreads:     64
 lsqproject:     YES

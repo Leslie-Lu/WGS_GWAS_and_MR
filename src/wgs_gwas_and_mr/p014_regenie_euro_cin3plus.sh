@@ -162,4 +162,3 @@ regenie \
   --rgc-gene-p \
   --write-mask \
   --out step2_gb_euro_cin3plus_chr\${chr}
-  

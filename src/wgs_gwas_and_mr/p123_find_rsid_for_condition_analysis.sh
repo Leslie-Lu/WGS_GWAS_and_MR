@@ -14,8 +14,22 @@
 # REASON            : Fix the annotation error
 ################################################################################################
 
+# awk \
+#     'NR==FNR{keep[$1]=1; next} ($3 in keep) {print}' \
+#     /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt \
+#     /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/allAnnotatedChrsInfo.tsv \
+#     > /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/condition_annotated_info_20251214.txt
+
+# # 20260122
+# awk \
+#     'NR==FNR{keep[$1]=1; next} ($3 in keep) {print}' \
+#     /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step2/cin3plus_GCTA_mht_lead_SNP_to_annotate.txt \
+#     /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/allAnnotatedChrsInfo.tsv \
+#     > /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step2/cin3plus_GCTA_mht_lead_SNP_annotated_info_20260122.txt
+
+# 20260208
 awk \
     'NR==FNR{keep[$1]=1; next} ($3 in keep) {print}' \
-    /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/CIN3plus_condition_list_all_lead_snps.txt \
+    /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step2/cin3plus_GCTA_mht_lead_SNP_to_annotate_20260208.txt \
     /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/vep_results_v2/allAnnotatedChrsInfo.tsv \
-    > /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis/condition_annotated_info_20251214.txt
+    > /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/step2/cin3plus_GCTA_mht_lead_SNP_annotated_info_20260208.txt

@@ -55,3 +55,35 @@ dat |>
     sep = "\t",
     na = NA
   )
+
+# #########################################################################
+# --- 1. Update on 20251231 ---
+# #########################################################################
+
+dat = "WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical.txt"
+eid= "/share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/MR/proteomic_only_cis/cis_pqtls/haplotype_analysis/output/condition_analysis_HLA_allele/T002_CIN3plus_phenotype_20251231_v2.txt"
+
+dat= data.table::fread(
+  dat
+)
+eid= data.table::fread(eid)
+eid[, `:=`(
+  `#FID`= NULL,
+  PHENO1= NULL
+)]
+dat |> dim()
+eid |> dim()
+eid |> head()
+dat |> head()
+# data.table::setnames(eid, "IID", "#IID")
+
+dat_v2= dat[eid, on="IID", nomatch=0]
+dat_v2 |> dim()
+dat_v2 |> head()
+data.table::setnames(dat_v2, "FID", "#FID")
+dat_v2 |>
+  data.table::fwrite(
+    file = "WGS_GWAS_and_MR/tmp_ssh_data/GWAS_european/T002_CIN3plus_covars_categorical_20251231.txt",
+    sep = "\t",
+    na = NA
+  )

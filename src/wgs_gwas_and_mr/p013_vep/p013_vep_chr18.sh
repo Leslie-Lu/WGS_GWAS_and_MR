@@ -45,7 +45,3 @@ vep --input_file /share/home/lsy_luzhen/WGS_GWAS_and_MR/tmp_ssh_data/VEP/VEP_con
   --gene_phenotype \
   --regulatory
 echo "--------done"
-
-
-
-

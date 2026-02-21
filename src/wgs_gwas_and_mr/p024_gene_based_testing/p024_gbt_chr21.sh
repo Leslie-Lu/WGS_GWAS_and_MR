@@ -52,7 +52,3 @@ THREADS=16 && \
     --out "${output_dir}/step2_gb_euro_cin3plus_chr21"
 conda deactivate
 echo "--------done"
-
-
-
-
